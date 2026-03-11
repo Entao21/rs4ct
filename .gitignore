@@ -209,3 +209,7 @@ __marimo__/
 /.quarto/
 **/*.quarto_ipynb
 data/
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
