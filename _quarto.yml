@@ -1,25 +1,45 @@
 project:
   type: website
   output-dir: docs
+  render: 
+    - "*.qmd"
+    - "!week2slides.Rmd"
 
 website:
-  title: "rs4ct"
+  title: "CASA0023 Learning Diary"
+  description: "A series of reflections on Remote Sensing for Cities and Environments Module"
+  site-url: https://entao21.github.io/rs4ct/
+  repo-url: https://github.com/entao21/rs4ct
   navbar:
+    background: primary # 导航栏背景色
     left:
       - href: index.qmd
-        text: Home
-      - href: weeks/week1.qmd
-        text: Week 1
-      - href: weeks/week2.qmd
-        text: Week 2
-      - href: weeks/week3.qmd
-        text: Week 3
-      - href: weeks/week4.qmd
-        text: Week 4
+        text: "About Me"
+      - text: "Weekly Entries" # 使用下拉菜单让侧边栏更整洁
+        menu:
+          - href: weeks/week1.qmd
+            text: "Week 1: Getting Started"
+          - href: weeks/week2.qmd
+            text: "Week 2: Portfolio"
+          - href: weeks/week3.qmd
+            text: "Week 3: Corrections"
+          - href: weeks/week4.qmd
+            text: "Week 4: Policy"
+    right:
+      - icon: github
+        href: https://github.com/Entao21/rs4ct
+        aria-label: GitHub
 
 format:
   html:
-    theme: cosmo
-    toc: true
+    theme: 
+      light: cosmo # 基础主题
+      dark: darkly # 增加深色模式切换，提升用户体验
+    css: styles.css # 通过外部 CSS 文件控制细节
+    toc: true # 开启目录
+    toc-depth: 3
+    number-sections: true # 章节自动编号，使逻辑更清晰
+    highlight-style: github # 代码高亮风格
+    code-copy: true # 方便阅卷人查看你的代码
 
 editor: visual
