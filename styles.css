@@ -1,0 +1,81 @@
+/* Circular Std 字体家族（docs/fonts/ 内 .otf 文件） */
+/* Book=400, Light=300, Medium=500, Bold=700, Black=900 */
+
+@font-face {
+  font-family: "Circular Std";
+  src: url("fonts/CircularStd-Book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("fonts/CircularStd-BookItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("fonts/CircularStd-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("fonts/CircularStd-Light%20Italic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("fonts/CircularStd-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("fonts/CircularStd-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("fonts/CircularStd-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("fonts/CircularStd-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("fonts/CircularStd-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circular Std";
+  src: url("fonts/CircularStd-BlackItalic.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* 使用 Circular Std；后面是 fallback */
+body {
+    font-family: "Circular Std", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  /* title color */
+  h1, h2, h3 {
+    color: #2c3e50;
+    font-weight: bold;
+  }
+  
+  /* background color */
+  .quarto-container {
+    /* background-color: #f8f9fa; */
+  }

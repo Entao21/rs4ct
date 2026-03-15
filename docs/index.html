@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Entao">
+<meta name="dcterms.date" content="2026-02-15">
 
-<title>index – rs4ct</title>
+<title>Welcome to my learning diary! 🎉 – CASA0023 Learning Diary</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -39,10 +41,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-adfb2833bc15652ec5881dc6381ea988.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-67e1af7abdb15bd5a2919d83736f6706.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4f6ed13f903dd169c65400d30de9f695.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-67e1af7abdb15bd5a2919d83736f6706.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-158031087360bce0ff56dc785ce39e06.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a4beaf5fbaf30f049347204747b513cb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-0fd3e5ac3b88b039276fa1e6a7fa4582.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-a4beaf5fbaf30f049347204747b513cb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,9 +78,172 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -82,7 +251,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">rs4ct</span>
+    <span class="navbar-title">CASA0023 Learning Diary</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -93,27 +262,42 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">Home</span></a>
+<span class="menu-text">About Me</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./weeks/week1.html"> 
-<span class="menu-text">Week 1</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-weekly-entries" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Weekly Entries</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-weekly-entries">    
+        <li>
+    <a class="dropdown-item" href="./weeks/week1.html">
+ <span class="dropdown-text">Week 1: Getting Started</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./weeks/week2.html"> 
-<span class="menu-text">Week 2</span></a>
+        <li>
+    <a class="dropdown-item" href="./weeks/week2.html">
+ <span class="dropdown-text">Week 2: Portfolio</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./weeks/week3.html"> 
-<span class="menu-text">Week 3</span></a>
+        <li>
+    <a class="dropdown-item" href="./weeks/week3.html">
+ <span class="dropdown-text">Week 3: Corrections</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./weeks/week4.html"> 
-<span class="menu-text">Week 4</span></a>
+        <li>
+    <a class="dropdown-item" href="./weeks/week4.html">
+ <span class="dropdown-text">Week 4: Policy</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/Entao21/rs4ct"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -127,23 +311,42 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#weekly-diary" id="toc-weekly-diary" class="nav-link active" data-scroll-target="#weekly-diary">Weekly Diary</a></li>
+  <li><a href="#about-me" id="toc-about-me" class="nav-link active" data-scroll-target="#about-me"><span class="header-section-number">1</span> About Me</a>
+  <ul class="collapse">
+  <li><a href="#background-education" id="toc-background-education" class="nav-link" data-scroll-target="#background-education"><span class="header-section-number">1.1</span> Background &amp; Education</a></li>
+  <li><a href="#past-research-experiences" id="toc-past-research-experiences" class="nav-link" data-scroll-target="#past-research-experiences"><span class="header-section-number">1.2</span> Past Research Experiences</a></li>
+  <li><a href="#i-hope-to-learn-these-things-form-this-module" id="toc-i-hope-to-learn-these-things-form-this-module" class="nav-link" data-scroll-target="#i-hope-to-learn-these-things-form-this-module"><span class="header-section-number">1.3</span> I hope to learn these things form this module:</a></li>
+  <li><a href="#preface" id="toc-preface" class="nav-link" data-scroll-target="#preface"><span class="header-section-number">1.4</span> Preface</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">index</h1>
+<h1 class="title">Welcome to my learning diary! 🎉</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Entao </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 15, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -153,22 +356,69 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Welcome!.</p>
-<section id="weekly-diary" class="level2">
-<h2 class="anchored" data-anchor-id="weekly-diary">Weekly Diary</h2>
-<ul>
-<li><a href="weeks/week1.html">Week 1</a></li>
-<li><a href="weeks/week2.html">Week 2</a></li>
-<li><a href="weeks/week3.html">Week 3</a></li>
-<li><a href="weeks/week4.html">Week 4</a></li>
-</ul>
+<section id="about-me" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="about-me"><span class="header-section-number">1</span> About Me</h2>
+<p>Hello and welcome to my dairy of learning CASA0023 remotely sensing for cities and environments! My name is Entao, and I am an MSc Urban Spatial Science student at UCL. This website is a live documentation of my learning process and reflections for this module. I am very excited to learn this module as I am a huge fan of remote sensing and its applications in urban studies, especially in the context of sustainable urban development, urban resilience, and urban planning. I hope you will enjoy this journey to remote sensing!</p>
+<section id="background-education" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="background-education"><span class="header-section-number">1.1</span> Background &amp; Education</h3>
+<p>My research interests are very diverse. I have a broad interest in environmental science (climate change, biodiversity conservation, water resources management, air pollution management), urban studies(blue/green infrastrucutre, urban resilience, urban policy), remote sensing (AI implications in remote sensing, remote sensing hydrology, remote sensing for urban studies), GIS and data science. I had a Bachelor degree in Economics and Geography at University College London, and a MSc degree in Environmental Science for Sustainability at King’s College London. I hope this module will help me further develop my skills in remote sensing and its applications in urban studies.</p>
+</section>
+<section id="past-research-experiences" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="past-research-experiences"><span class="header-section-number">1.2</span> Past Research Experiences</h3>
+<ol type="1">
+<li>Research: ‘Do Sponge Cities Work? A Remote-Sensing Panel of Greenness and Turbitiy across Ten Chinese Cities, 2008-2024’.</li>
+<li>CourseworkResearch: ‘Regional Variations in Air Quality Across Chinese Cities: Insights from Data Analysis and Predictive Modeling’.</li>
+<li>Coursework Research: ‘The Role of Remote Sensing in Monitoring Flood - Assessing both Urgent and Long-term Monitoring by Using Satellite Data’.</li>
+<li>Mini-project: ‘From Mining to Environmental Inequality: A Critical Global Challenge’.</li>
+<li>Coursework Research: ‘TFL’s Net Zero Action Plan - What is the spatial parttern of KSI casualty rates in London between 2022-2024 and how are these rates associated with local socio-economical factors?’.</li>
+</ol>
+</section>
+<section id="i-hope-to-learn-these-things-form-this-module" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="i-hope-to-learn-these-things-form-this-module"><span class="header-section-number">1.3</span> I hope to learn these things form this module:</h3>
+<ol type="1">
+<li>Get a better understanding of remote sensing and its applications in urban studies.</li>
+<li>Acquire better skills in processing remote sensing data from a data science perspective.</li>
+<li>Learn how to build professional website using R, quarto and relative tools.</li>
+</ol>
+<p>I really hope this module can act as a foundation of my future research, and possible PhD career.</p>
+</section>
+<section id="preface" class="level3" data-number="1.4">
+<h3 data-number="1.4" class="anchored" data-anchor-id="preface"><span class="header-section-number">1.4</span> Preface</h3>
+<p>Humans have tried to understand the Earth from the very beginning. From ancient China to renaissance Europe, people have been non-stoppingly adventuring, navigating, mapping and understanding the Earth. However, everything changed from the autumn of 1957, when the first ever artificial satellite Sputnik 1 entered its orbit. Humans have not only stared to explore the space, but most importantly, for the first time, Earth became something we could look back on: a single, blue world carring every person, every city, every river and every life we know.</p>
+<div style="text-align: center;">
+<p><img src="resources/pictures/apollo08_earthrise.jpg" class="img-fluid" style="border-radius: 0%; display: block; margin-left: auto; margin-right: auto;" width="400"></p>
+<p>‘Earthrise’ by NASA, 1968.</p>
+</div>
+<p>‘We came all this way to explore the Moon, and the most important thing is that we discovered the Earth.’</p>
+<div style="text-align: right;">
+<p>— William Anders, Apollo 8 astronaut, 1968.</p>
+</div>
+<hr>
+<p>⬅️ Navigate to left menu and our learning journey will start from here.</p>
+<p>↗️ View the source code from my GitHub repository.</p>
+<p>This diary is built on Quarto.</p>
+<p>View the source code here <a href="https://github.com/Entao21/rs4ct">GitHub</a>.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -240,7 +490,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/entao21\.github\.io\/rs4ct\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

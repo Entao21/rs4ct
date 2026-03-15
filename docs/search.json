@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "index",
+    "title": "Welcome to my learning diary! 🎉",
     "section": "",
-    "text": "Welcome!."
+    "text": "Hello and welcome to my dairy of learning CASA0023 remotely sensing for cities and environments! My name is Entao, and I am an MSc Urban Spatial Science student at UCL. This website is a live documentation of my learning process and reflections for this module. I am very excited to learn this module as I am a huge fan of remote sensing and its applications in urban studies, especially in the context of sustainable urban development, urban resilience, and urban planning. I hope you will enjoy this journey to remote sensing!\n\n\nMy research interests are very diverse. I have a broad interest in environmental science (climate change, biodiversity conservation, water resources management, air pollution management), urban studies(blue/green infrastrucutre, urban resilience, urban policy), remote sensing (AI implications in remote sensing, remote sensing hydrology, remote sensing for urban studies), GIS and data science. I had a Bachelor degree in Economics and Geography at University College London, and a MSc degree in Environmental Science for Sustainability at King’s College London. I hope this module will help me further develop my skills in remote sensing and its applications in urban studies.\n\n\n\n\nResearch: ‘Do Sponge Cities Work? A Remote-Sensing Panel of Greenness and Turbitiy across Ten Chinese Cities, 2008-2024’.\nCourseworkResearch: ‘Regional Variations in Air Quality Across Chinese Cities: Insights from Data Analysis and Predictive Modeling’.\nCoursework Research: ‘The Role of Remote Sensing in Monitoring Flood - Assessing both Urgent and Long-term Monitoring by Using Satellite Data’.\nMini-project: ‘From Mining to Environmental Inequality: A Critical Global Challenge’.\nCoursework Research: ‘TFL’s Net Zero Action Plan - What is the spatial parttern of KSI casualty rates in London between 2022-2024 and how are these rates associated with local socio-economical factors?’.\n\n\n\n\n\nGet a better understanding of remote sensing and its applications in urban studies.\nAcquire better skills in processing remote sensing data from a data science perspective.\nLearn how to build professional website using R, quarto and relative tools.\n\nI really hope this module can act as a foundation of my future research, and possible PhD career.\n\n\n\nHumans have tried to understand the Earth from the very beginning. From ancient China to renaissance Europe, people have been non-stoppingly adventuring, navigating, mapping and understanding the Earth. However, everything changed from the autumn of 1957, when the first ever artificial satellite Sputnik 1 entered its orbit. Humans have not only stared to explore the space, but most importantly, for the first time, Earth became something we could look back on: a single, blue world carring every person, every city, every river and every life we know.\n\n\n‘Earthrise’ by NASA, 1968.\n\n‘We came all this way to explore the Moon, and the most important thing is that we discovered the Earth.’\n\n— William Anders, Apollo 8 astronaut, 1968.\n\n\n⬅️ Navigate to left menu and our learning journey will start from here.\n↗️ View the source code from my GitHub repository.\nThis diary is built on Quarto.\nView the source code here GitHub."
   },
   {
     "objectID": "index.html#weekly-diary",
@@ -31,15 +31,15 @@
     "objectID": "weeks/week3.html#practical",
     "href": "weeks/week3.html#practical",
     "title": "week3",
-    "section": "Practical",
-    "text": "Practical\n(TBC)"
+    "section": "2 Practical",
+    "text": "2 Practical\n(TBC)"
   },
   {
     "objectID": "weeks/week3.html#reflection",
     "href": "weeks/week3.html#reflection",
     "title": "week3",
-    "section": "Reflection",
-    "text": "Reflection\n(TBC)"
+    "section": "3 Reflection",
+    "text": "3 Reflection\n(TBC)"
   },
   {
     "objectID": "weeks/week1.html",
@@ -59,15 +59,15 @@
     "objectID": "weeks/week1.html#practical",
     "href": "weeks/week1.html#practical",
     "title": "week1",
-    "section": "Practical",
-    "text": "Practical\n(TBC)"
+    "section": "2 Practical",
+    "text": "2 Practical\n(TBC)"
   },
   {
     "objectID": "weeks/week1.html#reflection",
     "href": "weeks/week1.html#reflection",
     "title": "week1",
-    "section": "Reflection",
-    "text": "Reflection\n(TBC)"
+    "section": "3 Reflection",
+    "text": "3 Reflection\n(TBC)"
   },
   {
     "objectID": "weeks/week2.html",
@@ -87,15 +87,15 @@
     "objectID": "weeks/week2.html#practical",
     "href": "weeks/week2.html#practical",
     "title": "week2",
-    "section": "Practical",
-    "text": "Practical\n(TBC)"
+    "section": "2 Practical",
+    "text": "2 Practical\n(TBC)"
   },
   {
     "objectID": "weeks/week2.html#reflection",
     "href": "weeks/week2.html#reflection",
     "title": "week2",
-    "section": "Reflection",
-    "text": "Reflection\n(TBC)"
+    "section": "3 Reflection",
+    "text": "3 Reflection\n(TBC)"
   },
   {
     "objectID": "weeks/week4.html",
@@ -115,14 +115,28 @@
     "objectID": "weeks/week4.html#practical",
     "href": "weeks/week4.html#practical",
     "title": "week4",
-    "section": "Practical",
-    "text": "Practical\n(TBC)"
+    "section": "2 Practical",
+    "text": "2 Practical\n(TBC)"
   },
   {
     "objectID": "weeks/week4.html#reflection",
     "href": "weeks/week4.html#reflection",
     "title": "week4",
-    "section": "Reflection",
-    "text": "Reflection\n(TBC)"
+    "section": "3 Reflection",
+    "text": "3 Reflection\n(TBC)"
+  },
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "Welcome to my learning diary! 🎉",
+    "section": "",
+    "text": "Hello and welcome to my dairy of learning CASA0023 remotely sensing for cities and environments! My name is Entao, and I am an MSc Urban Spatial Science student at UCL. This website is a live documentation of my learning process and reflections for this module. I am very excited to learn this module as I am a huge fan of remote sensing and its applications in urban studies, especially in the context of sustainable urban development, urban resilience, and urban planning. I hope you will enjoy this journey to remote sensing!\n\n\nMy research interests are very diverse. I have a broad interest in environmental science (climate change, biodiversity conservation, water resources management, air pollution management), urban studies(blue/green infrastrucutre, urban resilience, urban policy), remote sensing (AI implications in remote sensing, remote sensing hydrology, remote sensing for urban studies), GIS and data science. I had a Bachelor degree in Economics and Geography at University College London, and a MSc degree in Environmental Science for Sustainability at King’s College London. I hope this module will help me further develop my skills in remote sensing and its applications in urban studies.\n\n\n\n\nResearch: ‘Do Sponge Cities Work? A Remote-Sensing Panel of Greenness and Turbitiy across Ten Chinese Cities, 2008-2024’.\nCourseworkResearch: ‘Regional Variations in Air Quality Across Chinese Cities: Insights from Data Analysis and Predictive Modeling’.\nCoursework Research: ‘The Role of Remote Sensing in Monitoring Flood - Assessing both Urgent and Long-term Monitoring by Using Satellite Data’.\nMini-project: ‘From Mining to Environmental Inequality: A Critical Global Challenge’.\nCoursework Research: ‘TFL’s Net Zero Action Plan - What is the spatial parttern of KSI casualty rates in London between 2022-2024 and how are these rates associated with local socio-economical factors?’.\n\n\n\n\n\nGet a better understanding of remote sensing and its applications in urban studies.\nAcquire better skills in processing remote sensing data from a data science perspective.\nLearn how to build professional website using R, quarto and relative tools.\n\nI really hope this module can act as a foundation of my future research, and possible PhD career.\n\n\n\nHumans have tried to understand the Earth from the very beginning. From ancient China to renaissance Europe, people have been non-stoppingly adventuring, navigating, mapping and understanding the Earth. However, everything changed from the autumn of 1957, when the first ever artificial satellite Sputnik 1 entered its orbit. Humans have not only stared to explore the space, but most importantly, for the first time, Earth became something we could look back on: a single, blue world carring every person, every city, every river and every life we know.\n\n\n‘Earthrise’ by NASA, 1968.\n\n‘We came all this way to explore the Moon, and the most important thing is that we discovered the Earth.’\n\n— William Anders, Apollo 8 astronaut, 1968.\n\n\n⬅️ Navigate to left menu and our learning journey will start from here.\n↗️ View the source code from my GitHub repository.\nThis diary is built on Quarto.\nView the source code here GitHub."
+  },
+  {
+    "objectID": "data/week1/Istanbul_Metro.html",
+    "href": "data/week1/Istanbul_Metro.html",
+    "title": "CASA0023 Learning Diary",
+    "section": "",
+    "text": "&lt;!DOCTYPE qgis PUBLIC ‘http://mrcc.com/qgis.dtd’ ‘SYSTEM’&gt;     dataset\n\n\n                GEOGCRS[“WGS 84”,ENSEMBLE[“World Geodetic System 1984 ensemble”,MEMBER[“World Geodetic System 1984 (Transit)”],MEMBER[“World Geodetic System 1984 (G730)”],MEMBER[“World Geodetic System 1984 (G873)”],MEMBER[“World Geodetic System 1984 (G1150)”],MEMBER[“World Geodetic System 1984 (G1674)”],MEMBER[“World Geodetic System 1984 (G1762)”],ELLIPSOID[“WGS 84”,6378137,298.257223563,LENGTHUNIT[“metre”,1]],ENSEMBLEACCURACY[2.0]],PRIMEM[“Greenwich”,0,ANGLEUNIT[“degree”,0.0174532925199433]],CS[ellipsoidal,2],AXIS[“geodetic latitude (Lat)”,north,ORDER[1],ANGLEUNIT[“degree”,0.0174532925199433]],AXIS[“geodetic longitude (Lon)”,east,ORDER[2],ANGLEUNIT[“degree”,0.0174532925199433]],USAGE[SCOPE[“Horizontal component of 3D system.”],AREA[“World.”],BBOX[-90,-180,90,180]],ID[“EPSG”,4326]] +proj=longlat +datum=WGS84 +no_defs 3452 4326 EPSG:4326 WGS 84 longlat EPSG:7030 true"
   }
 ]

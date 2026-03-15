@@ -1,0 +1,65 @@
+---
+title: "Landsat"
+subtitle: "Sensor"
+author: "Entao"
+institute: "CASA, UCL"
+date: "2026/02/28"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+---
+# 第一页：标题页
+# 已经在 YAML 里定义了，这里会自动生成标题页
+
+---
+# 第二页：Summary - 传感器简介
+* 传感器名称：Landsat 8/9
+* 运营商：NASA / USGS
+* 轨道高度：705 km
+
+---
+# 第三页：Summary - 技术规格
+.pull-left[
+* 空间分辨率：30m (多光谱)
+* 时间分辨率：16天
+]
+.pull-right[
+# 这里可以放传感器的结构图
+]
+
+---
+# 第四页：Summary - 波段信息
+$$NDVI = \frac{NIR - Red}{NIR + Red}$$
+* Landsat 的波段 4 (Red) 和波段 5 (NIR) 常用于植被监测。
+
+---
+# 第五页：Application - 城市热岛研究
+* 研究案例：伦敦城市热岛分析
+* 数据使用：使用 TIRS 热红外波段反演地表温度。
+
+---
+# 第六页：Application - 土地利用变化
+* 研究案例：亚马逊雨林砍伐监测
+* 优势：长达 50 年的历史数据一致性。
+
+---
+# 第七页：Reflection - 个人见解
+* 学习收获：理解了波段合成对特征提取的重要性。
+* 局限性：30m 分辨率在微观城市研究中可能不够精细。
+
+---
+# 第八页：Reflection - 未来展望
+* 结合 Sentinel-2 的数据融合技术是未来的大趋势。
+
+---
+# 第九页：参考文献
+* 引用你使用的文献或网站。
