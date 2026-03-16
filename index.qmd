@@ -4,6 +4,16 @@ author: "Entao"
 date: "2026/02/15"
 ---
 
+⬆️ Navigate to top bar and our learning journey will start from there.
+
+↗️ Top right buttons from left to right are: link to my github page, dark mode, search.
+
+This diary is built on Quarto.
+
+View the source code here [GitHub](https://github.com/Entao21/rs4ct).
+
+------------------------------------------------------------------------
+
 ## About Me
 
 Hello and welcome to my dairy of learning CASA0023 remotely sensing for cities and environments! My name is Entao, and I am an MSc Urban Spatial Science student at UCL. This website is a live documentation of my learning process and reflections for this module. I am very excited to learn this module as I am a huge fan of remote sensing and its applications in urban studies, especially in the context of sustainable urban development, urban resilience, and urban planning. I hope you will enjoy this journey to remote sensing!
@@ -45,11 +55,3 @@ Humans have tried to understand the Earth from the very beginning. From ancient 
 :::
 
 ------------------------------------------------------------------------
-
-⬆️ Navigate to top bar and our learning journey will start from there.
-
-↗️ Top right buttons from left to right are: link to my github page, dark mode, search.
-
-This diary is built on Quarto.
-
-View the source code here [GitHub](https://github.com/Entao21/rs4ct).
