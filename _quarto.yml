@@ -31,7 +31,8 @@ website:
         aria-label: GitHub
   page-footer:
     left:
-      - text: "🛰️"
+      - text: "Back to top"
+      - href: "#"
     right:
       - text: "Entao21 © 2026"
       - text: "All rights reserved"
