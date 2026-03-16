@@ -31,8 +31,7 @@ website:
         aria-label: GitHub
   page-footer:
     left:
-      - text: "Back to top"
-        href: "#"
+      - text: "🛰️"
     right:
       - text: "Entao21 © 2026"
       - text: "All rights reserved"
@@ -45,6 +44,8 @@ format:
     theme: 
       light: cosmo # 基础主题
       dark: darkly # 增加深色模式切换，提升用户体验
+    back-to-top-navigation: true
+    smooth-scroll: true
     css: styles.css # 通过外部 CSS 文件控制细节
     toc: true # 开启目录
     toc-depth: 3
