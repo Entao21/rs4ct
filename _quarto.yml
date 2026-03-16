@@ -30,12 +30,11 @@ website:
         href: https://github.com/Entao21/rs4ct
         aria-label: GitHub
   page-footer:
-    left:
+    left: 
       - text: "Back to top"
-        href: "#"
-    right:
-      - text: "Entao21 © 2026"
-      - text: "All rights reserved"
+        href: "#" # 已修正：现在这是一个可点击的链接
+    right: 
+      - "Entao21 © 2026 | All rights reserved" # 合并成一行更整洁
     border: true
     background: "#1c1c1c"
     foreground: "#f0eee9"
