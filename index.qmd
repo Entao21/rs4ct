@@ -46,9 +46,9 @@ Humans have tried to understand the Earth from the very beginning. From ancient 
 
 ------------------------------------------------------------------------
 
-⬅️ Navigate to left menu and our learning journey will start from here.
+⬆️ Navigate to top bar and our learning journey will start from there.
 
-↗️ View the source code from my GitHub repository.
+↗️ Top right buttons from left to right are: link to my github page, dark mode, search.
 
 This diary is built on Quarto.
 

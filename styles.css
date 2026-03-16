@@ -62,6 +62,11 @@
   font-style: italic;
 }
 
+/* 平滑滚动，用于 footer 的 Back to top 链接 */
+html {
+  scroll-behavior: smooth;
+}
+
 /* 使用 Circular Std；后面是 fallback */
 body {
     font-family: "Circular Std", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -69,12 +74,37 @@ body {
     line-height: 1.6;
   }
   
-  /* title color */
+  /* title color（浅色主题） */
   h1, h2, h3 {
-    color: #2c3e50;
+    color: #242424;
     font-weight: bold;
   }
+
+  /* 深色模式：Quarto 会给 body 加上 .quarto-dark（与 _quarto.yml 里 dark: darkly 对应） */
+  body.quarto-dark h1,
+  body.quarto-dark h2,
+  body.quarto-dark h3 {
+    color: #f0eee9;
+  }
   
+  /* 浅色模式下导航栏文字颜色（与 _quarto.yml 里深色导航栏背景搭配） */
+  body:not(.quarto-dark) .navbar .navbar-brand,
+  body:not(.quarto-dark) .navbar .nav-link {
+    color: #f0eee9 !important;
+  }
+  body:not(.quarto-dark) .navbar .nav-link:hover,
+  body:not(.quarto-dark) .navbar .nav-link:focus {
+    color: #fff !important;
+  }
+
+  /* 页脚右侧两行、靠右对齐 */
+  .nav-footer-right .footer-items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.15rem;
+  }
+
   /* background color */
   .quarto-container {
     /* background-color: #f8f9fa; */

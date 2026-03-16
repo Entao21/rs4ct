@@ -11,7 +11,7 @@ website:
   site-url: https://entao21.github.io/rs4ct/
   repo-url: https://github.com/entao21/rs4ct
   navbar:
-    background: primary # 导航栏背景色
+    background: "#1c1c1c" # 导航栏背景色
     left:
       - href: index.qmd
         text: "About Me"
@@ -29,6 +29,16 @@ website:
       - icon: github
         href: https://github.com/Entao21/rs4ct
         aria-label: GitHub
+  page-footer:
+    left:
+      - text: "Back to top"
+        href: ""
+    right:
+      - text: "Entao21 © 2026"
+      - text: "All rights reserved"
+    border: true
+    background: "#1c1c1c"
+    foreground: "#f0eee9"
 
 format:
   html:
