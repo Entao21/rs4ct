@@ -32,7 +32,7 @@ website:
   page-footer:
     left:
       - text: "Back to top"
-      - href: "#"
+        href: "#"
     right:
       - text: "Entao21 © 2026"
       - text: "All rights reserved"
