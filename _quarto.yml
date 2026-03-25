@@ -11,11 +11,11 @@ website:
   site-url: https://entao21.github.io/rs4ct/
   repo-url: https://github.com/entao21/rs4ct
   navbar:
-    background: "#1c1c1c" # 导航栏背景色
+    background: "#1c1c1c" 
     left:
       - href: index.qmd
         text: "About Me"
-      - text: "Weekly Entries" # 使用下拉菜单让侧边栏更整洁
+      - text: "Weekly Entries" 
         menu:
           - href: weeks/week1.qmd
             text: "Week 1: Getting Started"
@@ -32,9 +32,9 @@ website:
   page-footer:
     left: 
       - text: "Back to top"
-        href: "#" # 已修正：现在这是一个可点击的链接
+        href: "#" 
     right: 
-      - "Entao21 © 2026 | All rights reserved" # 合并成一行更整洁
+      - "Entao21 © 2026 | All rights reserved" 
     border: true
     background: "#1c1c1c"
     foreground: "#f0eee9"
@@ -42,15 +42,15 @@ website:
 format:
   html:
     theme: 
-      light: cosmo # 基础主题
-      dark: darkly # 增加深色模式切换，提升用户体验
+      light: cosmo 
+      dark: darkly 
     back-to-top-navigation: true
     smooth-scroll: true
-    css: styles.css # 通过外部 CSS 文件控制细节
-    toc: true # 开启目录
+    css: styles.css 
+    toc: true
     toc-depth: 3
-    number-sections: true # 章节自动编号，使逻辑更清晰
-    highlight-style: github # 代码高亮风格
-    code-copy: true # 方便阅卷人查看你的代码
+    number-sections: true 
+    highlight-style: github
+    code-copy: true 
 
 editor: visual

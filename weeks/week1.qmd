@@ -3,14 +3,22 @@ title: "week1"
 format: html
 ---
 
-## Summary
+# #1
+
+# Getting Started with Remote Sensing
+
+#### Summary
+
+Going into the first week of remote sensing, I wasn't really sure what are we going to learn. Although I have a lot experience on remote sensing, I am very unsure about what new strategy are we going to use in our module since I have never encountered satellite image.
+
+I always keen to learn satellite basics, and I believe every advanced research is based on a good understanding of basic knowledge.
+
+#### Application
 
 (TBC)
 
-## Practical
+#### Reflection
 
 (TBC)
 
-## Reflection
-
-(TBC)
+#### References
