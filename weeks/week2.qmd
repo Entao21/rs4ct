@@ -1,16 +1,18 @@
 ---
-title: "week2"
-format: html
+title: "Week #2: Xaringan and Quarto"
+author: "Entao"
+date: "2026-02-17"
+bibliography: ../references.bib
+editor: source
+format:
+  html:
+    cite-method: citeproc
 ---
 
-## Summary
+# **Summary**
 
-(TBC)
+Prensentation
 
-## Practical
 
-(TBC)
+# **Reflection**
 
-## Reflection
-
-(TBC)
