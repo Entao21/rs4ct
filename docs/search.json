@@ -1,71 +1,29 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to my learning diary! 🎉",
-    "section": "",
-    "text": "⬆️ Navigate to top bar and our learning journey will start from there.\n↗️ Top right buttons from left to right are: link to my github page, dark mode, search.\nThis diary is built on Quarto.\nView the source code here GitHub."
-  },
-  {
-    "objectID": "index.html#weekly-diary",
-    "href": "index.html#weekly-diary",
-    "title": "index",
-    "section": "Weekly Diary",
-    "text": "Weekly Diary\n\nWeek 1\nWeek 2\nWeek 3\nWeek 4"
-  },
-  {
-    "objectID": "weeks/week3.html",
-    "href": "weeks/week3.html",
-    "title": "week3",
+    "objectID": "weeks/week4.html",
+    "href": "weeks/week4.html",
+    "title": "week4",
     "section": "",
     "text": "(TBC)"
   },
   {
-    "objectID": "weeks/week3.html#summary",
-    "href": "weeks/week3.html#summary",
-    "title": "week3",
+    "objectID": "weeks/week4.html#summary",
+    "href": "weeks/week4.html#summary",
+    "title": "week4",
     "section": "",
     "text": "(TBC)"
   },
   {
-    "objectID": "weeks/week3.html#practical",
-    "href": "weeks/week3.html#practical",
-    "title": "week3",
+    "objectID": "weeks/week4.html#practical",
+    "href": "weeks/week4.html#practical",
+    "title": "week4",
     "section": "2 Practical",
     "text": "2 Practical\n(TBC)"
   },
   {
-    "objectID": "weeks/week3.html#reflection",
-    "href": "weeks/week3.html#reflection",
-    "title": "week3",
-    "section": "3 Reflection",
-    "text": "3 Reflection\n(TBC)"
-  },
-  {
-    "objectID": "weeks/week1.html",
-    "href": "weeks/week1.html",
-    "title": "week1",
-    "section": "",
-    "text": "(TBC)"
-  },
-  {
-    "objectID": "weeks/week1.html#summary",
-    "href": "weeks/week1.html#summary",
-    "title": "week1",
-    "section": "",
-    "text": "(TBC)"
-  },
-  {
-    "objectID": "weeks/week1.html#practical",
-    "href": "weeks/week1.html#practical",
-    "title": "week1",
-    "section": "2 Practical",
-    "text": "2 Practical\n(TBC)"
-  },
-  {
-    "objectID": "weeks/week1.html#reflection",
-    "href": "weeks/week1.html#reflection",
-    "title": "week1",
+    "objectID": "weeks/week4.html#reflection",
+    "href": "weeks/week4.html#reflection",
+    "title": "week4",
     "section": "3 Reflection",
     "text": "3 Reflection\n(TBC)"
   },
@@ -98,32 +56,11 @@
     "text": "3 Reflection\n(TBC)"
   },
   {
-    "objectID": "weeks/week4.html",
-    "href": "weeks/week4.html",
-    "title": "week4",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to my learning diary! 🎉",
     "section": "",
-    "text": "(TBC)"
-  },
-  {
-    "objectID": "weeks/week4.html#summary",
-    "href": "weeks/week4.html#summary",
-    "title": "week4",
-    "section": "",
-    "text": "(TBC)"
-  },
-  {
-    "objectID": "weeks/week4.html#practical",
-    "href": "weeks/week4.html#practical",
-    "title": "week4",
-    "section": "2 Practical",
-    "text": "2 Practical\n(TBC)"
-  },
-  {
-    "objectID": "weeks/week4.html#reflection",
-    "href": "weeks/week4.html#reflection",
-    "title": "week4",
-    "section": "3 Reflection",
-    "text": "3 Reflection\n(TBC)"
+    "text": "⬆️ Navigate to top bar and our learning journey will start from there.\n↗️ Top right buttons from left to right are: link to my github page, dark mode, search.\nThis diary is built on Quarto.\nView the source code here GitHub."
   },
   {
     "objectID": "index.html#about-me",
@@ -138,5 +75,82 @@
     "title": "CASA0023 Learning Diary",
     "section": "",
     "text": "&lt;!DOCTYPE qgis PUBLIC ‘http://mrcc.com/qgis.dtd’ ‘SYSTEM’&gt;     dataset\n\n\n                GEOGCRS[“WGS 84”,ENSEMBLE[“World Geodetic System 1984 ensemble”,MEMBER[“World Geodetic System 1984 (Transit)”],MEMBER[“World Geodetic System 1984 (G730)”],MEMBER[“World Geodetic System 1984 (G873)”],MEMBER[“World Geodetic System 1984 (G1150)”],MEMBER[“World Geodetic System 1984 (G1674)”],MEMBER[“World Geodetic System 1984 (G1762)”],ELLIPSOID[“WGS 84”,6378137,298.257223563,LENGTHUNIT[“metre”,1]],ENSEMBLEACCURACY[2.0]],PRIMEM[“Greenwich”,0,ANGLEUNIT[“degree”,0.0174532925199433]],CS[ellipsoidal,2],AXIS[“geodetic latitude (Lat)”,north,ORDER[1],ANGLEUNIT[“degree”,0.0174532925199433]],AXIS[“geodetic longitude (Lon)”,east,ORDER[2],ANGLEUNIT[“degree”,0.0174532925199433]],USAGE[SCOPE[“Horizontal component of 3D system.”],AREA[“World.”],BBOX[-90,-180,90,180]],ID[“EPSG”,4326]] +proj=longlat +datum=WGS84 +no_defs 3452 4326 EPSG:4326 WGS 84 longlat EPSG:7030 true"
+  },
+  {
+    "objectID": "weeks/week1.html#two-types-of-sensor",
+    "href": "weeks/week1.html#two-types-of-sensor",
+    "title": "Week #1: Getting Started with Remote Sensing",
+    "section": "",
+    "text": "Passive sensors do not emit their own energy. Instead, they detect naturally occurring energy, typically sunlight reflected off the Earth’s surface or thermal radiation emitted by objects. It then records the intensity of the energy that is reflected. Famous sensors include Sentinel-2 (Launched by ESA), Landsat sensors (Launched by NASA) are all passive sensors. A weakness of these sensor is that they rely on external illumination, which can be easily blocked by atmospheric conditions like clouds, therefore they are not suitable for areas with persistent cloud cover.\nActive sensors carry their own ‘flashlight’, they actively sends out energy and detect the energy that is reflected back. A key example is Synthetic Aperture Radar (SAR), which operates at longer wavelengths capable of penetrating clouds—a massive advantage for monitoring regions with frequent overcast weather. However, a major disadvantage of this approach is that generating their own energy requires massive amounts of power, making these sensors much more expensive to operate than passive sensors.\n\n\n\n\nTwo Types of Sensors\n\n\nSource: GISStudy(2025)"
+  },
+  {
+    "objectID": "weeks/week1.html#four-types-of-resolution",
+    "href": "weeks/week1.html#four-types-of-resolution",
+    "title": "Week #1: Getting Started with Remote Sensing",
+    "section": "",
+    "text": "Remotely sensed data is fundamentally defined by four resolutions:\n\nSpatial Resolution: The physical size of the raster pixel on the ground (e.g., Sentinel-2 is 10m, while Landsat is typically 30m). It determines how much detail we can see.\nSpectral Resolution: The number of bands recorded across the electromagnetic spectrum. It determines the range of wavelengths that the sensor can detect.\nTemporal Resolution: The revisit time of the satellite (e.g., Landsat collects data every 16 days). It determines how often the sensor can capture the same area.\nRadiometric Resolution: The sensor’s sensitivity to small differences in electromagnetic energy, defined by its bit depth (e.g., 8-bit has 256 possible values). It determines the accuracy of the sensor."
+  },
+  {
+    "objectID": "weeks/week1.html#how-electromagnetic-waves-interact-with-different-surfaces",
+    "href": "weeks/week1.html#how-electromagnetic-waves-interact-with-different-surfaces",
+    "title": "Week #1: Getting Started with Remote Sensing",
+    "section": "",
+    "text": "Before energy reaches a sensor, it interacts with the Earth and atmosphere through absorption, transmission, and scattering. For instance, Rayleigh scattering scatters shorter (blue) wavelengths more easily, explaining why the sky appears blue and why atmospheric correction is often necessary. In the practical, we used R and SNAP to extract pixel values and compare spectral signatures across different land covers. We also explored the Tasseled Cap transformation, which compresses bands into Brightness (bare soil/built surfaces), Greenness (vegetation), and Wetness (moisture)."
+  },
+  {
+    "objectID": "weeks/week1.html#applications-beyond-the-practical",
+    "href": "weeks/week1.html#applications-beyond-the-practical",
+    "title": "Week #1: Getting Started with Remote Sensing",
+    "section": "2.1 Applications Beyond the Practical",
+    "text": "2.1 Applications Beyond the Practical\nThe Tasseled Cap Transformation (TCT) remains crucial in urban remote sensing because it efficiently compresses high-dimensional satellite data into directly interpretable physical parameters: Brightness, Greenness, and Wetness (Nedkov, 2017). For example, one of the application integrates high-resolution Sentinel-2 TCT components with machine learning algorithms to accurately map urban green infrastructure and monitor urban sprawl (Shi & Xu, 2019). However, there are opposing voices regarding its rigidity. Critics argue that TCT’s fixed linear coefficients are strictly sensor-dependent and highly sensitive to local atmospheric variations (Baig et al., 2014). Consequently, some researchers advocate for dynamic, data-driven approaches—such as symbolic regression—over traditional TCT to improve global generalization across different ecosystems (Chrysostomou et al., 2024). Despite these limitations, the future of TCT in urban contexts is highly promising. Future applications aim to fuse TCT outputs with 3D radiative transfer models and active sensors to dynamically assess urban tree health and urban micro-climate resilience (Neophytides et al., 2024)."
+  },
+  {
+    "objectID": "weeks/week1.html#reflection",
+    "href": "weeks/week1.html#reflection",
+    "title": "Week #1: Getting Started with Remote Sensing",
+    "section": "2.2 Reflection",
+    "text": "2.2 Reflection\nThese datasets are actually quite familiar to me. During my previous studies, I extensively used both Sentinel-2 and Landsat data, but usually within Google Earth Engine. This practical was the first time I downloaded the raw data straight from the official websites and process them locally.\nThere do exist lots of technial difficulties for me to do the practical. I struggled the most with the SNAP software. Although I am very comfortable with QGIS, SNAP feels quite different. At first, I couldn’t find the right tools and had a hard time just drawing polygon boxes. What is making it worse is my laptop constantly crashed when running SNAP, which severely slowed my progress. Furthermore, the size of our raw datasets are very big, resulting in painfully long processing times.\nDespite these frustrations, I firmly believe that mastering these foundational skills is never a waste of time. Learning to handle raw data locally is crucial for our future work. I am genuinely looking forward to diving deeper into remote sensing and its applications in the coming weeks!"
+  },
+  {
+    "objectID": "weeks/week1.html#references",
+    "href": "weeks/week1.html#references",
+    "title": "Week #1: Getting Started with Remote Sensing",
+    "section": "3.1 References",
+    "text": "3.1 References\nBaig, M. H. A., Zhang, L., Shuai, T., & Tong, Q. (2014). Derivation of a tasselled cap transformation based on Landsat 8 at-satellite reflectance. Remote Sensing Letters, 5(5), 423-431.\nChrysostomou, C., Neophytides, S. P., Mavrovouniotis, M., & Hadjimitsis, D. G. (2024). Optimized spectral indices for global vegetation and water mapping using Sentinel-2. Scientific Reports, 14, 3867.\nNedkov, R. (2017). Orthogonal transformation of segmented images from the satellite Sentinel-2. Comptes rendus de l’Académie bulgare des Sciences, 70(5), 687-692.\nNeophytides, S. P., et al. (2024). Estimation of Urban Tree Chlorophyll Content and Leaf Area Index Using Sentinel-2 Images and 3D Radiative Transfer Model Inversion. Remote Sensing, 16(20), 3867.\nShi, L., & Xu, H. (2019). Derivation of Tasseled Cap Transformation Coefficients for Sentinel-2 MSI At-Sensor Reflectance Data. IEEE Geoscience and Remote Sensing Letters, 16(9), 1504-1508."
+  },
+  {
+    "objectID": "weeks/week3.html",
+    "href": "weeks/week3.html",
+    "title": "week3",
+    "section": "",
+    "text": "(TBC)"
+  },
+  {
+    "objectID": "weeks/week3.html#summary",
+    "href": "weeks/week3.html#summary",
+    "title": "week3",
+    "section": "",
+    "text": "(TBC)"
+  },
+  {
+    "objectID": "weeks/week3.html#practical",
+    "href": "weeks/week3.html#practical",
+    "title": "week3",
+    "section": "2 Practical",
+    "text": "2 Practical\n(TBC)"
+  },
+  {
+    "objectID": "weeks/week3.html#reflection",
+    "href": "weeks/week3.html#reflection",
+    "title": "week3",
+    "section": "3 Reflection",
+    "text": "3 Reflection\n(TBC)"
+  },
+  {
+    "objectID": "weeks/week1.html",
+    "href": "weeks/week1.html",
+    "title": "Week #1: Getting Started with Remote Sensing",
+    "section": "",
+    "text": "Starting this module, I was truly excited that we get a chance to build our own online portofolio. I always want to do this but I just do not have a chance or opportunity to formally learn the techniques needed to build websites. For me, a portofolio works a bit like the camera rolls on my phone—it records every progress and preserves the parts of the work that I want to show later. It is also a perfect way of recording what did I do during my university time and it will become super precious in the future.\n\n\nPassive sensors do not emit their own energy. Instead, they detect naturally occurring energy, typically sunlight reflected off the Earth’s surface or thermal radiation emitted by objects. It then records the intensity of the energy that is reflected. Famous sensors include Sentinel-2 (Launched by ESA), Landsat sensors (Launched by NASA) are all passive sensors. A weakness of these sensor is that they rely on external illumination, which can be easily blocked by atmospheric conditions like clouds, therefore they are not suitable for areas with persistent cloud cover.\nActive sensors carry their own ‘flashlight’, they actively sends out energy and detect the energy that is reflected back. A key example is Synthetic Aperture Radar (SAR), which operates at longer wavelengths capable of penetrating clouds—a massive advantage for monitoring regions with frequent overcast weather. However, a major disadvantage of this approach is that generating their own energy requires massive amounts of power, making these sensors much more expensive to operate than passive sensors.\n\n\n\n\nTwo Types of Sensors\n\n\nSource: GISStudy(2025)\n\n\n\n\nRemotely sensed data is fundamentally defined by four resolutions:\n\nSpatial Resolution: The physical size of the raster pixel on the ground (e.g., Sentinel-2 is 10m, while Landsat is typically 30m). It determines how much detail we can see.\nSpectral Resolution: The number of bands recorded across the electromagnetic spectrum. It determines the range of wavelengths that the sensor can detect.\nTemporal Resolution: The revisit time of the satellite (e.g., Landsat collects data every 16 days). It determines how often the sensor can capture the same area.\nRadiometric Resolution: The sensor’s sensitivity to small differences in electromagnetic energy, defined by its bit depth (e.g., 8-bit has 256 possible values). It determines the accuracy of the sensor.\n\n\n\n\nBefore energy reaches a sensor, it interacts with the Earth and atmosphere through absorption, transmission, and scattering. For instance, Rayleigh scattering scatters shorter (blue) wavelengths more easily, explaining why the sky appears blue and why atmospheric correction is often necessary. In the practical, we used R and SNAP to extract pixel values and compare spectral signatures across different land covers. We also explored the Tasseled Cap transformation, which compresses bands into Brightness (bare soil/built surfaces), Greenness (vegetation), and Wetness (moisture)."
   }
 ]

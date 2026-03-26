@@ -1,6 +1,11 @@
 project:
   type: website
   output-dir: docs
+  # Copied into docs/ on every render (survives clean output-dir; edit fonts only in /fonts)
+  resources:
+    - "fonts"
+    - "resources/pictures1"
+    - "resources/pictures"
   render: 
     - "*.qmd"
     - "!week2slides.Rmd"

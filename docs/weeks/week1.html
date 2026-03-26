@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Entao">
+<meta name="dcterms.date" content="2026-02-10">
 
-<title>week1 – CASA0023 Learning Diary</title>
+<title>Week #1: Getting Started with Remote Sensing – CASA0023 Learning Diary</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -44,9 +46,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-67e1af7abdb15bd5a2919d83736f6706.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c2789b59c451f5d6c9e09eb283bc9a10.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-c538eb8a6aa0e16fde37bef04869a59f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-c2789b59c451f5d6c9e09eb283bc9a10.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-1e439da7aa88c9d4554912bc2ee74c2d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-b8b69fd8e30c41d735a45cd7a533fa73.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-1e439da7aa88c9d4554912bc2ee74c2d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,7 +76,37 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -309,9 +341,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1</span> Summary</a></li>
-  <li><a href="#practical" id="toc-practical" class="nav-link" data-scroll-target="#practical"><span class="header-section-number">2</span> Practical</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">3</span> Reflection</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1</span> <strong>Summary</strong></a>
+  <ul class="collapse">
+  <li><a href="#two-types-of-sensor" id="toc-two-types-of-sensor" class="nav-link" data-scroll-target="#two-types-of-sensor"><span class="header-section-number">1.1</span> Two Types of Sensor</a></li>
+  <li><a href="#four-types-of-resolution" id="toc-four-types-of-resolution" class="nav-link" data-scroll-target="#four-types-of-resolution"><span class="header-section-number">1.2</span> Four Types of Resolution</a></li>
+  <li><a href="#how-electromagnetic-waves-interact-with-different-surfaces" id="toc-how-electromagnetic-waves-interact-with-different-surfaces" class="nav-link" data-scroll-target="#how-electromagnetic-waves-interact-with-different-surfaces"><span class="header-section-number">1.3</span> How Electromagnetic Waves Interact with Different Surfaces</a></li>
+  </ul></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">2</span> <strong>Applications</strong></a>
+  <ul class="collapse">
+  <li><a href="#applications-beyond-the-practical" id="toc-applications-beyond-the-practical" class="nav-link" data-scroll-target="#applications-beyond-the-practical"><span class="header-section-number">2.0.1</span> Applications Beyond the Practical</a></li>
+  </ul></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">3</span> <strong>Reflection</strong></a>
+  <ul class="collapse">
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">3.1</span> References</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -321,14 +364,26 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">week1</h1>
+<h1 class="title">Week #1: Getting Started with Remote Sensing</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Entao </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 10, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -338,19 +393,120 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="summary" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="summary"><span class="header-section-number">1</span> Summary</h2>
-<p>(TBC)</p>
+<section id="summary" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> <strong>Summary</strong></h1>
+<p>Starting this module, I was truly excited that we get a chance to build our own online portofolio. I always want to do this but I just do not have a chance or opportunity to formally learn the techniques needed to build websites. For me, a portofolio works a bit like the camera rolls on my phone—it records every progress and preserves the parts of the work that I want to show later. It is also a perfect way of recording what did I do during my university time and it will become super precious in the future.</p>
+<section id="two-types-of-sensor" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="two-types-of-sensor"><span class="header-section-number">1.1</span> Two Types of Sensor</h2>
+<p>Passive sensors do not emit their own energy. Instead, they detect naturally occurring energy, typically sunlight reflected off the Earth’s surface or thermal radiation emitted by objects. It then records the intensity of the energy that is reflected. Famous sensors include Sentinel-2 (Launched by ESA), Landsat sensors (Launched by NASA) are all passive sensors. A weakness of these sensor is that they rely on external illumination, which can be easily blocked by atmospheric conditions like clouds, therefore they are not suitable for areas with persistent cloud cover.</p>
+<p>Active sensors carry their own ‘flashlight’, they actively sends out energy and detect the energy that is reflected back. A key example is Synthetic Aperture Radar (SAR), which operates at longer wavelengths capable of penetrating clouds—a massive advantage for monitoring regions with frequent overcast weather. However, a major disadvantage of this approach is that generating their own energy requires massive amounts of power, making these sensors much more expensive to operate than passive sensors.</p>
+<div style="text-align: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/picture1/active-and-passive-rs.png" class="img-fluid figure-img"></p>
+<figcaption>Two Types of Sensors</figcaption>
+</figure>
+</div>
+<p><em>Source: <a href="https://gisrsstudy.com/types-of-sensor/">GISStudy(2025)</a></em></p>
+</div>
 </section>
-<section id="practical" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="practical"><span class="header-section-number">2</span> Practical</h2>
-<p>(TBC)</p>
+<section id="four-types-of-resolution" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="four-types-of-resolution"><span class="header-section-number">1.2</span> Four Types of Resolution</h2>
+<p>Remotely sensed data is fundamentally defined by four resolutions:</p>
+<ol type="1">
+<li><p>Spatial Resolution: The physical size of the raster pixel on the ground (e.g., Sentinel-2 is 10m, while Landsat is typically 30m). It determines how much detail we can see.</p></li>
+<li><p>Spectral Resolution: The number of bands recorded across the electromagnetic spectrum. It determines the range of wavelengths that the sensor can detect.</p></li>
+<li><p>Temporal Resolution: The revisit time of the satellite (e.g., Landsat collects data every 16 days). It determines how often the sensor can capture the same area.</p></li>
+<li><p>Radiometric Resolution: The sensor’s sensitivity to small differences in electromagnetic energy, defined by its bit depth (e.g., 8-bit has 256 possible values). It determines the accuracy of the sensor.</p></li>
+</ol>
 </section>
-<section id="reflection" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3</span> Reflection</h2>
-<p>(TBC)</p>
+<section id="how-electromagnetic-waves-interact-with-different-surfaces" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="how-electromagnetic-waves-interact-with-different-surfaces"><span class="header-section-number">1.3</span> How Electromagnetic Waves Interact with Different Surfaces</h2>
+<p>Before energy reaches a sensor, it interacts with the Earth and atmosphere through absorption, transmission, and scattering. For instance, Rayleigh scattering scatters shorter (blue) wavelengths more easily, explaining why the sky appears blue and why atmospheric correction is often necessary. In the practical, we used R and SNAP to extract pixel values and compare spectral signatures across different land covers. We also explored the Tasseled Cap transformation, which compresses bands into Brightness (bare soil/built surfaces), Greenness (vegetation), and Wetness (moisture).</p>
+</section>
+</section>
+<section id="applications" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> <strong>Applications</strong></h1>
+<p>In this week practical, we used the Landsat 8 and Sentinel-2 data to extract spectral signatures from different land covers.</p>
+<p>My study area of this practical is Istanbul, Turkey, which is a city with a lot of built surfaces and vegetation, and open water bodies. We downloaded data from Copernicus and EarthExplorer, and then used QGIS and SNAP to explore the data.</p>
+<p>At first, I was following the practicals instructions to filter out the image with 0% of cloud coverage, however, I found there are no image with 0% of cloud in 2025 for Istanbul. Therefore, I increased the cloud coverage to 10% and I selected December 17th, 2025 as acquisition date.</p>
+<p>The first group of output from this week’s practial is the differenct color composite graph. True color composite is composed of Sentinel-2 Band 2 (Blue), Band 3 (Green) and Band 4 (Red). Second graph below is the false color composite composed of B8 (NIR), B4 (Red) and B3 (Green). This could show the level of health of the vegetation. The third graph below is the atmospheric penetration composite composed of B12(SWIR), B11(SWIR) and B8A(NIR). This could highlight the vegetation in blue and urban area as gray, cyan or purple.</p>
+<div class="quarto-layout-panel" data-layout-ncol="3" data-layout-align="center">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/picture1/true_color.png" class="img-fluid figure-img"></p>
+<figcaption>True Color Composite</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/picture1/infra_color.png" class="img-fluid figure-img"></p>
+<figcaption>False Color Composite</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/picture1/atm_color.png" class="img-fluid figure-img"></p>
+<figcaption>Atmospheric Penetration Composite</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p>To me, this demonstrates the true power of remote sensing, and we can easily monitor specific land covers simply by isolating their unique spectral signatures across the most relevant bands.</p>
+<p>Second output of this week’s practical is the tasseled cap. The tasseled cap is a transformation that compresses bands into Brightness (overall reflectance), Greenness (vegetation), and Wetness (moisture). This could help us to understand the level of health of the vegetation, the moisture of the soil and urban area.</p>
+<p>The equation of tasseled cap is as follows: <span class="math display">\[\begin{aligned}
+\text{Brightness} &amp;= 0.3037 \times B2 + 0.2793 \times B3 + 0.4743 \times B4 + 0.5585 \times B8 + 0.5082 \times B11 + 0.1863 \times B12 \\
+\text{Greenness} &amp;= -0.2848 \times B2 - 0.2435 \times B3 - 0.5436 \times B4 + 0.7243 \times B8 + 0.0840 \times B11 - 0.1800 \times B12 \\
+\text{Wetness} &amp;= 0.1509 \times B2 + 0.1973 \times B3 + 0.3279 \times B4 + 0.3406 \times B8 - 0.7112 \times B11 - 0.4572 \times B12
+\end{aligned}\]</span></p>
+<p>Below scatterplots illustrate Istanbul’s spectral feature space before and after the Tasseled Cap transformation. The first plot maps the Red (Band 4) against the Near-Infrared (Band 8) band. Its triangular distribution reveals a rigid ‘soil line’ at the bottom connecting dry and wet soils, while the top-left peak highlights dense vegetation. The second plot displays the Tasseled Cap output, mapping Brightness against Greenness to reduce data dimensionality. This forms a distinct ‘wizard’s hat’ shape, where the x-axis (Brightness) isolates highly reflective man-made urban surfaces and the y-axis (Greenness) captures vegetation. Together, these visualizations perfectly demonstrate how mathematical transformations simplify complex raw satellite bands into identifiable physical features like urban infrastructure and green spaces.</p>
+<div class="quarto-layout-panel" data-layout-ncol="2" data-layout-align="center">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/pictures1/tass2.png" class="img-fluid figure-img"></p>
+<figcaption>Band 4(Red) vs Band 8 (NIR）</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="resources/pictures1/tass1.png" class="img-fluid figure-img"></p>
+<figcaption>Brightness vs Greenness Tasseled Cap</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<section id="applications-beyond-the-practical" class="level3" data-number="2.0.1">
+<h3 data-number="2.0.1" class="anchored" data-anchor-id="applications-beyond-the-practical"><span class="header-section-number">2.0.1</span> Applications Beyond the Practical</h3>
+<p>The Tasseled Cap Transformation (TCT) remains crucial in urban remote sensing because it efficiently compresses high-dimensional satellite data into directly interpretable physical parameters: Brightness, Greenness, and Wetness (Nedkov, 2017). For example, one of the application integrates high-resolution Sentinel-2 TCT components with machine learning algorithms to accurately map urban green infrastructure and monitor urban sprawl (Shi &amp; Xu, 2019). However, there are opposing voices regarding its rigidity. Critics argue that TCT’s fixed linear coefficients are strictly sensor-dependent and highly sensitive to local atmospheric variations (Baig et al., 2014). Consequently, some researchers advocate for dynamic, data-driven approaches—such as symbolic regression—over traditional TCT to improve global generalization across different ecosystems (Chrysostomou et al., 2024). Despite these limitations, the future of TCT in urban contexts is highly promising. Future applications aim to fuse TCT outputs with 3D radiative transfer models and active sensors to dynamically assess urban tree health and urban micro-climate resilience (Neophytides et al., 2024).</p>
+</section>
+</section>
+<section id="reflection" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> <strong>Reflection</strong></h1>
+<p>These datasets are actually quite familiar to me. During my previous studies, I extensively used both Sentinel-2 and Landsat data, but usually within Google Earth Engine. This practical was the first time I downloaded the raw data straight from the official websites and process them locally.</p>
+<p>There do exist lots of technial difficulties for me to do the practical. I struggled the most with the SNAP software. Although I am very comfortable with QGIS, SNAP feels quite different. At first, I couldn’t find the right tools and had a hard time just drawing polygon boxes. What is making it worse is my laptop constantly crashed when running SNAP, which severely slowed my progress. Furthermore, the size of our raw datasets are very big, resulting in painfully long processing times.</p>
+<p>Despite these frustrations, I firmly believe that mastering these foundational skills is never a waste of time. Learning to handle raw data locally is crucial for our future work. I am genuinely looking forward to diving deeper into remote sensing and its applications in the coming weeks!</p>
+<section id="references" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="references"><span class="header-section-number">3.1</span> References</h2>
+<p>Baig, M. H. A., Zhang, L., Shuai, T., &amp; Tong, Q. (2014). Derivation of a tasselled cap transformation based on Landsat 8 at-satellite reflectance. Remote Sensing Letters, 5(5), 423-431.</p>
+<p>Chrysostomou, C., Neophytides, S. P., Mavrovouniotis, M., &amp; Hadjimitsis, D. G. (2024). Optimized spectral indices for global vegetation and water mapping using Sentinel-2. Scientific Reports, 14, 3867.</p>
+<p>Nedkov, R. (2017). Orthogonal transformation of segmented images from the satellite Sentinel-2. Comptes rendus de l’Académie bulgare des Sciences, 70(5), 687-692.</p>
+<p>Neophytides, S. P., et al.&nbsp;(2024). Estimation of Urban Tree Chlorophyll Content and Leaf Area Index Using Sentinel-2 Images and 3D Radiative Transfer Model Inversion. Remote Sensing, 16(20), 3867.</p>
+<p>Shi, L., &amp; Xu, H. (2019). Derivation of Tasseled Cap Transformation Coefficients for Sentinel-2 MSI At-Sensor Reflectance Data. IEEE Geoscience and Remote Sensing Letters, 16(9), 1504-1508.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -768,8 +924,32 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../#">
+<p>Back to top</p>
+</a>
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ Entao21 © 2026 | All rights reserved
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 
 
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
