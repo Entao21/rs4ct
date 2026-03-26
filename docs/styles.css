@@ -134,32 +134,31 @@ body {
     max-width: 100%;
   }
 
-  /* Sidebar: "pill" backgrounds behind text (not a full-height dark bar) */
+  /* Sidebar: "pill" backgrounds behind the link text (not a full-height dark bar)
+     Note: Quarto uses <a class="sidebar-item-text sidebar-link"> ... */
   #quarto-sidebar.sidebar-navigation {
     background-color: transparent !important;
-    color: #f0eee9;
     border-right: 1px solid rgba(45, 45, 45, 0.35);
   }
-  #quarto-sidebar a.sidebar-link {
-    background: transparent !important;
-  }
-  #quarto-sidebar .sidebar-item-text {
+  #quarto-sidebar a.sidebar-item-text.sidebar-link {
     display: inline-block;
     color: #f0eee9 !important;
-    background-color: #1c1c1c;
+    background-color: #1c1c1c !important;
     padding: 0.25rem 0.6rem;
     border-radius: 0.6rem;
     border: 1px solid rgba(255, 255, 255, 0.08);
+    margin: 0.12rem 0.25rem;
   }
-  #quarto-sidebar a.sidebar-link:hover .sidebar-item-text,
-  #quarto-sidebar a.sidebar-link:focus .sidebar-item-text {
+  #quarto-sidebar a.sidebar-item-text.sidebar-link:hover,
+  #quarto-sidebar a.sidebar-item-text.sidebar-link:focus {
     color: #ffffff !important;
-    background-color: rgba(28, 28, 28, 0.82);
+    background-color: rgba(28, 28, 28, 0.82) !important;
     border-color: rgba(255, 255, 255, 0.16);
+    text-decoration: none;
   }
-  #quarto-sidebar a.sidebar-link.active .sidebar-item-text {
+  #quarto-sidebar a.sidebar-item-text.sidebar-link.active {
     color: #ffffff !important;
-    background-color: #2d4a3e;
+    background-color: #2d4a3e !important;
     border-color: rgba(45, 74, 62, 0.9);
     font-weight: 600;
   }
