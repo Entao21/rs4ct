@@ -1,7 +1,7 @@
 ---
-title: "Week #3: Corrections"
+title: "Week #6: Classification 1"
 author: "Entao"
-date: "2026-02-24"
+date: "2026-03-20"
 bibliography: ../references.bib
 editor: source
 format:

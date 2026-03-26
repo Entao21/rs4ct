@@ -1,16 +1,22 @@
 ---
-title: "week4"
-format: html
+title: "Week #4: Policy"
+author: "Entao"
+date: "2026-03-05"
+bibliography: ../references.bib
+editor: source
+format:
+  html:
+    cite-method: citeproc
 ---
 
-## Summary
+# **Summary**
 
-(TBC)
 
-## Practical
 
-(TBC)
+# **Applications**
 
-## Reflection
+## Applications Beyond the Practical
 
-(TBC)
+# **Reflection**
+
+

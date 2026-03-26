@@ -6,9 +6,10 @@ project:
     - "fonts"
     - "resources/pictures1"
     - "resources/pictures"
-  render: 
+  render:
     - "*.qmd"
-    - "!week2slides.Rmd"
+    - "weeks/*.qmd"
+    - "!weeks/week2slides.Rmd"
 
 website:
   title: "CASA0023 Learning Diary"
@@ -30,6 +31,16 @@ website:
             text: "Week 3: Corrections"
           - href: weeks/week4.qmd
             text: "Week 4: Policy"
+          - href: weeks/week5.qmd
+            text: "Week 5: Google Earth Engine"
+          - href: weeks/week6.qmd
+            text: "Week 6: Classification 1"
+          - href: weeks/week7.qmd
+            text: "Week 7: Classification 2"
+          - href: weeks/week8.qmd
+            text: "Week 8: Temperature"
+          - href: weeks/week9.qmd
+            text: "Week 9: References and Final Words"
     right:
       - icon: github
         href: https://github.com/Entao21/rs4ct
