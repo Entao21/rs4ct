@@ -21,7 +21,7 @@ Passive sensors do not emit their own energy. Instead, they detect naturally occ
 Active sensors carry their own 'flashlight', they actively sends out energy and detect the energy that is reflected back. A key example is Synthetic Aperture Radar (SAR), which operates at longer wavelengths capable of penetrating clouds—a massive advantage for monitoring regions with frequent overcast weather. However, a major disadvantage of this approach is that generating their own energy requires massive amounts of power, making these sensors much more expensive to operate than passive sensors.
 
 ::: {style="text-align: center;"}
-![Two Types of Sensors](../resources/pictures1/active-and-passive-rs.jpg){fig-align="center"}
+![Figure 1 Two Types of Sensors](../resources/pictures1/active-and-passive-rs.jpg){fig-align="center"}
 
 *Source: [GISStudy(2025)](https://gisrsstudy.com/types-of-sensor/)*
 :::
@@ -53,7 +53,7 @@ At first, I was following the practicals instructions to filter out the image wi
 The first group of output from this week's practial is the differenct color composite graph. True color composite is composed of Sentinel-2 Band 2 (Blue), Band 3 (Green) and Band 4 (Red). Second graph below is the false color composite composed of B8 (NIR), B4 (Red) and B3 (Green). This could show the level of health of the vegetation. The third graph below is the atmospheric penetration composite composed of B12(SWIR), B11(SWIR) and B8A(NIR). This could highlight the vegetation in blue and urban area as gray, cyan or purple.
 
 ::: {layout-ncol="3" layout-align="center"}
-![True Color Composite](../resources/pictures1/true_color.png){fig-align="center"}
+![Figure 2-4 True Color Composite](../resources/pictures1/true_color.png){fig-align="center"}
 
 ![False Color Composite](../resources/pictures1/infra_color.png){fig-align="center"}
 
@@ -80,9 +80,9 @@ $$
 Below scatterplots illustrate Istanbul’s spectral feature space before and after the Tasseled Cap transformation. The first plot maps the Red (Band 4) against the Near-Infrared (Band 8) band. Its triangular distribution reveals a rigid 'soil line' at the bottom connecting dry and wet soils, while the top-left peak highlights dense vegetation. The second plot displays the Tasseled Cap output, mapping Brightness against Greenness to reduce data dimensionality. This forms a distinct 'wizard's hat' shape, where the x-axis (Brightness) isolates highly reflective man-made urban surfaces and the y-axis (Greenness) captures vegetation. Together, these visualizations perfectly demonstrate how mathematical transformations simplify complex raw satellite bands into identifiable physical features like urban infrastructure and green spaces.
 
 ::: {layout-ncol="2" layout-align="center"}
-![Band 4 (Red) vs Band 8 (NIR)](../resources/pictures1/tass2.png){fig-align="center"}
+![Figure 5 Band 4 (Red) vs Band 8 (NIR)](../resources/pictures1/tass2.png){fig-align="center"}
 
-![Brightness vs Greenness Tasseled Cap](../resources/pictures1/tass1.png){fig-align="center"}
+![Figure 6 Brightness vs Greenness Tasseled Cap](../resources/pictures1/tass1.png){fig-align="center"}
 :::
 
 ### Applications Beyond the Practical
