@@ -2,7 +2,7 @@
    Keep this file so you can add slide styling later without touching font config. */
 
 .remark-slide-content {
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1.2;
 }
 
@@ -10,4 +10,21 @@
 .remark-slide-content li {
   margin-top: 0.35em;
   margin-bottom: 0.35em;
+}
+
+/* Title slide background + light text for dark image */
+.title-slide {
+  background-image: url("../resources/pictures2/back.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.title-slide,
+.title-slide h1,
+.title-slide h2,
+.title-slide h3,
+.title-slide p,
+.title-slide a {
+  color: #f0eee9 !important;
 }

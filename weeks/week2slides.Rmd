@@ -6,21 +6,19 @@ date: "2026-03-26"
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ["../styles/xaringan-fonts.css", "../styles/xaringan-theme.css", "../styles/xaringan-custom.css"]
+    css: ["../styles/xaringan-fonts.css", "../styles/xaringan-theme.css"]
     nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
 ---
+```{r xaringan-extra-panelset, echo=FALSE}
+xaringanExtra::use_panelset()
+```
 
-
-### 1. What is Sentinel-1?
+### What is Sentinel-1?
 
 Sentinel-1 is a pair of European Space Agency satellites in the Copernicus Programme carrying a C-band Synthetic Aperture Radar (SAR) sensor.
-
---
-
-**What makes it different from optical sensors?**
 
 --
 
@@ -34,17 +32,61 @@ Sentinel-1 is a pair of European Space Agency satellites in the Copernicus Progr
 
 3.  It works in all weather conditions, including thick cloud cover.
 
---
 
-**Why this matters:**  
+```{r s1-image, echo=FALSE, out.width='62%', fig.align='center'}
+knitr::include_graphics("../resources/pictures2/sen_1.png")
+```
 
---
-
-Sentinel-1 is designed to observe the Earth's surface when optical sensors are limited by darkness or cloud.
+<p style="text-align: center; font-size: 0.9em;">
+  Sentinel-1. Source: <a href="https://sentiwiki.copernicus.eu/web/s1-mission" target="_blank">(ESA, 2025)</a>
+</p>
 
 ---
 
-### 2. Why does Sentinel-1 matter?
+### Sentinel-1 Technical Parameters
+
+Sentinel-1 is technically powerful because it combines **all-weather radar imaging**, **regular revisit times**, and **open-access data**, but these same characteristics also make interpretation more demanding.
+
+.panelset[
+.panel[.panel-name[Sensor]
+
+- **Mission:** ESA Copernicus Sentinel-1 constellation  
+- **Sensor type:** C-band Synthetic Aperture Radar (SAR)  
+- **Wavelength:** around 5.6 cm 
+- **Sensing mode:** active microwave sensor
+
+
+]
+
+.panel[.panel-name[Resolution]
+
+- **Spatial resolution:** commonly around 5 × 20 m in IW mode  
+- **Swath width:** about 250 km  
+- **Temporal resolution:** roughly 6–12 days, depending on orbit and location  
+- **Radiometric sensitivity:** suitable for detecting differences in backscatter intensity  
+
+
+]
+
+.panel[.panel-name[Acquisition]
+
+- **Main land mode:** Interferometric Wide Swath (IW)  
+- **Polarisation:** commonly VV and VH  
+- **Data access:** free and open-access through the Copernicus Programme  
+
+
+]
+
+.panel[.panel-name[Limitation]
+
+- SAR images are not visually intuitive like optical imagery  
+- Data usually requires calibration, speckle filtering, and terrain correction  
+- Backscatter depends on surface roughness, geometry, and moisture, not colour  
+
+]
+]
+---
+### Sentinel -1 Pros and Cons
 
 **Core strengths:**
 --
@@ -77,41 +119,48 @@ Sentinel-1 is designed to observe the Earth's surface when optical sensors are l
 
 ---
 
-# 3. Application 1: Urban flood mapping
+### Application in Urban Study
 
-Sentinel-1 is widely used for **rapid flood detection** because smooth open water tends to return very little radar signal, making inundated areas stand out clearly.
+**Application 1 - Urban Flood Monitoring**  
+- Twele et al. (2016) built a fully automated near-real-time processing chain for Sentinel-1 SAR data that ingests new images, preprocesses them, and then classifies flooded areas using auxiliary information such as topography and reference water masks. 
 
-**Example from literature**  
-Twele et al. (2016) developed an automated Sentinel-1 processing chain for near real-time flood mapping.
+- The system was designed to produce flood maps without manual intervention.
 
-**Why Sentinel-1 is well suited**
-- Storm events often coincide with heavy cloud, when optical imagery is least reliable
-- Radar can still capture the flooded surface under these conditions
-- This makes Sentinel-1 highly valuable for emergency response and post-event mapping
+--
 
-**Critical point**  
-Flood mapping in cities is not always straightforward. Urban surfaces produce complex backscatter, and shadows, double-bounce effects, or rough surfaces can complicate interpretation. Sentinel-1 is therefore powerful, but not automatically simple.
+**But?**  
 
----
+--
 
-# 4. Application 2: Urban subsidence and InSAR
+Urban surfaces produce complex backscatter, shadows, and double-bounce effects, which can all complicate interpretation.  
 
-One of Sentinel-1’s most powerful uses is **Interferometric SAR (InSAR)**, which can detect **millimetre-scale ground deformation** over time.
-
-**Example from literature**  
-Shirzaei et al. (2021) used satellite-based observations to understand and project coastal land subsidence.
-
-**Why this matters in cities**
-- Subsidence threatens roads, buildings, drainage systems, and coastal defences
-- It is often linked to groundwater extraction, loading from infrastructure, and sediment compaction
-- Optical sensors cannot measure vertical deformation at this scale
-
-**Critical point**  
-This application shows that remote sensing is not just about “seeing” the city. With Sentinel-1, it becomes possible to measure hidden physical processes that are crucial for long-term urban resilience.
+--
+ 
+Sentinel-1 is therefore powerful, but not automatically simple.
 
 ---
 
-# 5. Reflection: What have I learnt?
+### Application in Urban Study
+
+**Application 2 - Land Subsidence Monitoring**  
+- Shirzaei et al. (2021) used Sentinel-1 InSAR time-series to monitor land subsidence in coastal urban regions.  
+
+- By comparing the phase of radar waves from repeated satellite passes, they measured millimetre-scale ground deformation over time.
+
+--
+
+**However?**  
+
+--
+
+- InSAR is not straightforward to interpret, because reliable results depend on stable surface coherence across multiple observations.
+
+--
+- Vegetation, water, and rapid surface change can all reduce coherence and introduce uncertainty into subsidence mapping.
+
+---
+
+### Reflection: What have I learnt?
 
 This week changed how I think about remote sensing.
 
@@ -126,35 +175,20 @@ For me, the most important shift was understanding that remote sensing is not on
 
 ---
 
-# 6. Future work and broader context
+### My future work and broader context
 
-In a broader context, Sentinel-1 is highly relevant to **urban resilience under climate change**.
-
-For example:
-- flood monitoring can support emergency planning
-- InSAR-based subsidence tracking can inform infrastructure maintenance
-- repeated SAR observations can contribute to long-term risk governance
+In a broader context, Sentinel-1 is highly relevant to urban resilience under climate change.
 
 In my future work, I would like to combine:
-- **Sentinel-1** for structural and moisture-related information
-- **Sentinel-2** for spectral and vegetation-related information
+- Sentinel-1 for structural and moisture-related information
+- Sentinel-2 for spectral and vegetation-related information
 
 This combination of active and passive sensing could provide a much fuller understanding of complex urban environments than either sensor alone.
 
 ---
 
-class: inverse, center, middle
-
-# Key takeaway
-
-Sentinel-1 is powerful not because it produces beautiful images,  
-but because it can observe the city when optical sensors fail  
-and reveal processes that optical data cannot measure.
-
----
-
 # References
 
-- European Space Agency (ESA). (n.d.). *Sentinel-1 Mission Overview*.
+- European Space Agency (ESA). (2025). *Sentinel-1 Mission Overview*. Available at: https://sentiwiki.copernicus.eu/web/s1-mission. 
 - Shirzaei, M., Freymueller, J., Törnqvist, T. E., Gallagher, D. L., Dura, T., & Piecuch, C. G. (2021). *Measuring, modelling and projecting coastal land subsidence*. Nature Reviews Earth & Environment, 2(1), 40–58.
 - Twele, A., Cao, W., Plank, S., & Martinis, S. (2016). *Sentinel-1-based flood mapping: a fully automated processing chain*. International Journal of Remote Sensing, 37(13), 2990–3004.

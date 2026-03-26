@@ -130,7 +130,7 @@
     "href": "weeks/week2.html",
     "title": "Week #2: Xaringan and Quarto",
     "section": "",
-    "text": "1 Summary\nPrensentation\n\n\n2 Reflection",
+    "text": "1 Presentation\nThis week we were taught how to use Xaringan and R to build presentation. Below presentation slides are build by me. I am really a newbie to this so I tried my best.\n\n\n\n\n2 Reflection\nFor me, this week where I stuck the most is the use of Xaringan. The most frustrating issue was still from technical errors. I am really having a hard time using the ‘Infinite Moon Reader’ to view the slides. I have to close and reopen the Rmd file multiple times to see the changes. I hope Xaringan author will fix this issue in the future.\nHowever, I do find quarto website is a super useful and easy way of building our own portofolio. I will definitely use it in the future to build my own website. It also inspired me to use other tools to build my own website not only quarto. I used to always feel like I cannot build my own website because I am not a technical person. But this week’s content really gave me the confidence and the feeling of creating something by myself is awesome.",
     "crumbs": [
       "About Me",
       "2 Portfolio"

@@ -6,6 +6,9 @@ project:
     - "fonts"
     - "resources/pictures1"
     - "resources/pictures"
+    - "resources/pictures2"
+    - "weeks/week2slides.html"
+    - "weeks/libs"
   render:
     - "*.qmd"
     - "weeks/*.qmd"
