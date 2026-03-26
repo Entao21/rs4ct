@@ -154,15 +154,21 @@ body {
   /* The menu region (from first item to last item) */
   #quarto-sidebar .sidebar-menu-container {
     background-color: #1c1c1c;
-    padding: 0.5rem 0.4rem;
-    border-radius: 0.25rem;
+    padding: 0;
+    border-radius: 0;
+    width: 100%;
+    margin: 0;
+  }
+  #quarto-sidebar .sidebar-menu-container > ul {
+    margin: 0;
+    padding: 0;
   }
   #quarto-sidebar a.sidebar-item-text.sidebar-link {
     display: block;
     color: #f0eee9 !important;
     background: transparent !important;
-    padding: 0.35rem 0.55rem;
-    border-radius: 0.25rem;
+    padding: 0.45rem 0.75rem;
+    border-radius: 0;
     text-decoration: none;
   }
   #quarto-sidebar a.sidebar-item-text.sidebar-link:hover,
