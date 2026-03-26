@@ -2,7 +2,7 @@
 title: "Sentinel-1: Piercing Through the Clouds"
 author: "Entao Wang"
 institute: "UCL Centre for Advanced Spatial Analysis"
-date: "2026-03-26"
+date: "2026-02-26"
 output:
   xaringan::moon_reader:
     lib_dir: libs
