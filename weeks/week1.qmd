@@ -7,6 +7,7 @@ format:
   html:
     cite-method: citeproc
 ---
+
 # **Summary**
 
 Starting this module, I was truly excited that we get a chance to build our own online portofolio. I always want to do this but I just do not have a chance or opportunity to formally learn the techniques needed to build websites. For me, a portofolio works a bit like the camera rolls on my phone—it records every progress and preserves the parts of the work that I want to show later. It is also a perfect way of recording what did I do during my university time and it will become super precious in the future.
@@ -18,7 +19,7 @@ Passive sensors do not emit their own energy. Instead, they detect naturally occ
 Active sensors carry their own 'flashlight', they actively sends out energy and detect the energy that is reflected back. A key example is Synthetic Aperture Radar (SAR), which operates at longer wavelengths capable of penetrating clouds—a massive advantage for monitoring regions with frequent overcast weather. However, a major disadvantage of this approach is that generating their own energy requires massive amounts of power, making these sensors much more expensive to operate than passive sensors.
 
 ::: {style="text-align: center;"}
-![Two Types of Sensors](../resources/pictures1/active-and-passive-rs.jpg){fig-align="center"}
+![Two Types of Sensors](/resources/pictures1/active-and-passive-rs.jpg){fig-align="center"}
 
 *Source: [GISStudy(2025)](https://gisrsstudy.com/types-of-sensor/)*
 :::
@@ -49,12 +50,12 @@ At first, I was following the practicals instructions to filter out the image wi
 
 The first group of output from this week's practial is the differenct color composite graph. True color composite is composed of Sentinel-2 Band 2 (Blue), Band 3 (Green) and Band 4 (Red). Second graph below is the false color composite composed of B8 (NIR), B4 (Red) and B3 (Green). This could show the level of health of the vegetation. The third graph below is the atmospheric penetration composite composed of B12(SWIR), B11(SWIR) and B8A(NIR). This could highlight the vegetation in blue and urban area as gray, cyan or purple.
 
-::: {layout-ncol=3 layout-align="center"}
-![True Color Composite](../resources/pictures1/true_color.png){fig-align="center"}
+::: {layout-ncol="3" layout-align="center"}
+![True Color Composite](/resources/pictures1/true_color.png){fig-align="center"}
 
-![False Color Composite](../resources/pictures1/infra_color.png){fig-align="center"}
+![False Color Composite](/resources/pictures1/infra_color.png){fig-align="center"}
 
-![Atmospheric Penetration Composite](../resources/pictures1/atm_color.png){fig-align="center"}
+![Atmospheric Penetration Composite](/resources/pictures1/atm_color.png){fig-align="center"}
 :::
 
 To me, this demonstrates the true power of remote sensing, and we can easily monitor specific land covers simply by isolating their unique spectral signatures across the most relevant bands.
@@ -62,21 +63,27 @@ To me, this demonstrates the true power of remote sensing, and we can easily mon
 Second output of this week's practical is the tasseled cap. The tasseled cap is a transformation that compresses bands into Brightness (overall reflectance), Greenness (vegetation), and Wetness (moisture). This could help us to understand the level of health of the vegetation, the moisture of the soil and urban area.
 
 The equation of tasseled cap is as follows:
-$$\begin{aligned}
-\text{Brightness} &= 0.3037 \times B2 + 0.2793 \times B3 + 0.4743 \times B4 + 0.5585 \times B8 + 0.5082 \times B11 + 0.1863 \times B12 \\
-\text{Greenness} &= -0.2848 \times B2 - 0.2435 \times B3 - 0.5436 \times B4 + 0.7243 \times B8 + 0.0840 \times B11 - 0.1800 \times B12 \\
-\text{Wetness} &= 0.1509 \times B2 + 0.1973 \times B3 + 0.3279 \times B4 + 0.3406 \times B8 - 0.7112 \times B11 - 0.4572 \times B12
-\end{aligned}$$
+
+$$
+\begin{aligned}
+\text{Brightness} &= 0.3037 \times B2 + 0.2793 \times B3 + 0.4743 \times B4 \\
+  &\quad + 0.5585 \times B8 + 0.5082 \times B11 + 0.1863 \times B12 \\[0.5em]
+\text{Greenness} &= -0.2848 \times B2 - 0.2435 \times B3 - 0.5436 \times B4 \\
+  &\quad + 0.7243 \times B8 + 0.0840 \times B11 - 0.1800 \times B12 \\[0.5em]
+\text{Wetness} &= 0.1509 \times B2 + 0.1973 \times B3 + 0.3279 \times B4 \\
+  &\quad + 0.3406 \times B8 - 0.7112 \times B11 - 0.4572 \times B12
+\end{aligned}
+$$
 
 Below scatterplots illustrate Istanbul’s spectral feature space before and after the Tasseled Cap transformation. The first plot maps the Red (Band 4) against the Near-Infrared (Band 8) band. Its triangular distribution reveals a rigid 'soil line' at the bottom connecting dry and wet soils, while the top-left peak highlights dense vegetation. The second plot displays the Tasseled Cap output, mapping Brightness against Greenness to reduce data dimensionality. This forms a distinct 'wizard's hat' shape, where the x-axis (Brightness) isolates highly reflective man-made urban surfaces and the y-axis (Greenness) captures vegetation. Together, these visualizations perfectly demonstrate how mathematical transformations simplify complex raw satellite bands into identifiable physical features like urban infrastructure and green spaces.
 
-::: {layout-ncol=2 layout-align="center"}
-![Band 4 (Red) vs Band 8 (NIR)](../resources/pictures1/tass2.png){fig-align="center"}
+::: {layout-ncol="2" layout-align="center"}
+![Band 4(Red) vs Band 8 (NIR）](/resources/pictures1/tass2.png){fig-align="center"}
 
-![Brightness vs Greenness (Tasseled Cap)](../resources/pictures1/tass1.png){fig-align="center"}
+![Brightness vs Greenness Tasseled Cap](/resources/pictures1/tass1.png){fig-align="center"}
 :::
 
-### Applications Beyond the Practical
+## Applications Beyond the Practical
 
 The Tasseled Cap Transformation (TCT) remains crucial in urban remote sensing because it efficiently compresses high-dimensional satellite data into directly interpretable physical parameters: Brightness, Greenness, and Wetness (Nedkov, 2017). For example, one of the application integrates high-resolution Sentinel-2 TCT components with machine learning algorithms to accurately map urban green infrastructure and monitor urban sprawl (Shi & Xu, 2019). However, there are opposing voices regarding its rigidity. Critics argue that TCT's fixed linear coefficients are strictly sensor-dependent and highly sensitive to local atmospheric variations (Baig et al., 2014). Consequently, some researchers advocate for dynamic, data-driven approaches—such as symbolic regression—over traditional TCT to improve global generalization across different ecosystems (Chrysostomou et al., 2024). Despite these limitations, the future of TCT in urban contexts is highly promising. Future applications aim to fuse TCT outputs with 3D radiative transfer models and active sensors to dynamically assess urban tree health and urban micro-climate resilience (Neophytides et al., 2024).
 
