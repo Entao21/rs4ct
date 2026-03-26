@@ -1,4 +1,3 @@
-
 /* Book=400, Light=300, Medium=500, Bold=700, Black=900 */
 
 @font-face {
@@ -62,162 +61,100 @@
   font-style: italic;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Circular Std", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-  
+  font-family: "Circular Std", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
 
-  h1, h2, h3 {
-    color: #242424;
-    font-weight: bold;
-  }
+h1, h2, h3 {
+  color: #242424;
+  font-weight: bold;
+}
 
- 
-  body.quarto-dark h1,
-  body.quarto-dark h2,
-  body.quarto-dark h3 {
-    color: #f0eee9;
-  }
-  
- 
-  body:not(.quarto-dark) .navbar .navbar-brand,
-  body:not(.quarto-dark) .navbar .nav-link {
-    color: #f0eee9 !important;
-  }
-  body:not(.quarto-dark) .navbar .nav-link:hover,
-  body:not(.quarto-dark) .navbar .nav-link:focus {
-    color: #fff !important;
-  }
+body.quarto-dark h1,
+body.quarto-dark h2,
+body.quarto-dark h3 {
+  color: #f0eee9;
+}
 
+body:not(.quarto-dark) .navbar .navbar-brand,
+body:not(.quarto-dark) .navbar .nav-link {
+  color: #f0eee9 !important;
+}
+body:not(.quarto-dark) .navbar .nav-link:hover,
+body:not(.quarto-dark) .navbar .nav-link:focus {
+  color: #fff !important;
+}
 
-  .nav-footer-right .footer-items {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 0.15rem;
-  }
+.nav-footer-right .footer-items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.15rem;
+}
 
+/* Center alt-text captions under images (Quarto uses <figcaption> inside <figure>) */
+main .quarto-figure,
+main figure.figure,
+main .quarto-layout-panel figure.figure,
+main .quarto-layout-panel .quarto-figure,
+main .quarto-layout-panel .quarto-layout-cell {
+  text-align: center;
+}
+main figure.figure figcaption,
+main .quarto-figure figcaption,
+main .figure-caption,
+main .quarto-layout-panel .figure-caption {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: block;
+}
 
-  .quarto-container {
-    /* background-color: #f8f9fa; */
-  }
+/* Allow wide display math to scroll instead of overflowing */
+main .MathJax_Display,
+main mjx-container[jax="CHTML"] {
+  overflow-x: auto;
+  max-width: 100%;
+}
 
-  /* Center alt-text captions under images (Quarto uses <figcaption> inside <figure>) */
-  main .quarto-figure,
-  main figure.figure,
-  main .quarto-layout-panel figure.figure,
-  main .quarto-layout-panel .quarto-figure,
-  main .quarto-layout-panel .quarto-layout-cell {
-    text-align: center;
-  }
-  main figure.figure figcaption,
-  main .quarto-figure figcaption,
-  main .figure-caption,
-  main .quarto-layout-panel .figure-caption {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    display: block;
-  }
-  /* Allow wide display math to scroll instead of overflowing */
-  main .MathJax_Display,
-  main mjx-container[jax="CHTML"] {
-    overflow-x: auto;
-    max-width: 100%;
-  }
-
-  /* Sidebar: white overall, but the menu block is black (continuous) */
-  #quarto-sidebar.sidebar-navigation {
-    background-color: #ffffff !important;
-    border-right: 1px solid rgba(45, 45, 45, 0.18);
-  }
-
-  /* Keep the search area on white */
-  #quarto-sidebar .sidebar-search {
-    background: transparent;
-  }
-  #quarto-sidebar .sidebar-search .aa-Autocomplete .aa-Form,
-  #quarto-sidebar .sidebar-search input {
-    background-color: #ffffff !important;
-    border-color: rgba(0, 0, 0, 0.18) !important;
-    color: #242424 !important;
-  }
-
-  /* The menu region (from first item to last item) */
-  #quarto-sidebar .sidebar-menu-container {
-    background-color: #1c1c1c;
-    padding: 0;
-    border-radius: 0;
-    width: 100%;
-    margin: 0;
-  }
-  /* Remove the inner wrapper padding so black block is flush */
-  #quarto-sidebar > .mt-2.flex-shrink-0.align-items-center {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  /* Keep search readable while menu is flush */
-  #quarto-sidebar .sidebar-search {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-  #quarto-sidebar .sidebar-menu-container > ul {
-    margin: 0;
-    padding: 0;
-  }
-  #quarto-sidebar a.sidebar-item-text.sidebar-link {
-    display: block;
-    color: #f0eee9 !important;
-    background: transparent !important;
-    padding: 0.45rem 0.75rem;
-    border-radius: 0;
-    text-decoration: none;
-  }
-  #quarto-sidebar a.sidebar-item-text.sidebar-link:hover,
-  #quarto-sidebar a.sidebar-item-text.sidebar-link:focus {
-    color: #ffffff !important;
-    background-color: rgba(255, 255, 255, 0.06) !important;
-  }
-  #quarto-sidebar a.sidebar-item-text.sidebar-link.active {
-    color: #ffffff !important;
-    background-color: #2d4a3e !important;
-    font-weight: 600;
-  }
-
-  /* Dark mode overrides: don't force the whole sidebar white */
-  body.quarto-dark #quarto-sidebar.sidebar-navigation {
-    background-color: #1c1c1c !important;
-    border-right: 1px solid rgba(255, 255, 255, 0.10);
-  }
-  body.quarto-dark #quarto-sidebar .sidebar-search .aa-Autocomplete .aa-Form,
-  body.quarto-dark #quarto-sidebar .sidebar-search input {
-    background-color: #2a2a2a !important;
-    border-color: rgba(255, 255, 255, 0.18) !important;
-    color: #f0eee9 !important;
-  }
-  /* In dark mode, menu container can match sidebar so it doesn't look like a white panel */
-  body.quarto-dark #quarto-sidebar .sidebar-menu-container {
-    background-color: #1c1c1c;
-  }
-  #quarto-sidebar .sidebar-search .aa-Autocomplete .aa-Form,
-  #quarto-sidebar .sidebar-search input {
-    background-color: #2a2a2a !important;
-    border-color: #444 !important;
-    color: #f0eee9 !important;
-  }
-  #quarto-sidebar .sidebar-search .aa-SubmitButton,
-  #quarto-sidebar .sidebar-search .aa-ClearButton {
-    color: #f0eee9;
-  }
-  /* Mobile sidebar toggle: keep visible on dark header */
-  .quarto-navbar .quarto-btn-toggle.btn {
-    color: #f0eee9;
-  }
+/* Dark docked sidebar (first version) */
+#quarto-sidebar.sidebar-navigation {
+  background-color: #1c1c1c !important;
+  color: #f0eee9;
+  border-right: 1px solid #2d2d2d;
+}
+#quarto-sidebar .sidebar-item-text,
+#quarto-sidebar a.sidebar-link {
+  color: #f0eee9 !important;
+}
+#quarto-sidebar .sidebar-item-text:hover,
+#quarto-sidebar a.sidebar-link:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+#quarto-sidebar a.sidebar-link.active {
+  color: #ffffff !important;
+  background-color: #2d4a3e;
+  font-weight: 600;
+}
+#quarto-sidebar .sidebar-search .aa-Autocomplete .aa-Form,
+#quarto-sidebar .sidebar-search input {
+  background-color: #2a2a2a !important;
+  border-color: #444 !important;
+  color: #f0eee9 !important;
+}
+#quarto-sidebar .sidebar-search .aa-SubmitButton,
+#quarto-sidebar .sidebar-search .aa-ClearButton {
+  color: #f0eee9;
+}
+/* Mobile sidebar toggle: keep visible on dark header */
+.quarto-navbar .quarto-btn-toggle.btn {
+  color: #f0eee9;
+}

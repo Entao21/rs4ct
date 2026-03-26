@@ -124,83 +124,31 @@ main mjx-container[jax="CHTML"] {
   max-width: 100%;
 }
 
-/* Sidebar: white overall, but the menu block is black (continuous) */
+/* Dark docked sidebar (first version) */
 #quarto-sidebar.sidebar-navigation {
-  background-color: #ffffff !important;
-  border-right: 1px solid rgba(45, 45, 45, 0.18);
-  padding-left: 0 !important; 
-  padding-right: 0 !important; 
+  background-color: #1c1c1c !important;
+  color: #f0eee9;
+  border-right: 1px solid #2d2d2d;
 }
-
-#quarto-sidebar .sidebar-search {
-  background: transparent;
-  padding-left: 1rem !important;
-  padding-right: 1rem !important;
-  margin-top: 1rem; 
-  margin-bottom: 0.5rem;
-}
-
-#quarto-sidebar .sidebar-search .aa-Autocomplete .aa-Form,
-#quarto-sidebar .sidebar-search input {
-  background-color: #ffffff !important;
-  border-color: rgba(0, 0, 0, 0.18) !important;
-  color: #242424 !important;
-}
-
-/* The menu region (from first item to last item) */
-#quarto-sidebar .sidebar-menu-container {
-  background-color: #1c1c1c;
-  padding: 1rem 0; 
-  border-radius: 0;
-  width: 100%;
-  margin: 0;
-}
-
-/* Remove the inner wrapper padding so black block is flush */
-#quarto-sidebar > .mt-2.flex-shrink-0.align-items-center {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-#quarto-sidebar .sidebar-menu-container > ul {
-  margin: 0;
-  padding: 0;
-}
-
-#quarto-sidebar a.sidebar-item-text.sidebar-link {
-  display: block;
+#quarto-sidebar .sidebar-item-text,
+#quarto-sidebar a.sidebar-link {
   color: #f0eee9 !important;
-  background: transparent !important;
-  padding: 0.45rem 1rem !important; 
-  text-decoration: none;
 }
-
-#quarto-sidebar a.sidebar-item-text.sidebar-link:hover,
-#quarto-sidebar a.sidebar-item-text.sidebar-link:focus {
+#quarto-sidebar .sidebar-item-text:hover,
+#quarto-sidebar a.sidebar-link:hover {
   color: #ffffff !important;
-  background-color: rgba(255, 255, 255, 0.06) !important;
+  background-color: rgba(255, 255, 255, 0.06);
 }
-
-#quarto-sidebar a.sidebar-item-text.sidebar-link.active {
+#quarto-sidebar a.sidebar-link.active {
   color: #ffffff !important;
-  background-color: #2d4a3e !important;
+  background-color: #2d4a3e;
   font-weight: 600;
 }
-
-/* Dark mode overrides: don't force the whole sidebar white */
-body.quarto-dark #quarto-sidebar.sidebar-navigation {
-  background-color: #1c1c1c !important;
-  border-right: 1px solid rgba(255, 255, 255, 0.10);
-}
-body.quarto-dark #quarto-sidebar .sidebar-search .aa-Autocomplete .aa-Form,
-body.quarto-dark #quarto-sidebar .sidebar-search input {
+#quarto-sidebar .sidebar-search .aa-Autocomplete .aa-Form,
+#quarto-sidebar .sidebar-search input {
   background-color: #2a2a2a !important;
-  border-color: rgba(255, 255, 255, 0.18) !important;
+  border-color: #444 !important;
   color: #f0eee9 !important;
-}
-/* In dark mode, menu container can match sidebar so it doesn't look like a white panel */
-body.quarto-dark #quarto-sidebar .sidebar-menu-container {
-  background-color: #1c1c1c;
 }
 #quarto-sidebar .sidebar-search .aa-SubmitButton,
 #quarto-sidebar .sidebar-search .aa-ClearButton {
