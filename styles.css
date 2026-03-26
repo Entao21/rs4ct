@@ -108,3 +108,28 @@ body {
   .quarto-container {
     /* background-color: #f8f9fa; */
   }
+
+  /* Center alt-text captions under images (Quarto uses <figcaption> inside <figure>) */
+  main .quarto-figure,
+  main figure.figure,
+  main .quarto-layout-panel figure.figure,
+  main .quarto-layout-panel .quarto-figure,
+  main .quarto-layout-panel .quarto-layout-cell {
+    text-align: center;
+  }
+  main figure.figure figcaption,
+  main .quarto-figure figcaption,
+  main .figure-caption,
+  main .quarto-layout-panel .figure-caption {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    display: block;
+  }
+  /* Allow wide display math to scroll instead of overflowing */
+  main .MathJax_Display,
+  main mjx-container[jax="CHTML"] {
+    overflow-x: auto;
+    max-width: 100%;
+  }

@@ -349,7 +349,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">2</span> <strong>Applications</strong></a>
   <ul class="collapse">
-  <li><a href="#applications-beyond-the-practical" id="toc-applications-beyond-the-practical" class="nav-link" data-scroll-target="#applications-beyond-the-practical"><span class="header-section-number">2.1</span> Applications Beyond the Practical</a></li>
+  <li><a href="#applications-beyond-the-practical" id="toc-applications-beyond-the-practical" class="nav-link" data-scroll-target="#applications-beyond-the-practical"><span class="header-section-number">2.0.1</span> Applications Beyond the Practical</a></li>
   </ul></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">3</span> <strong>Reflection</strong></a>
   <ul class="collapse">
@@ -431,7 +431,7 @@ window.Quarto = {
 <p>My study area of this practical is Istanbul, Turkey, which is a city with a lot of built surfaces and vegetation, and open water bodies. We downloaded data from Copernicus and EarthExplorer, and then used QGIS and SNAP to explore the data.</p>
 <p>At first, I was following the practicals instructions to filter out the image with 0% of cloud coverage, however, I found there are no image with 0% of cloud in 2025 for Istanbul. Therefore, I increased the cloud coverage to 10% and I selected December 17th, 2025 as acquisition date.</p>
 <p>The first group of output from this week’s practial is the differenct color composite graph. True color composite is composed of Sentinel-2 Band 2 (Blue), Band 3 (Green) and Band 4 (Red). Second graph below is the false color composite composed of B8 (NIR), B4 (Red) and B3 (Green). This could show the level of health of the vegetation. The third graph below is the atmospheric penetration composite composed of B12(SWIR), B11(SWIR) and B8A(NIR). This could highlight the vegetation in blue and urban area as gray, cyan or purple.</p>
-<div class="quarto-layout-panel" data-layout-ncol="3" data-layout-align="center">
+<div class="quarto-layout-panel" data-layout-align="center" data-layout-ncol="3">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
@@ -462,19 +462,24 @@ window.Quarto = {
 <p>To me, this demonstrates the true power of remote sensing, and we can easily monitor specific land covers simply by isolating their unique spectral signatures across the most relevant bands.</p>
 <p>Second output of this week’s practical is the tasseled cap. The tasseled cap is a transformation that compresses bands into Brightness (overall reflectance), Greenness (vegetation), and Wetness (moisture). This could help us to understand the level of health of the vegetation, the moisture of the soil and urban area.</p>
 <p>The equation of tasseled cap is as follows:</p>
-<p><span class="math display">\[\begin{aligned}
-\text{Brightness} &amp;= 0.3037 \times B2 + 0.2793 \times B3 + 0.4743 \times B4 + 0.5585 \times B8 + 0.5082 \times B11 + 0.1863 \times B12 \\
-\text{Greenness} &amp;= -0.2848 \times B2 - 0.2435 \times B3 - 0.5436 \times B4 + 0.7243 \times B8 + 0.0840 \times B11 - 0.1800 \times B12 \\
-\text{Wetness} &amp;= 0.1509 \times B2 + 0.1973 \times B3 + 0.3279 \times B4 + 0.3406 \times B8 - 0.7112 \times B11 - 0.4572 \times B12
-\end{aligned}\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{Brightness} &amp;= 0.3037 \times B2 + 0.2793 \times B3 + 0.4743 \times B4 \\
+  &amp;\quad + 0.5585 \times B8 + 0.5082 \times B11 + 0.1863 \times B12 \\[0.5em]
+\text{Greenness} &amp;= -0.2848 \times B2 - 0.2435 \times B3 - 0.5436 \times B4 \\
+  &amp;\quad + 0.7243 \times B8 + 0.0840 \times B11 - 0.1800 \times B12 \\[0.5em]
+\text{Wetness} &amp;= 0.1509 \times B2 + 0.1973 \times B3 + 0.3279 \times B4 \\
+  &amp;\quad + 0.3406 \times B8 - 0.7112 \times B11 - 0.4572 \times B12
+\end{aligned}
+\]</span></p>
 <p>Below scatterplots illustrate Istanbul’s spectral feature space before and after the Tasseled Cap transformation. The first plot maps the Red (Band 4) against the Near-Infrared (Band 8) band. Its triangular distribution reveals a rigid ‘soil line’ at the bottom connecting dry and wet soils, while the top-left peak highlights dense vegetation. The second plot displays the Tasseled Cap output, mapping Brightness against Greenness to reduce data dimensionality. This forms a distinct ‘wizard’s hat’ shape, where the x-axis (Brightness) isolates highly reflective man-made urban surfaces and the y-axis (Greenness) captures vegetation. Together, these visualizations perfectly demonstrate how mathematical transformations simplify complex raw satellite bands into identifiable physical features like urban infrastructure and green spaces.</p>
-<div class="quarto-layout-panel" data-layout-ncol="2" data-layout-align="center">
+<div class="quarto-layout-panel" data-layout-align="center" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../resources/pictures1/tass2.png" class="img-fluid figure-img"></p>
-<figcaption>Band 4(Red) vs Band 8 (NIR）</figcaption>
+<figcaption>Band 4 (Red) vs Band 8 (NIR)</figcaption>
 </figure>
 </div>
 </div>
@@ -488,8 +493,8 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<section id="applications-beyond-the-practical" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="applications-beyond-the-practical"><span class="header-section-number">2.1</span> Applications Beyond the Practical</h2>
+<section id="applications-beyond-the-practical" class="level3" data-number="2.0.1">
+<h3 data-number="2.0.1" class="anchored" data-anchor-id="applications-beyond-the-practical"><span class="header-section-number">2.0.1</span> Applications Beyond the Practical</h3>
 <p>The Tasseled Cap Transformation (TCT) remains crucial in urban remote sensing because it efficiently compresses high-dimensional satellite data into directly interpretable physical parameters: Brightness, Greenness, and Wetness (Nedkov, 2017). For example, one of the application integrates high-resolution Sentinel-2 TCT components with machine learning algorithms to accurately map urban green infrastructure and monitor urban sprawl (Shi &amp; Xu, 2019). However, there are opposing voices regarding its rigidity. Critics argue that TCT’s fixed linear coefficients are strictly sensor-dependent and highly sensitive to local atmospheric variations (Baig et al., 2014). Consequently, some researchers advocate for dynamic, data-driven approaches—such as symbolic regression—over traditional TCT to improve global generalization across different ecosystems (Chrysostomou et al., 2024). Despite these limitations, the future of TCT in urban contexts is highly promising. Future applications aim to fuse TCT outputs with 3D radiative transfer models and active sensors to dynamically assess urban tree health and urban micro-climate resilience (Neophytides et al., 2024).</p>
 </section>
 </section>
