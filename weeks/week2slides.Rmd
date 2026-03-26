@@ -1,65 +1,160 @@
 ---
-title: "Landsat"
-subtitle: "Sensor"
-author: "Entao"
-institute: "CASA, UCL"
-date: "2026/02/28"
+title: "Sentinel-1: Piercing Through the Clouds"
+author: "Entao Wang"
+institute: "UCL Centre for Advanced Spatial Analysis"
+date: "2026-03-26"
 output:
   xaringan::moon_reader:
     lib_dir: libs
+    css: ["../styles/xaringan-fonts.css", "../styles/xaringan-theme.css", "../styles/xaringan-custom.css"]
     nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
----
-# 第一页：标题页
-# 已经在 YAML 里定义了，这里会自动生成标题页
+
+### 1. What is Sentinel-1?
+
+Sentinel-1 is a pair of European Space Agency satellites in the Copernicus Programme carrying a C-band Synthetic Aperture Radar (SAR) sensor.
+
+--
+
+**What makes it different from optical sensors?**
+
+--
+
+1. It is an active sensor: it transmits its own microwave signal.
+
+--
+
+2. It can acquire data day and night.
+
+--
+
+3.  It works in all weather conditions, including thick cloud cover.
+
+--
+
+**Why this matters:**  
+
+--
+
+Sentinel-1 is designed to observe the Earth's surface when optical sensors are limited by darkness or cloud.
 
 ---
-# 第二页：Summary - 传感器简介
-* 传感器名称：Landsat 8/9
-* 运营商：NASA / USGS
-* 轨道高度：705 km
+
+### 2. Why does Sentinel-1 matter?
+
+**Core strengths:**
+--
+
+1. Reliable acquisition in cloudy regions and during extreme weather
+
+--
+
+2. Sensitive to surface roughness, moisture, and structure
+
+--
+
+3. Particularly valuable for hazards, flooding, deformation, and infrastructure risk
+
+--
+
+**But it is not easy data:**
+
+--
+
+1. SAR imagery is not intuitively readable like true-colour optical imagery and interpretation depends on radar physics.
+
+--
+
+2. Images often contain speckle noise
+
+--
+
+3. Pre-processing is essential: calibration, filtering, and terrain correction
 
 ---
-# 第三页：Summary - 技术规格
-.pull-left[
-* 空间分辨率：30m (多光谱)
-* 时间分辨率：16天
-]
-.pull-right[
-# 这里可以放传感器的结构图
-]
+
+# 3. Application 1: Urban flood mapping
+
+Sentinel-1 is widely used for **rapid flood detection** because smooth open water tends to return very little radar signal, making inundated areas stand out clearly.
+
+**Example from literature**  
+Twele et al. (2016) developed an automated Sentinel-1 processing chain for near real-time flood mapping.
+
+**Why Sentinel-1 is well suited**
+- Storm events often coincide with heavy cloud, when optical imagery is least reliable
+- Radar can still capture the flooded surface under these conditions
+- This makes Sentinel-1 highly valuable for emergency response and post-event mapping
+
+**Critical point**  
+Flood mapping in cities is not always straightforward. Urban surfaces produce complex backscatter, and shadows, double-bounce effects, or rough surfaces can complicate interpretation. Sentinel-1 is therefore powerful, but not automatically simple.
 
 ---
-# 第四页：Summary - 波段信息
-$$NDVI = \frac{NIR - Red}{NIR + Red}$$
-* Landsat 的波段 4 (Red) 和波段 5 (NIR) 常用于植被监测。
+
+# 4. Application 2: Urban subsidence and InSAR
+
+One of Sentinel-1’s most powerful uses is **Interferometric SAR (InSAR)**, which can detect **millimetre-scale ground deformation** over time.
+
+**Example from literature**  
+Shirzaei et al. (2021) used satellite-based observations to understand and project coastal land subsidence.
+
+**Why this matters in cities**
+- Subsidence threatens roads, buildings, drainage systems, and coastal defences
+- It is often linked to groundwater extraction, loading from infrastructure, and sediment compaction
+- Optical sensors cannot measure vertical deformation at this scale
+
+**Critical point**  
+This application shows that remote sensing is not just about “seeing” the city. With Sentinel-1, it becomes possible to measure hidden physical processes that are crucial for long-term urban resilience.
 
 ---
-# 第五页：Application - 城市热岛研究
-* 研究案例：伦敦城市热岛分析
-* 数据使用：使用 TIRS 热红外波段反演地表温度。
+
+# 5. Reflection: What have I learnt?
+
+This week changed how I think about remote sensing.
+
+Before this, I associated Earth observation mainly with satellite images that resemble photographs. Sentinel-1 showed me that remote sensing is equally about measuring the **physical properties** of the Earth's surface.
+
+I learnt three key lessons:
+- sensor choice is always a compromise
+- radar data is more difficult to interpret than optical data
+- difficulty does not reduce value; it often reflects greater analytical depth
+
+For me, the most important shift was understanding that remote sensing is not only visual. It is a way of observing moisture, structure, and movement as well as colour and reflectance.
 
 ---
-# 第六页：Application - 土地利用变化
-* 研究案例：亚马逊雨林砍伐监测
-* 优势：长达 50 年的历史数据一致性。
+
+# 6. Future work and broader context
+
+In a broader context, Sentinel-1 is highly relevant to **urban resilience under climate change**.
+
+For example:
+- flood monitoring can support emergency planning
+- InSAR-based subsidence tracking can inform infrastructure maintenance
+- repeated SAR observations can contribute to long-term risk governance
+
+In my future work, I would like to combine:
+- **Sentinel-1** for structural and moisture-related information
+- **Sentinel-2** for spectral and vegetation-related information
+
+This combination of active and passive sensing could provide a much fuller understanding of complex urban environments than either sensor alone.
 
 ---
-# 第七页：Reflection - 个人见解
-* 学习收获：理解了波段合成对特征提取的重要性。
-* 局限性：30m 分辨率在微观城市研究中可能不够精细。
+
+class: inverse, center, middle
+
+# Key takeaway
+
+Sentinel-1 is powerful not because it produces beautiful images,  
+but because it can observe the city when optical sensors fail  
+and reveal processes that optical data cannot measure.
 
 ---
-# 第八页：Reflection - 未来展望
-* 结合 Sentinel-2 的数据融合技术是未来的大趋势。
 
----
-# 第九页：参考文献
-* 引用你使用的文献或网站。
+# References
+
+- European Space Agency (ESA). (n.d.). *Sentinel-1 Mission Overview*.
+- Shirzaei, M., Freymueller, J., Törnqvist, T. E., Gallagher, D. L., Dura, T., & Piecuch, C. G. (2021). *Measuring, modelling and projecting coastal land subsidence*. Nature Reviews Earth & Environment, 2(1), 40–58.
+- Twele, A., Cao, W., Plank, S., & Martinis, S. (2016). *Sentinel-1-based flood mapping: a fully automated processing chain*. International Journal of Remote Sensing, 37(13), 2990–3004.

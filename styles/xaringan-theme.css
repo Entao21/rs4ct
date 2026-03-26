@@ -1,0 +1,13 @@
+/* Minimal xaringan theme hook.
+   Keep this file so you can add slide styling later without touching font config. */
+
+.remark-slide-content {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.remark-slide-content p,
+.remark-slide-content li {
+  margin-top: 0.35em;
+  margin-bottom: 0.35em;
+}
