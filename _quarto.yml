@@ -16,12 +16,38 @@ website:
   description: "A series of reflections on Remote Sensing for Cities and Environments Module"
   site-url: https://entao21.github.io/rs4ct/
   repo-url: https://github.com/entao21/rs4ct
+  # Left sidebar + top navbar dropdown (same week links in both places)
+  sidebar:
+    style: docked
+    search: true
+    collapse-level: 1
+    contents:
+      - text: "About Me"
+        href: index.qmd
+      - text: "1 Getting Started"
+        href: weeks/week1.qmd
+      - text: "2 Portfolio"
+        href: weeks/week2.qmd
+      - text: "3 Corrections"
+        href: weeks/week3.qmd
+      - text: "4 Policy"
+        href: weeks/week4.qmd
+      - text: "5 Google Earth Engine"
+        href: weeks/week5.qmd
+      - text: "6 Classification I"
+        href: weeks/week6.qmd
+      - text: "7 Classification II"
+        href: weeks/week7.qmd
+      - text: "8 Temperature"
+        href: weeks/week8.qmd
+      - text: "9 References & Final Words"
+        href: weeks/week9.qmd
   navbar:
     background: "#1c1c1c" 
     left:
       - href: index.qmd
         text: "About Me"
-      - text: "Weekly Entries" 
+      - text: "Weekly Entries"
         menu:
           - href: weeks/week1.qmd
             text: "Week 1: Getting Started"

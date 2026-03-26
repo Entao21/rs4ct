@@ -133,3 +133,38 @@ body {
     overflow-x: auto;
     max-width: 100%;
   }
+
+  /* Dark docked sidebar (match top navbar #1c1c1c) */
+  #quarto-sidebar.sidebar-navigation {
+    background-color: #1c1c1c !important;
+    color: #f0eee9;
+    border-right: 1px solid #2d2d2d;
+  }
+  #quarto-sidebar .sidebar-item-text,
+  #quarto-sidebar a.sidebar-link {
+    color: #f0eee9 !important;
+  }
+  #quarto-sidebar .sidebar-item-text:hover,
+  #quarto-sidebar a.sidebar-link:hover {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.06);
+  }
+  #quarto-sidebar a.sidebar-link.active {
+    color: #ffffff !important;
+    background-color: #2d4a3e;
+    font-weight: 600;
+  }
+  #quarto-sidebar .sidebar-search .aa-Autocomplete .aa-Form,
+  #quarto-sidebar .sidebar-search input {
+    background-color: #2a2a2a !important;
+    border-color: #444 !important;
+    color: #f0eee9 !important;
+  }
+  #quarto-sidebar .sidebar-search .aa-SubmitButton,
+  #quarto-sidebar .sidebar-search .aa-ClearButton {
+    color: #f0eee9;
+  }
+  /* Mobile sidebar toggle: keep visible on dark header */
+  .quarto-navbar .quarto-btn-toggle.btn {
+    color: #f0eee9;
+  }
