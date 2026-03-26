@@ -3,6 +3,7 @@ project:
   output-dir: docs
   # Copied into docs/ on every render (survives clean output-dir; edit fonts only in /fonts)
   resources:
+    - "styles"
     - "fonts"
     - "resources/pictures1"
     - "resources/pictures"
