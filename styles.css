@@ -134,32 +134,45 @@ body {
     max-width: 100%;
   }
 
-  /* Sidebar: "pill" backgrounds behind the link text (not a full-height dark bar)
-     Note: Quarto uses <a class="sidebar-item-text sidebar-link"> ... */
+  /* Sidebar: white overall, but the menu block is black (continuous) */
   #quarto-sidebar.sidebar-navigation {
-    background-color: transparent !important;
-    border-right: 1px solid rgba(45, 45, 45, 0.35);
+    background-color: #ffffff !important;
+    border-right: 1px solid rgba(45, 45, 45, 0.18);
+  }
+
+  /* Keep the search area on white */
+  #quarto-sidebar .sidebar-search {
+    background: transparent;
+  }
+  #quarto-sidebar .sidebar-search .aa-Autocomplete .aa-Form,
+  #quarto-sidebar .sidebar-search input {
+    background-color: #ffffff !important;
+    border-color: rgba(0, 0, 0, 0.18) !important;
+    color: #242424 !important;
+  }
+
+  /* The menu region (from first item to last item) */
+  #quarto-sidebar .sidebar-menu-container {
+    background-color: #1c1c1c;
+    padding: 0.5rem 0.4rem;
+    border-radius: 0.25rem;
   }
   #quarto-sidebar a.sidebar-item-text.sidebar-link {
-    display: inline-block;
+    display: block;
     color: #f0eee9 !important;
-    background-color: #1c1c1c !important;
-    padding: 0.25rem 0.6rem;
-    border-radius: 0.6rem;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    margin: 0.12rem 0.25rem;
+    background: transparent !important;
+    padding: 0.35rem 0.55rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
   }
   #quarto-sidebar a.sidebar-item-text.sidebar-link:hover,
   #quarto-sidebar a.sidebar-item-text.sidebar-link:focus {
     color: #ffffff !important;
-    background-color: rgba(28, 28, 28, 0.82) !important;
-    border-color: rgba(255, 255, 255, 0.16);
-    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.06) !important;
   }
   #quarto-sidebar a.sidebar-item-text.sidebar-link.active {
     color: #ffffff !important;
     background-color: #2d4a3e !important;
-    border-color: rgba(45, 74, 62, 0.9);
     font-weight: 600;
   }
   #quarto-sidebar .sidebar-search .aa-Autocomplete .aa-Form,
