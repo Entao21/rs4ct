@@ -258,7 +258,7 @@
     "href": "weeks/week4.html#references",
     "title": "Week #4: Policy",
     "section": "3.1 References",
-    "text": "3.1 References\nCatalao, J., Nico, G., Hanssen, R. and Sousa, J.J. (2020) ‘InSAR maps of land subsidence and sea level scenarios to quantify the flood inundation risk in coastal cities: The case of Singapore’, Remote Sensing, 12(2), 296.\nHirschfeld, D., Nicholls, R.J., Brown, S., Hinkel, J. and Hanson, S. (2023) ‘Global survey shows planners use widely varying sea-level rise projections for coastal adaptation’, Communications Earth & Environment, 4, article 56.\nIslam, T., Rahman, R.M., Khatun, R. and Hossain, M.S. (2025) ‘A systematic review of urban flood susceptibility mapping: Remote sensing, machine learning, and other modeling approaches’, Remote Sensing, 17(3), 524.\nNational Climate Change Secretariat (NCCS) (2026) Drainage and flood prevention. Singapore: NCCS.\nPUB (2026a) Stormwater management. Singapore: PUB, Singapore’s National Water Agency.\nUrban Redevelopment Authority (URA) (2025) A Flood Resilient City & Coast. Singapore: URA.",
+    "text": "3.1 References\nCatalao, J., Nico, G., Hanssen, R. and Sousa, J.J. (2020) ‘InSAR maps of land subsidence and sea level scenarios to quantify the flood inundation risk in coastal cities: The case of Singapore’, Remote Sensing, 12(2), 296.\nNational Climate Change Secretariat (NCCS) (2026) Drainage and flood prevention. Singapore: NCCS.\nPUB (2026a) Stormwater management. Singapore: PUB, Singapore’s National Water Agency.\nUrban Redevelopment Authority (URA) (2025) A Flood Resilient City & Coast. Singapore: URA.\nYin, J., Yu, D., Yin, Z., Wang, J. and Xu, S. (2016) ‘Modelling the impact of land subsidence on urban pluvial flooding: A case study of Shanghai, China’, Science of the Total Environment, 544, pp. 744–753.",
     "crumbs": [
       "About Me",
       "4 Policy"
@@ -504,6 +504,39 @@
     "crumbs": [
       "About Me",
       "8 Temperature"
+    ]
+  },
+  {
+    "objectID": "weeks/week4.html#supporting-mitigation-of-inland-flooding",
+    "href": "weeks/week4.html#supporting-mitigation-of-inland-flooding",
+    "title": "Week #4: Policy",
+    "section": "2.1 Supporting Mitigation of Inland Flooding",
+    "text": "2.1 Supporting Mitigation of Inland Flooding\nFor inland flooding, InSAR can help detect subtle land subsidence that may increase local flood risk in dense urban areas. This is important because even small vertical changes in ground level can alter drainage pathways and increase water accumulation during heavy rainfall. Yin et al. (2016) modelled an inland area in Shanghai and built a hydraulic model to simulate topographic change caused by subsidence. They also emphasised that this approach could be useful for other megacities with highly heterogeneous urban surfaces.",
+    "crumbs": [
+      "About Me",
+      "4 Policy"
+    ]
+  },
+  {
+    "objectID": "weeks/week4.html#supporting-mitigation-of-tidal-flooding",
+    "href": "weeks/week4.html#supporting-mitigation-of-tidal-flooding",
+    "title": "Week #4: Policy",
+    "section": "2.2 Supporting Mitigation of Tidal Flooding",
+    "text": "2.2 Supporting Mitigation of Tidal Flooding\nFor coastal resilience, EO is especially valuable because it allows planners to monitor changing exposure over time rather than relying only on static protection standards. Satellite radar and elevation-based analysis can be used to detect land subsidence, map low-lying terrain and model future inundation under sea-level-rise scenarios. In Singapore, Catalao et al. (2020) made use of InSAR dataset and proved that estuary land subsidence can significantly increase an area’s flood vulnerability, especially in reclaimed or low-flat coastal zones. This means EO can help identify where coastal protection should be prioritised, where design levels may need revision and where adaptation should be integrated with long-term development plans rather than treated as a separate engineering exercise (URA, 2025; Catalao et al., 2020).\n\n\n\n\nFig. 4 Land Subsidence Result from Catalao et al. (2020)’s Study\n\n\n\nHowever, EO and InSAR are not complete flood-planning solutions. They are useful for identifying changing physical exposure, such as land subsidence and low-lying terrain, but they do not directly capture drainage capacity, infrastructure condition or social vulnerability. Their value therefore lies in supporting wider hydrological and planning analysis, rather than replacing it.",
+    "crumbs": [
+      "About Me",
+      "4 Policy"
+    ]
+  },
+  {
+    "objectID": "weeks/week4.html#urban-planning",
+    "href": "weeks/week4.html#urban-planning",
+    "title": "Week #4: Policy",
+    "section": "2.3 Urban Planning",
+    "text": "2.3 Urban Planning\nEO also has value beyond hazard detection. When combined with zoning, infrastructure and population data, it can support more targeted planning decisions about which districts, transport assets or future growth areas face the greatest compound risk. As Figure 4 shown below, a recent research shows that remote sensing, GIS and data-driven modelling are increasingly being used by researchers to map urban flood susceptibility, especially where risks are dynamic and spatially uneven (Islam et al., 2025). In this sense, EO can help Singapore move from broad resilience ambitions to a more evidence-based and adaptive planning framework. This is consistent with wider coastal adaptation practice, where planners increasingly rely on sea-level projections and spatial risk tools to guide long-term decisions (Hirschfeld et al., 2023).\n\n\n\n\nFig. 4 Islam et al. (2025)’s Literature Review Result\n\n\n\nHowever, EO and InSAR are not complete flood-planning solutions. They are useful for identifying changing physical exposure, such as land subsidence and low-lying terrain, but they do not directly capture drainage capacity, infrastructure condition or social vulnerability. Their value therefore lies in supporting wider hydrological and planning analysis, rather than replacing it.",
+    "crumbs": [
+      "About Me",
+      "4 Policy"
     ]
   }
 ]
