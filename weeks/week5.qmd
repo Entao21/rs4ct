@@ -15,11 +15,12 @@ We were introduced to Google Earth Engine (GEE) this week. Although I had used G
 
 Google Earth Engine (GEE) is an online platform operated by Google. It is a cloud-based platform with a large number of built-in geospatial and remote sensing datasets. This greatly facilitates remote sensing analysis, as users do not need to download large volumes of data to their local machines before processing them. Instead, data can be accessed, filtered and analysed directly within the platform.
 
-::: {style="text-align: center;"}
-![Figure 1. Googel Earth Engine Code Editor](../resources/pictures5/gee.png){fig-align="center"}
+::: {#fig-gee fig-align="center"}
+![](../resources/pictures5/gee.png)
 
-*Source: [GEE(2025)](https://developers.google.com/earth-engine/guides/playground)*
+Google Earth Engine Code Editor. *Source: [GEE(2025)](https://developers.google.com/earth-engine/guides/playground)*
 :::
+
 ## Pros and Cons of GEE
 
 Based on both my current and previous experience, I summarise the main advantages and disadvantages of using GEE as follows.
@@ -66,11 +67,29 @@ Zhang et al. (2018) used GEE to quantify short-term urban land cover change from
 ## Flood detection
 Johary et al. (2023) used GEE with Sentinel-1 SAR imagery to detect large-scale flood extent. The platform enabled rapid processing of radar data, which is especially useful during flood events because SAR can observe the surface even under cloud cover. Here, GEE supported an operational flood-mapping workflow, demonstrating how cloud computing can improve the speed and scalability of disaster-response analysis.
 
+::: {#fig-sdg fig-align="center"}
+![](../resources/pictures5/re_flo.png)
+
+Flood Detection Result from Johary et al. (2023)'s Study.
+:::
+
 ## Forest change monitoring
 Brovelli et al. (2020) used GEE to map and monitor forest change in the Amazon between 2000 and 2019. Their workflow involved supervised classification on cloud infrastructure, allowing repeated land cover mapping across multiple years. In this application, GEE was not only a data-access tool but also a computational environment for long-term forest monitoring, which is difficult to manage efficiently with purely local processing.
 
+::: {#fig-sdg fig-align="center"}
+![](../resources/pictures5/re_for.png)
+
+Forest Change Monitoring Result from Brovelli et al. (2020)'s Study.
+:::
+
 ## Cropland mapping
 Xing et al. (2022) developed a semi-automatic framework in GEE to map irrigated, rainfed and paddy croplands using time-series remote sensing data. GEE helped manage large image collections and supported classification across different agricultural types. This study shows that GEE is highly useful for agricultural monitoring, especially where crop conditions vary over time and where automated workflows are needed for consistent regional analysis.
+
+::: {#fig-sdg fig-align="center"}
+![](../resources/pictures5/re_cr.jpg)
+
+Cropland Mapping Result from Xing et al. (2022)'s Study.
+:::
 
 ## Land cover classification
 Phan et al. (2020) used GEE and a Random Forest classifier to test different Landsat 8 compositing strategies for land cover classification. The study used GEE to compare multiple image combinations efficiently and evaluate classification outcomes. This demonstrates how GEE can support methodological experimentation as well as final mapping, making it useful not only for producing results but also for testing which remote sensing workflow performs best.

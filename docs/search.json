@@ -313,7 +313,7 @@
     "href": "weeks/week5.html#flood-detection",
     "title": "Week #5: Google Earth Engine",
     "section": "2.2 Flood detection",
-    "text": "2.2 Flood detection\nJohary et al. (2023) used GEE with Sentinel-1 SAR imagery to detect large-scale flood extent. The platform enabled rapid processing of radar data, which is especially useful during flood events because SAR can observe the surface even under cloud cover. Here, GEE supported an operational flood-mapping workflow, demonstrating how cloud computing can improve the speed and scalability of disaster-response analysis.",
+    "text": "2.2 Flood detection\nJohary et al. (2023) used GEE with Sentinel-1 SAR imagery to detect large-scale flood extent. The platform enabled rapid processing of radar data, which is especially useful during flood events because SAR can observe the surface even under cloud cover. Here, GEE supported an operational flood-mapping workflow, demonstrating how cloud computing can improve the speed and scalability of disaster-response analysis.\n\n\n\n\n\n\nFigure 2: Flood Detection Result from Johary et al. (2023)’s Study.",
     "crumbs": [
       "About Me",
       "5 Google Earth Engine"
@@ -324,7 +324,7 @@
     "href": "weeks/week5.html#forest-change-monitoring",
     "title": "Week #5: Google Earth Engine",
     "section": "2.3 Forest change monitoring",
-    "text": "2.3 Forest change monitoring\nBrovelli et al. (2020) used GEE to map and monitor forest change in the Amazon between 2000 and 2019. Their workflow involved supervised classification on cloud infrastructure, allowing repeated land cover mapping across multiple years. In this application, GEE was not only a data-access tool but also a computational environment for long-term forest monitoring, which is difficult to manage efficiently with purely local processing.",
+    "text": "2.3 Forest change monitoring\nBrovelli et al. (2020) used GEE to map and monitor forest change in the Amazon between 2000 and 2019. Their workflow involved supervised classification on cloud infrastructure, allowing repeated land cover mapping across multiple years. In this application, GEE was not only a data-access tool but also a computational environment for long-term forest monitoring, which is difficult to manage efficiently with purely local processing.\n\n\n\n\n\n\nFigure 3: Forest Change Monitoring Result from Brovelli et al. (2020)’s Study.",
     "crumbs": [
       "About Me",
       "5 Google Earth Engine"
@@ -335,7 +335,7 @@
     "href": "weeks/week5.html#cropland-mapping",
     "title": "Week #5: Google Earth Engine",
     "section": "2.4 Cropland mapping",
-    "text": "2.4 Cropland mapping\nXing et al. (2022) developed a semi-automatic framework in GEE to map irrigated, rainfed and paddy croplands using time-series remote sensing data. GEE helped manage large image collections and supported classification across different agricultural types. This study shows that GEE is highly useful for agricultural monitoring, especially where crop conditions vary over time and where automated workflows are needed for consistent regional analysis.",
+    "text": "2.4 Cropland mapping\nXing et al. (2022) developed a semi-automatic framework in GEE to map irrigated, rainfed and paddy croplands using time-series remote sensing data. GEE helped manage large image collections and supported classification across different agricultural types. This study shows that GEE is highly useful for agricultural monitoring, especially where crop conditions vary over time and where automated workflows are needed for consistent regional analysis.\n\n\n\n\n\n\nFigure 4: Cropland Mapping Result from Xing et al. (2022)’s Study.",
     "crumbs": [
       "About Me",
       "5 Google Earth Engine"
