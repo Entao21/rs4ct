@@ -26,11 +26,11 @@ In this week, we were introduced to four major types of correction in remote sen
 
 It is definitely useful to know these correction methods. However, in real-world analysis, we do need to consider if we actually need to apply all of these corrections. For example, Song et al. (2001) showed that atmospheric correction is not always necessary for single-date maximum-likelihood classification, and that more complicated correction methods do not necessarily improve classification or change detection performance. Correcting data too much could also introduce new errors and uncertainties. 
 
-We should be especailly careful if we are doing multi-temporal research. Hantson and Chuvieco (2011) noted that multi-temporal studies require prior geometric and radiometric homogenisation; otherwise, apparent “changes” may simply reflect misregistration or inconsistent calibration rather than real land-surface change.
+We should be especially careful if we are doing multi-temporal research. Hantson and Chuvieco (2011) noted that multi-temporal studies require prior geometric and radiometric homogenisation; otherwise, apparent “changes” may simply reflect misregistration or inconsistent calibration rather than real land-surface change.
 
 # **Applications**
 
-The practical output I want to record in this week's dairy is NDVI, Texture and PCA analysis. I chose Kuala Lumpur, Malaysia as my study area, because I am always looking for cities with a diverse land covers.
+The practical output I want to record in this week's diary is NDVI, Texture and PCA analysis. I chose Kuala Lumpur, Malaysia as my study area, because I am always looking for cities with diverse land covers.
 
 ## NDVI
 
@@ -44,7 +44,7 @@ We can easily see that the vegetation is concentrated in the outer part of the c
 
 
 ![Figure 2 Binary Vegetation Mask](../resources/pictures3/klp_0.2.png){fig-align="center"}
-Using a threshold of NDVI ≥ 0.2, I created a binary vegetation mask. Here, 0 means NDVI > 0.2 and 1 means NDVI < 0.2. The result clearly separates areas with stronger vegetation signals from more urbanised and impervious surfaces. 
+Using a threshold of NDVI ≥ 0.2, I created a binary vegetation mask. Here, 0 means NDVI < 0.2 and 1 means NDVI > 0.2. The result clearly separates areas with stronger vegetation signals from more urbanised and impervious surfaces. 
 
 ## Texture
 
@@ -73,7 +73,7 @@ However, traditional data enhancements have notable limitations. Critics argue t
 
 This week was a major reality check. My previous experience with cloud platforms like Google Earth Engine (GEE) slightly spoiled me—GEE often provides Level-2 surface reflectance products where all the atmospheric and geometric corrections are already perfectly applied behind the scenes. Having to manually code a DOS correction in R made me appreciate the immense mathematical complexity required just to get satellite data to a "usable" state.
 
-My RStudio kept crashing when I was running the code and I kept using AI to help me with debugging. I understand the importance of computational power in nowdays' data analysis. 
+My RStudio kept crashing when I was running the code and I kept using AI to help me with debugging. I understand the importance of computational power in nowadays' data analysis. 
 
 I think in the future I will always bear in mind that when facing satellite data, I will always question myself first if the data needs to be corrected. 
 

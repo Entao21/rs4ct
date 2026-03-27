@@ -19,7 +19,7 @@ Another major focus was change detection. The lecture said that simple image dif
 
 What I found most important is that there seems to be no single established best approach. The lecture repeatedly suggested that SAR analysis must work backwards from the research question, which makes the method powerful but also demanding. In other words, SAR is highly useful, but only when its physical properties and limitations are properly understood.
 
-## SAR and Other Data Comparasion
+## SAR and Other Data Comparison
 
 I made this table to compare the main characteristics of SAR and other data types.
 
@@ -37,7 +37,7 @@ One particularly useful application of SAR is multisensor fusion with optical im
 
 For my own interests in urban and environmental research, this is especially relevant because many real-world landscapes are not well captured by one sensor type alone. However, fusion does not automatically improve results. The lecture itself stressed that there is no universally best method, and Lu et al. (2011) also showed that some fusion strategies performed better than others. This means that SAR–optical integration should be chosen carefully according to the research aim, rather than treated as a guaranteed improvement.
 
-Beyond the practical, SAR could be highly valuable in urban and environmental monitoring where cloud cover, surface roughness, or change through time are central to the research question. Soudani et al. (2021), for example, used Sentinel-1 SAR time series to detect forest phenology and showed that SAR can overcome the limitations caused by cloud cover in optical monitoring. This demonstrates that SAR is especially useful for tracking dynamic surface processes when consistent optical observations are difficult to obtain.
+Beyond the practical, SAR could be highly valuable in urban and environmental monitoring where cloud cover, surface roughness, or change through time are central to the research question. Soudani et al. (2021), for example, used Sentinel-1 SAR time series to detect forest phenology and showed that SAR can overcome the limitations caused by cloud cover in optical monitoring. This shows that SAR is especially useful for tracking dynamic surface processes when consistent optical observations are difficult to obtain.
 
 # **Reflection**
 

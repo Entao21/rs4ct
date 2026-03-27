@@ -12,7 +12,7 @@ format:
 
 # **Summary**
 
-Starting this module, I was truly excited that we get a chance to build our own online portofolio. I always want to do this but I just do not have a chance or opportunity to formally learn the techniques needed to build websites. For me, a portofolio works a bit like the camera rolls on my phone—it records every progress and preserves the parts of the work that I want to show later. It is also a perfect way of recording what did I do during my university time and it will become super precious in the future.
+Starting this module, I was truly excited that we get a chance to build our own online portfolio. I always want to do this but I just do not have a chance or opportunity to formally learn the techniques needed to build websites. For me, a portfolio works a bit like the camera rolls on my phone—it records every progress and preserves the parts of the work that I want to show later. It is also a perfect way of recording what did I do during my university time and it will become super precious in the future.
 
 ## Two Types of Sensor
 
@@ -48,9 +48,9 @@ In this week practical, we used the Landsat 8 and Sentinel-2 data to extract spe
 
 My study area of this practical is Istanbul, Turkey, which is a city with a lot of built surfaces and vegetation, and open water bodies. We downloaded data from Copernicus and EarthExplorer, and then used QGIS and SNAP to explore the data.
 
-At first, I was following the practicals instructions to filter out the image with 0% of cloud coverage, however, I found there are no image with 0% of cloud in 2025 for Istanbul. Therefore, I increased the cloud coverage to 10% and I selected December 17th, 2025 as acquisition date.
+At first, I was following the practical instructions to filter out the image with 0% of cloud coverage, however, I found there are no image with 0% of cloud in 2025 for Istanbul. Therefore, I increased the cloud coverage to 10% and I selected December 17th, 2025 as acquisition date.
 
-The first group of output from this week's practial is the differenct color composite graph. True color composite is composed of Sentinel-2 Band 2 (Blue), Band 3 (Green) and Band 4 (Red). Second graph below is the false color composite composed of B8 (NIR), B4 (Red) and B3 (Green). This could show the level of health of the vegetation. The third graph below is the atmospheric penetration composite composed of B12(SWIR), B11(SWIR) and B8A(NIR). This could highlight the vegetation in blue and urban area as gray, cyan or purple.
+The first group of output from this week's practical is the different color composite graph. True color composite is composed of Sentinel-2 Band 2 (Blue), Band 3 (Green) and Band 4 (Red). Second graph below is the false color composite composed of B8 (NIR), B4 (Red) and B3 (Green). This could show the level of health of the vegetation. The third graph below is the atmospheric penetration composite composed of B12(SWIR), B11(SWIR) and B8A(NIR). This could highlight the vegetation in blue and urban area as gray, cyan or purple.
 
 ::: {layout-ncol="3" layout-align="center" style="text-align: center;"}
 ![Figure 2-4 True Color Composite](../resources/pictures1/true_color.png){fig-align="center"}
@@ -93,7 +93,7 @@ The Tasseled Cap Transformation (TCT) remains crucial in urban remote sensing be
 
 These datasets are actually quite familiar to me. During my previous studies, I extensively used both Sentinel-2 and Landsat data, but usually within Google Earth Engine. This practical was the first time I downloaded the raw data straight from the official websites and process them locally.
 
-There do exist lots of technial difficulties for me to do the practical. I struggled the most with the SNAP software. Although I am very comfortable with QGIS, SNAP feels quite different. At first, I couldn't find the right tools and had a hard time just drawing polygon boxes. What is making it worse is my laptop constantly crashed when running SNAP, which severely slowed my progress. Furthermore, the size of our raw datasets are very big, resulting in painfully long processing times.
+There do exist lots of technical difficulties for me to do the practical. I struggled the most with the SNAP software. Although I am very comfortable with QGIS, SNAP feels quite different. At first, I couldn't find the right tools and had a hard time just drawing polygon boxes. What is making it worse is my laptop constantly crashed when running SNAP, which severely slowed my progress. Furthermore, the size of our raw datasets are very big, resulting in painfully long processing times.
 
 Despite these frustrations, I firmly believe that mastering these foundational skills is never a waste of time. Learning to handle raw data locally is crucial for our future work. I am genuinely looking forward to diving deeper into remote sensing and its applications in the coming weeks!
 

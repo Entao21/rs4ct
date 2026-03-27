@@ -20,12 +20,12 @@ Another major focus was accuracy assessment. The lecture showed that classificat
 Although Kappa adjusts for chance agreement and has been widely used in remote sensing, it should not be treated as a sufficient accuracy measure on its own. A classification may still show a reasonable Kappa value while hiding important errors in specific classes. 
 
 ## F1- Score
-F1-score is a useful evaluation metric because it combines precision and recall into a single measure. This makes it particularly valuable when classification performance cannot be judged well by overall accuracy alone, especially if classes are imbalanced or if some errors matter more than others. A high F1-score indicates that the classifier is not only identifying many true positives, but also avoiding too many false positives. In this sense, F1-score provides a more balanced view of classification quality than a single overall accuracy value.
+F1-score is a useful evaluation metric because it combines precision and recall into a single measure. This makes it particularly valuable when classification performance cannot be judged well by overall accuracy alone, especially if classes are imbalanced or if some errors matter more than others. A high F1-score indicates that the classifier is not only identifying many true positives, but also avoiding too many false positives. F1-score therefore provides a more balanced view of classification quality than a single overall accuracy value.
 
 ::: {#fig-sdg fig-align="center"}
 ![](../resources/pictures7/f1.png)
 
-You can veiw the detailed explanation of F1-score [here](https://medium.com/@nay1228/mastering-evaluation-metrics-f1-score-z-score-roc-curve-and-precision-recall-curve-cb175de25724).
+You can view the detailed explanation of F1-score [here](https://medium.com/@nay1228/mastering-evaluation-metrics-f1-score-z-score-roc-curve-and-precision-recall-curve-cb175de25724).
 :::
 
 ## ROC Curve
@@ -34,7 +34,7 @@ ROC curves and AUC are broader machine-learning style evaluation tools. Unlike s
 ::: {#fig-sdg fig-align="center"}
 ![](../resources/pictures7/roc.png)
 
-You can veiw the detailed explanation of ROC curve [here](https://medium.com/@nay1228/mastering-evaluation-metrics-f1-score-z-score-roc-curve-and-precision-recall-curve-cb175de25724).
+You can view the detailed explanation of ROC curve [here](https://medium.com/@nay1228/mastering-evaluation-metrics-f1-score-z-score-roc-curve-and-precision-recall-curve-cb175de25724).
 :::
 
 ## Spatial Cross Validation
@@ -48,7 +48,7 @@ One of the main themes of this week was that classification is not simply about 
 
 In this context, object-based image analysis (OBIA) offers an important application, especially in complex urban environments where individual pixels rarely correspond to real-world objects. Blaschke (2010) explains that OBIA works by first segmenting imagery into objects and then classifying those objects using not only spectral information, but also shape, texture and spatial context. This makes OBIA especially valuable in urban remote sensing, where buildings, roads and vegetation patches are heterogeneous and spatially structured rather than spectrally pure. For my own interests in urban and environmental research, OBIA seems particularly relevant because it links classification more closely to actual spatial units. 
 
-A example comes from Myint et al. (2011), who compared per-pixel and object-based classification for urban land cover in Phoenix, Arizona. Using high-resolution imagery, they found that the object-based approach achieved substantially higher overall accuracy than the traditional maximum likelihood classifier. This is important because it shows that OBIA is not only conceptually attractive, but can also produce more reliable results in heterogeneous urban environments where land-cover types are spatially mixed and structurally complex.
+An example comes from Myint et al. (2011), who compared per-pixel and object-based classification for urban land cover in Phoenix, Arizona. Using high-resolution imagery, they found that the object-based approach achieved substantially higher overall accuracy than the traditional maximum likelihood classifier. This is important because it shows that OBIA is not only conceptually attractive, but can also produce more reliable results in heterogeneous urban environments where land-cover types are spatially mixed and structurally complex.
 
 **Cons of OBIA:**
 
@@ -63,7 +63,7 @@ The confusion matrix remains important because it records class-by-class agreeme
 ::: {#fig-sdg fig-align="center"}
 ![](../resources/pictures7/con.png)
 
-You can veiw the detailed explanation of confusion matrix [here](https://www.datacamp.com/tutorial/what-is-a-confusion-matrix-in-machine-learning?dc_referrer=https%3A%2F%2Fwww.google.com%2F).
+You can view the detailed explanation of confusion matrix [here](https://www.datacamp.com/tutorial/what-is-a-confusion-matrix-in-machine-learning?dc_referrer=https%3A%2F%2Fwww.google.com%2F).
 :::
 
 **Cons of confusion matrix:**
@@ -76,7 +76,7 @@ This week made me think more carefully about what a “good” classification re
 
 I found OBIA especially interesting because it seems more suitable for complex urban environments, where real-world features rarely match single pixels. This connects well with my own interests in urban remote sensing. At the same time, learning about confusion matrices and spatial cross-validation reminded me that a visually convincing map is not always a reliable one. Overall, this week helped me become more critical of both classification methods and their evaluation.
 
-By finishing week 6 and week 7, I feel a littlle bit of overwhelmed by the amount of content I have learned. In other modules such as Huanfa's module, we were also taught with machine learning and deep learning, some of the content is overlapping with this module and some are not. Also in Ollie's module we also learned machine learning methods to detect informal settlements etc. I also had another module that is taching using CNN, GNN and transformers. I think right now it is a perfect time to review all of these content and make a summary and make everything clear.
+By finishing week 6 and week 7, I feel a little bit of overwhelmed by the amount of content I have learned. In other modules such as Huanfa's module, we were also taught with machine learning and deep learning, some of the content is overlapping with this module and some are not. Also in Ollie's module we also learned machine learning methods to detect informal settlements etc. I also had another module that is teaching using CNN, GNN and transformers. I think right now it is a perfect time to review all of this content and make a summary and make everything clear.
 
 ## References
 

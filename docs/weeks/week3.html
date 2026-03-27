@@ -554,19 +554,19 @@ window.Quarto = {
 </tbody>
 </table>
 <p>It is definitely useful to know these correction methods. However, in real-world analysis, we do need to consider if we actually need to apply all of these corrections. For example, Song et al.&nbsp;(2001) showed that atmospheric correction is not always necessary for single-date maximum-likelihood classification, and that more complicated correction methods do not necessarily improve classification or change detection performance. Correcting data too much could also introduce new errors and uncertainties.</p>
-<p>We should be especailly careful if we are doing multi-temporal research. Hantson and Chuvieco (2011) noted that multi-temporal studies require prior geometric and radiometric homogenisation; otherwise, apparent “changes” may simply reflect misregistration or inconsistent calibration rather than real land-surface change.</p>
+<p>We should be especially careful if we are doing multi-temporal research. Hantson and Chuvieco (2011) noted that multi-temporal studies require prior geometric and radiometric homogenisation; otherwise, apparent “changes” may simply reflect misregistration or inconsistent calibration rather than real land-surface change.</p>
 </section>
 </section>
 <section id="applications" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> <strong>Applications</strong></h1>
-<p>The practical output I want to record in this week’s dairy is NDVI, Texture and PCA analysis. I chose Kuala Lumpur, Malaysia as my study area, because I am always looking for cities with a diverse land covers.</p>
+<p>The practical output I want to record in this week’s diary is NDVI, Texture and PCA analysis. I chose Kuala Lumpur, Malaysia as my study area, because I am always looking for cities with diverse land covers.</p>
 <section id="ndvi" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="ndvi"><span class="header-section-number">2.1</span> NDVI</h2>
 <p>NDVI (Normalized Difference Vegetation Index) is a spectral index that is commonly used to assess the vegetation health and density. It is calculated as the ratio of the difference between the near-infrared (NIR) and red (red) bands to the sum of the NIR and red bands. As the formula shown below, since vegetation has a higher reflectance in the NIR band and a lower reflectance in the red band, a higher NDVI value indicates a higher vegetation density. <span class="math display">\[
 NDVI = \frac{NIR - Red}{NIR + Red}
 \]</span></p>
 <p><img src="../resources/pictures3/klp_ndvi.png" class="img-fluid quarto-figure quarto-figure-center" alt="Figure 1 NDVI"> We can easily see that the vegetation is concentrated in the outer part of the city, while the urban area is concentrated in the inner part of the city.</p>
-<p><img src="../resources/pictures3/klp_0.2.png" class="img-fluid quarto-figure quarto-figure-center" alt="Figure 2 Binary Vegetation Mask"> Using a threshold of NDVI ≥ 0.2, I created a binary vegetation mask. Here, 0 means NDVI &gt; 0.2 and 1 means NDVI &lt; 0.2. The result clearly separates areas with stronger vegetation signals from more urbanised and impervious surfaces.</p>
+<p><img src="../resources/pictures3/klp_0.2.png" class="img-fluid quarto-figure quarto-figure-center" alt="Figure 2 Binary Vegetation Mask"> Using a threshold of NDVI ≥ 0.2, I created a binary vegetation mask. Here, 0 means NDVI &lt; 0.2 and 1 means NDVI &gt; 0.2. The result clearly separates areas with stronger vegetation signals from more urbanised and impervious surfaces.</p>
 </section>
 <section id="texture" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="texture"><span class="header-section-number">2.2</span> Texture</h2>
@@ -599,7 +599,7 @@ NDVI = \frac{NIR - Red}{NIR + Red}
 <section id="reflection" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> <strong>Reflection</strong></h1>
 <p>This week was a major reality check. My previous experience with cloud platforms like Google Earth Engine (GEE) slightly spoiled me—GEE often provides Level-2 surface reflectance products where all the atmospheric and geometric corrections are already perfectly applied behind the scenes. Having to manually code a DOS correction in R made me appreciate the immense mathematical complexity required just to get satellite data to a “usable” state.</p>
-<p>My RStudio kept crashing when I was running the code and I kept using AI to help me with debugging. I understand the importance of computational power in nowdays’ data analysis.</p>
+<p>My RStudio kept crashing when I was running the code and I kept using AI to help me with debugging. I understand the importance of computational power in nowadays’ data analysis.</p>
 <p>I think in the future I will always bear in mind that when facing satellite data, I will always question myself first if the data needs to be corrected.</p>
 <section id="references" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="references"><span class="header-section-number">3.1</span> References</h2>

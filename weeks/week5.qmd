@@ -47,7 +47,7 @@ By using GEE, I realised that the core idea of doing research in QGIS and GEE is
 
 | Aspect | GEE | QGIS | SNAP |
 |---|---|---|---|
-| Core Nature | A cloud-based platform | Destop software | Desktop software|
+| Core Nature | A cloud-based platform | Desktop software | Desktop software|
 | Main Strength | Best for handling large remote sensing datasets at scale | General GIS analysis, mapping, editing and visualisation | Processing and analysis of EO data products|
 | Main Limitation | Very limited for detailed manual GIS editing and high-quality cartographic or aesthetic outputs.| Less efficient for planetary scale EO archives and repeated large-batch processing | Not suitable for general GIS/cartography and often slower for very large local workflows|
 | User Interface | Mainly code based, not friendly for people who are not familiar with coding | GUI based, click and drag everything | GUI based, but requires some learning| 
@@ -92,7 +92,7 @@ Cropland Mapping Result from Xing et al. (2022)'s Study.
 :::
 
 ## Land cover classification
-Phan et al. (2020) used GEE and a Random Forest classifier to test different Landsat 8 compositing strategies for land cover classification. The study used GEE to compare multiple image combinations efficiently and evaluate classification outcomes. This demonstrates how GEE can support methodological experimentation as well as final mapping, making it useful not only for producing results but also for testing which remote sensing workflow performs best.
+Phan et al. (2020) used GEE and a Random Forest classifier to test different Landsat 8 compositing strategies for land cover classification. The study used GEE to compare multiple image combinations efficiently and evaluate classification outcomes. This shows how GEE can support methodological experimentation as well as final mapping, making it useful not only for producing results but also for testing which remote sensing workflow performs best.
 
 By reading these studies, I gained a clearer idea of the potential applications of GEE in my dissertation and future work. GEE seems to be a very powerful tool, especially if I want to include multi-temporal analysis. One common drawback I noticed across these papers is that they all relied on datasets already built into GEE. However, if I were to conduct urban research, I think I might need much higher-resolution data.
 
