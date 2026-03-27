@@ -422,7 +422,10 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#applications-beyond-the-practical" id="toc-applications-beyond-the-practical" class="nav-link" data-scroll-target="#applications-beyond-the-practical"><span class="header-section-number">2.1</span> Applications Beyond the Practical</a></li>
   </ul></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">3</span> <strong>Reflection</strong></a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">3</span> <strong>Reflection</strong></a>
+  <ul class="collapse">
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">3.1</span> References</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -463,17 +466,32 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="summary" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> <strong>Summary</strong></h1>
+<p>This week focused on analysing urban temperature using remote sensing, especially through land surface temperature (LST) data in Google Earth Engine. The practical compared two major temperature data products: Landsat and MODIS. Landsat provides finer spatial detail, while MODIS offers much denser temporal coverage. In the Beijing example, the materials showed that Landsat produced only 5 usable summer images for the selected period, whereas MODIS Aqua and Terra provided more than 100 images each, which makes MODIS much more suitable for time-series analysis. Both datasets also required scaling and conversion from Kelvin to Celsius before interpretation.</p>
+<p>A key idea this week was that temperature can be analysed at different scales. First, it can be mapped continuously as raster data to show spatial variation across the city. Second, it can be summarised by administrative units using functions such as reduceRegions, allowing the average temperature of each polygon to be added to the attribute table. The practical then extended this to time series per spatial unit using ui.Chart.image.seriesByRegion, which is useful for comparing how different districts change over time.</p>
+<p>The final major theme was the construction of a heat index. Instead of mapping raw temperature alone, the practical ranked spatial units by percentiles and grouped them into categories, similar to the BBC’s heat hazard approach. This turns continuous temperature values into a more interpretable indicator of relative heat risk. The materials also suggested that, once such an index is created, it could be linked to built-environment variables such as vegetation, buildings or water to explore why some places are hotter than others.</p>
 </section>
 <section id="applications" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> <strong>Applications</strong></h1>
+<p>A key application of remotely sensed temperature is heat-mitigation planning. MacLachlan et al.&nbsp;(2021) integrated Earth observation temperature data with 3D urban models to guide optimal tree placement for localised urban heat mitigation. Their study shows that LST is useful not only for identifying hotter areas, but also for informing where cooling interventions may produce the greatest benefit. This is highly relevant to planning because remote sensing can move heat analysis from description to spatially targeted action.</p>
+<p>A second application is time-series monitoring of urban heat dynamics. Khalil et al.&nbsp;(2021) used remotely sensed LST time series to analyse the drivers of urban heat island effects and develop a prediction model, showing that repeated temperature observations can reveal long-term heat behaviour rather than a single thermal snapshot. This links closely to this week’s practical, where MODIS was useful because of its dense temporal coverage. For urban research, this means remote sensing can help track not only where cities are hot, but also how heat changes seasonally and over time.</p>
+<p>A third application is linking temperature with land-cover change. MacLachlan et al.&nbsp;(2017) showed that land-cover transitions, especially from forest to urban land, were associated with the strongest increases in daytime and nighttime temperature. This demonstrates that LST can be used to evaluate the thermal consequences of urban development and therefore support planning decisions about greening, land conversion and urban expansion. In this sense, temperature analysis is not only environmental monitoring, but also evidence for more climate-sensitive land-use policy.</p>
 <section id="applications-beyond-the-practical" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="applications-beyond-the-practical"><span class="header-section-number">2.1</span> Applications Beyond the Practical</h2>
+<p>Beyond the practical, these methods could be extended to urban policy evaluation. The literature shows that LST can be combined with planning, land-cover and modelling frameworks to assess where mitigation should occur and how urban form influences thermal risk. However, this also requires caution: remotely sensed LST is valuable for spatial comparison, but it does not perfectly represent human heat exposure, especially at street level or indoors. The most meaningful future application is therefore not temperature mapping alone, but integrating EO with urban form, vegetation and social vulnerability data.</p>
 </section>
 </section>
 <section id="reflection" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> <strong>Reflection</strong></h1>
+<p>This week was especially relevant to my own interests because it connected remote sensing more directly to urban environmental inequality and policy. I found it useful that temperature was not treated only as a raster surface, but also as something that could be summarised by spatial units, tracked over time, and translated into an index that is easier to communicate. That feels particularly relevant for future urban research, where the challenge is often not only to detect environmental patterns, but to make them meaningful for planning and governance. At the same time, this week also reminded me that data choice always involves trade-offs. Landsat and MODIS offer different strengths, so the method should depend on whether spatial detail or temporal coverage is more important for the research question.</p>
+<section id="references" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="references"><span class="header-section-number">3.1</span> References</h2>
+<p>Khalil, U., Qiu, C., Lan, H. and others (2021) ‘Time series analysis of land surface temperature and drivers of urban heat island effect based on remotely sensed data to develop a prediction model’, Applied Artificial Intelligence. Available at: https://doi.org/10.1080/08839514.2021.1993633 .</p>
+<p>MacLachlan, A., Biggs, E., Roberts, G. and Boruff, B. (2021) ‘Sustainable city planning: A data-driven approach for mitigating urban heat’, Frontiers in Built Environment, 6, 519599. Available at: https://doi.org/10.3389/fbuil.2020.519599 .</p>
+<p>MacLachlan, A., Biggs, E., Roberts, G. and Boruff, B. (2017) ‘Urbanisation-induced land cover temperature dynamics for sustainable future cities’, Urban Science, 1(4), 38. Available at: https://doi.org/10.3390/urbansci1040038 .</p>
+<p>Shi, H. et al.&nbsp;(2021) ‘Urban heat island and its regional impacts using remote sensing: A review’, Remote Sensing. Available via NOAA repository.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

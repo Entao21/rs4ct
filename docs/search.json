@@ -4,7 +4,7 @@
     "href": "weeks/week9.html",
     "title": "Week #9: References and Final Words",
     "section": "",
-    "text": "1 Ending\nRemote Sensing is not only a tool for data analysis, it is a way of letting people look back and have reflection on our own world. When the Earth become a single blue pixel, we will finally understand the true beauty of our planet.\nAs we finished the course, I would like to thank all the lecturers and tutors for their help and support during the course. For me, I am very grateful to have this opportunity to learn this module as it was quite popular during the module selection stage. I hope I can continue this learning in the future and apply the knowledge to my own research and career.",
+    "text": "1 Ending\nRemote Sensing is not only a tool for data analysis, it is a way of letting people look back and have reflection on our own world. When the Earth become a single blue pixel, we will finally understand the true beauty of our planet.\nAs we finished the course, I would like to thank all the lecturers and tutors for their help and support during the course. For me, I am very grateful to have this opportunity to learn this module as it was quite popular during the module selection stage. I hope I can continue this learning in the future and apply the knowledge to my own research and career.\nThank you for reading and hopt we can meet again in the future!",
     "crumbs": [
       "About Me",
       "9 References & Final Words"
@@ -163,7 +163,7 @@
     "href": "weeks/week8.html#applications-beyond-the-practical",
     "title": "Week #8: Temperature",
     "section": "2.1 Applications Beyond the Practical",
-    "text": "2.1 Applications Beyond the Practical",
+    "text": "2.1 Applications Beyond the Practical\nBeyond the practical, these methods could be extended to urban policy evaluation. The literature shows that LST can be combined with planning, land-cover and modelling frameworks to assess where mitigation should occur and how urban form influences thermal risk. However, this also requires caution: remotely sensed LST is valuable for spatial comparison, but it does not perfectly represent human heat exposure, especially at street level or indoors. The most meaningful future application is therefore not temperature mapping alone, but integrating EO with urban form, vegetation and social vulnerability data.",
     "crumbs": [
       "About Me",
       "8 Temperature"
@@ -482,6 +482,28 @@
     "crumbs": [
       "About Me",
       "7 Classification II"
+    ]
+  },
+  {
+    "objectID": "weeks/week8.html",
+    "href": "weeks/week8.html",
+    "title": "Week #8: Temperature",
+    "section": "",
+    "text": "This week focused on analysing urban temperature using remote sensing, especially through land surface temperature (LST) data in Google Earth Engine. The practical compared two major temperature data products: Landsat and MODIS. Landsat provides finer spatial detail, while MODIS offers much denser temporal coverage. In the Beijing example, the materials showed that Landsat produced only 5 usable summer images for the selected period, whereas MODIS Aqua and Terra provided more than 100 images each, which makes MODIS much more suitable for time-series analysis. Both datasets also required scaling and conversion from Kelvin to Celsius before interpretation.\nA key idea this week was that temperature can be analysed at different scales. First, it can be mapped continuously as raster data to show spatial variation across the city. Second, it can be summarised by administrative units using functions such as reduceRegions, allowing the average temperature of each polygon to be added to the attribute table. The practical then extended this to time series per spatial unit using ui.Chart.image.seriesByRegion, which is useful for comparing how different districts change over time.\nThe final major theme was the construction of a heat index. Instead of mapping raw temperature alone, the practical ranked spatial units by percentiles and grouped them into categories, similar to the BBC’s heat hazard approach. This turns continuous temperature values into a more interpretable indicator of relative heat risk. The materials also suggested that, once such an index is created, it could be linked to built-environment variables such as vegetation, buildings or water to explore why some places are hotter than others.",
+    "crumbs": [
+      "About Me",
+      "8 Temperature"
+    ]
+  },
+  {
+    "objectID": "weeks/week8.html#references",
+    "href": "weeks/week8.html#references",
+    "title": "Week #8: Temperature",
+    "section": "3.1 References",
+    "text": "3.1 References\nKhalil, U., Qiu, C., Lan, H. and others (2021) ‘Time series analysis of land surface temperature and drivers of urban heat island effect based on remotely sensed data to develop a prediction model’, Applied Artificial Intelligence. Available at: https://doi.org/10.1080/08839514.2021.1993633 .\nMacLachlan, A., Biggs, E., Roberts, G. and Boruff, B. (2021) ‘Sustainable city planning: A data-driven approach for mitigating urban heat’, Frontiers in Built Environment, 6, 519599. Available at: https://doi.org/10.3389/fbuil.2020.519599 .\nMacLachlan, A., Biggs, E., Roberts, G. and Boruff, B. (2017) ‘Urbanisation-induced land cover temperature dynamics for sustainable future cities’, Urban Science, 1(4), 38. Available at: https://doi.org/10.3390/urbansci1040038 .\nShi, H. et al. (2021) ‘Urban heat island and its regional impacts using remote sensing: A review’, Remote Sensing. Available via NOAA repository.",
+    "crumbs": [
+      "About Me",
+      "8 Temperature"
     ]
   }
 ]
