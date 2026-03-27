@@ -19,13 +19,25 @@ Another major focus was change detection. The lecture said that simple image dif
 
 What I found most important is that there seems to be no single established best approach. The lecture repeatedly suggested that SAR analysis must work backwards from the research question, which makes the method powerful but also demanding. In other words, SAR is highly useful, but only when its physical properties and limitations are properly understood.
 
+## SAR and Other Data Comparasion
+
+I made this table to compare the main characteristics of SAR and other data types.
+
+| Data type | Sensor type | Main information captured | Main strengths | Main limitations | Typical applications |
+|---|---|---|---|---|---|
+| SAR | Active | Backscatter and, in some products, phase | Can see through clouds and weather; sensitive to surface roughness, structure and moisture; useful for change detection | Harder to interpret visually; affected by speckle, shadowing and corner reflections in urban areas | Flood mapping, surface change detection, land deformation, urban monitoring |
+| Optical / multispectral | Passive | Reflected solar radiation in visible and infrared bands | Easy to interpret; strong for land cover, vegetation and spectral indices | Cannot see through cloud; depends on daylight and atmospheric conditions | Land-cover classification, vegetation mapping, urban expansion |
+| Thermal | Passive | Emitted surface thermal radiation | Useful for analysing land surface temperature and urban heat patterns | Usually coarser spatial resolution; surface temperature is not always the same as air temperature | Urban heat island studies, temperature monitoring |
+| LiDAR | Active | Distance/elevation from laser returns, often including 3D structure | Very strong for terrain, height and 3D urban/vegetation structure | Often expensive and less widely available than satellite imagery | DEM generation, 3D city modelling, vegetation structure analysis |
+
+
 # **Applications**
 
-One particularly useful application of SAR is multisensor fusion with optical imagery. This was highlighted both in the lecture resources and in the broader literature, because SAR contributes information on surface structure and roughness that optical sensors cannot provide under cloudy conditions. Lu et al. (2011) compared different multisensor integration methods in the Brazilian Amazon and found that combining Landsat TM with radar data improved land-cover classification under some fusion approaches, particularly wavelet-based methods, compared with optical data alone. This is important because it shows that SAR is not always most useful as a stand-alone dataset, but often as a complementary source of structural information. That point is reinforced by Schulte to Bühne and Pettorelli (2018), who argue that integrating multispectral and radar imagery can significantly improve the ability to map ecological structure and spatial heterogeneity.
+One particularly useful application of SAR is multisensor fusion with optical imagery. This was highlighted both in the lecture resources and in the broader literature, because SAR contributes information on surface structure and roughness that optical sensors cannot provide under cloudy conditions. Lu et al. (2011) compared different multisensor integration methods in the Brazilian Amazon and found that combining Landsat TM with radar data improved land-cover classification under some fusion approaches, particularly wavelet-based methods, compared with optical data alone. This is important because it shows that SAR is not always most useful as a stand-alone dataset, but often as a complementary source of structural information. That point is reinforced by Bühne and Pettorelli (2018), who argue that integrating multispectral and radar imagery can significantly improve the ability to map ecological structure and spatial heterogeneity.
 
 For my own interests in urban and environmental research, this is especially relevant because many real-world landscapes are not well captured by one sensor type alone. However, fusion does not automatically improve results. The lecture itself stressed that there is no universally best method, and Lu et al. (2011) also showed that some fusion strategies performed better than others. This means that SAR–optical integration should be chosen carefully according to the research aim, rather than treated as a guaranteed improvement.
 
-These methods could be extended to urban policy evaluation. The literature shows that LST can be combined with planning, land-cover and modelling frameworks to assess where mitigation should occur and how urban form influences thermal risk. However, this also requires caution: remotely sensed LST is valuable for spatial comparison, but it does not perfectly represent human heat exposure, especially at street level or indoors. The most meaningful future application is therefore not temperature mapping alone, but integrating EO with urban form, vegetation and social vulnerability data.
+Beyond the practical, SAR could be highly valuable in urban and environmental monitoring where cloud cover, surface roughness, or change through time are central to the research question. Soudani et al. (2021), for example, used Sentinel-1 SAR time series to detect forest phenology and showed that SAR can overcome the limitations caused by cloud cover in optical monitoring. This demonstrates that SAR is especially useful for tracking dynamic surface processes when consistent optical observations are difficult to obtain.
 
 # **Reflection**
 
@@ -38,3 +50,5 @@ I also found the lecture useful because it reminded me that learning remote sens
 Lu, D., Li, G., Moran, E., Dutra, L. and Batistella, M. (2011) ‘A comparison of multisensor integration methods for land cover classification in the Brazilian Amazon’, GIScience & Remote Sensing, 48(3), pp. 345–370.
 
 Schulte to Bühne, H. and Pettorelli, N. (2018) ‘Better together: Integrating and fusing multispectral and radar satellite imagery to inform biodiversity monitoring, ecological research and conservation science’, Methods in Ecology and Evolution, 9(4), pp. 849–865.
+
+Soudani, K., François, C., Le Maire, G., Le Dantec, V. and Dufrêne, E. (2021) ‘Potential of C-band Synthetic Aperture Radar Sentinel-1 time-series for the monitoring of phenological cycles in a deciduous forest’, International Journal of Applied Earth Observation and Geoinformation, 104, 102528.

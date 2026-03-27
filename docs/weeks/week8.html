@@ -417,7 +417,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1</span> <strong>Summary</strong></a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1</span> <strong>Summary</strong></a>
+  <ul class="collapse">
+  <li><a href="#sar-and-other-data-comparasion" id="toc-sar-and-other-data-comparasion" class="nav-link" data-scroll-target="#sar-and-other-data-comparasion"><span class="header-section-number">1.1</span> SAR and Other Data Comparasion</a></li>
+  </ul></li>
   <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">2</span> <strong>Applications</strong></a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">3</span> <strong>Reflection</strong></a>
   <ul class="collapse">
@@ -465,14 +468,72 @@ ul.task-list li input[type="checkbox"] {
 <h1 data-number="1"><span class="header-section-number">1</span> <strong>Summary</strong></h1>
 <p>This week introduced Synthetic Aperture Radar (SAR) as a different type of remote sensing data from the optical imagery used in previous weeks. The lecture first emphasised that SAR is an active sensor, meaning that it emits its own electromagnetic signal and records the energy that returns to the sensor, rather than relying on reflected sunlight. This makes SAR especially valuable because it can image the Earth through clouds and weather, which is a major advantage over optical sensors in flood or change-detection applications. The lecture also explained that SAR records two main types of information: amplitude (backscatter) and phase, although only amplitude data are available in GEE, while phase-based applications such as InSAR require specialist tools like SNAP.</p>
 <p>A key idea this week was that SAR images do not behave like optical images. Their interpretation depends on polarization, surface roughness, wavelength, and the way different surfaces scatter radar signals. For example, calm water often appears dark because it reflects the radar pulse away from the sensor, while rough surfaces scatter more energy back. The lecture also showed that SAR values can be represented in power, amplitude, or dB units, and that each format is better suited to different purposes such as analysis, visualisation, or detecting dark pixels like water.</p>
-<p>Another major focus was change detection. The lecture argued that simple image differencing is not well suited to SAR because of the statistical properties of radar data, and instead introduced ratio, log-ratio, and image-collection approaches. It also suggested that SAR can be combined with optical data through fusion methods such as PCA, OBIA and intensity-based fusion.</p>
+<p>Another major focus was change detection. The lecture said that simple image differencing is not well suited to SAR because of the statistical properties of radar data, and instead introduced ratio, log-ratio, and image-collection approaches. It also suggested that SAR can be combined with optical data through fusion methods such as PCA, OBIA and intensity-based fusion.</p>
 <p>What I found most important is that there seems to be no single established best approach. The lecture repeatedly suggested that SAR analysis must work backwards from the research question, which makes the method powerful but also demanding. In other words, SAR is highly useful, but only when its physical properties and limitations are properly understood.</p>
+<section id="sar-and-other-data-comparasion" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="sar-and-other-data-comparasion"><span class="header-section-number">1.1</span> SAR and Other Data Comparasion</h2>
+<p>I made this table to compare the main characteristics of SAR and other data types.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Data type</th>
+<th>Sensor type</th>
+<th>Main information captured</th>
+<th>Main strengths</th>
+<th>Main limitations</th>
+<th>Typical applications</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SAR</td>
+<td>Active</td>
+<td>Backscatter and, in some products, phase</td>
+<td>Can see through clouds and weather; sensitive to surface roughness, structure and moisture; useful for change detection</td>
+<td>Harder to interpret visually; affected by speckle, shadowing and corner reflections in urban areas</td>
+<td>Flood mapping, surface change detection, land deformation, urban monitoring</td>
+</tr>
+<tr class="even">
+<td>Optical / multispectral</td>
+<td>Passive</td>
+<td>Reflected solar radiation in visible and infrared bands</td>
+<td>Easy to interpret; strong for land cover, vegetation and spectral indices</td>
+<td>Cannot see through cloud; depends on daylight and atmospheric conditions</td>
+<td>Land-cover classification, vegetation mapping, urban expansion</td>
+</tr>
+<tr class="odd">
+<td>Thermal</td>
+<td>Passive</td>
+<td>Emitted surface thermal radiation</td>
+<td>Useful for analysing land surface temperature and urban heat patterns</td>
+<td>Usually coarser spatial resolution; surface temperature is not always the same as air temperature</td>
+<td>Urban heat island studies, temperature monitoring</td>
+</tr>
+<tr class="even">
+<td>LiDAR</td>
+<td>Active</td>
+<td>Distance/elevation from laser returns, often including 3D structure</td>
+<td>Very strong for terrain, height and 3D urban/vegetation structure</td>
+<td>Often expensive and less widely available than satellite imagery</td>
+<td>DEM generation, 3D city modelling, vegetation structure analysis</td>
+</tr>
+</tbody>
+</table>
+</section>
 </section>
 <section id="applications" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> <strong>Applications</strong></h1>
-<p>One particularly useful application of SAR is multisensor fusion with optical imagery. This was highlighted both in the lecture resources and in the broader literature, because SAR contributes information on surface structure and roughness that optical sensors cannot provide under cloudy conditions. Lu et al.&nbsp;(2011) compared different multisensor integration methods in the Brazilian Amazon and found that combining Landsat TM with radar data improved land-cover classification under some fusion approaches, particularly wavelet-based methods, compared with optical data alone. This is important because it shows that SAR is not always most useful as a stand-alone dataset, but often as a complementary source of structural information. That point is reinforced by Schulte to Bühne and Pettorelli (2018), who argue that integrating multispectral and radar imagery can significantly improve the ability to map ecological structure and spatial heterogeneity.</p>
+<p>One particularly useful application of SAR is multisensor fusion with optical imagery. This was highlighted both in the lecture resources and in the broader literature, because SAR contributes information on surface structure and roughness that optical sensors cannot provide under cloudy conditions. Lu et al.&nbsp;(2011) compared different multisensor integration methods in the Brazilian Amazon and found that combining Landsat TM with radar data improved land-cover classification under some fusion approaches, particularly wavelet-based methods, compared with optical data alone. This is important because it shows that SAR is not always most useful as a stand-alone dataset, but often as a complementary source of structural information. That point is reinforced by Bühne and Pettorelli (2018), who argue that integrating multispectral and radar imagery can significantly improve the ability to map ecological structure and spatial heterogeneity.</p>
 <p>For my own interests in urban and environmental research, this is especially relevant because many real-world landscapes are not well captured by one sensor type alone. However, fusion does not automatically improve results. The lecture itself stressed that there is no universally best method, and Lu et al.&nbsp;(2011) also showed that some fusion strategies performed better than others. This means that SAR–optical integration should be chosen carefully according to the research aim, rather than treated as a guaranteed improvement.</p>
-<p>These methods could be extended to urban policy evaluation. The literature shows that LST can be combined with planning, land-cover and modelling frameworks to assess where mitigation should occur and how urban form influences thermal risk. However, this also requires caution: remotely sensed LST is valuable for spatial comparison, but it does not perfectly represent human heat exposure, especially at street level or indoors. The most meaningful future application is therefore not temperature mapping alone, but integrating EO with urban form, vegetation and social vulnerability data.</p>
+<p>Beyond the practical, SAR could be highly valuable in urban and environmental monitoring where cloud cover, surface roughness, or change through time are central to the research question. Soudani et al.&nbsp;(2021), for example, used Sentinel-1 SAR time series to detect forest phenology and showed that SAR can overcome the limitations caused by cloud cover in optical monitoring. This demonstrates that SAR is especially useful for tracking dynamic surface processes when consistent optical observations are difficult to obtain.</p>
 </section>
 <section id="reflection" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> <strong>Reflection</strong></h1>
@@ -482,6 +543,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="3.1" class="anchored" data-anchor-id="references"><span class="header-section-number">3.1</span> References</h2>
 <p>Lu, D., Li, G., Moran, E., Dutra, L. and Batistella, M. (2011) ‘A comparison of multisensor integration methods for land cover classification in the Brazilian Amazon’, GIScience &amp; Remote Sensing, 48(3), pp.&nbsp;345–370.</p>
 <p>Schulte to Bühne, H. and Pettorelli, N. (2018) ‘Better together: Integrating and fusing multispectral and radar satellite imagery to inform biodiversity monitoring, ecological research and conservation science’, Methods in Ecology and Evolution, 9(4), pp.&nbsp;849–865.</p>
+<p>Soudani, K., François, C., Le Maire, G., Le Dantec, V. and Dufrêne, E. (2021) ‘Potential of C-band Synthetic Aperture Radar Sentinel-1 time-series for the monitoring of phenological cycles in a deciduous forest’, International Journal of Applied Earth Observation and Geoinformation, 104, 102528.</p>
 
 
 </section>
