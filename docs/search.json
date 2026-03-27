@@ -417,5 +417,71 @@
       "About Me",
       "6 Classification I"
     ]
+  },
+  {
+    "objectID": "weeks/week7.html",
+    "href": "weeks/week7.html",
+    "title": "Week #7: Classification 2",
+    "section": "",
+    "text": "This week moved beyond basic pixel-based classification and focused on more advanced ways of thinking about classification in remote sensing. A central question was whether pixels should always be treated as the main unit of analysis, especially in urban environments where land cover is often heterogeneous. The lecture therefore introduced object-based image analysis (OBIA), where similar pixels are grouped into larger objects before classification, and sub-pixel analysis / spectral mixture analysis (SMA), where a pixel is understood as a mixture of several land-cover types rather than a single class. In the practical, these ideas were implemented in GEE through unmix() for spectral fractions and through segmentation methods such as KMeans and SNIC for object-based workflows.\n\n\nAnother major focus was accuracy assessment. The lecture showed that classification is incomplete without evaluation, and introduced the error matrix, producer’s accuracy, user’s accuracy, overall accuracy, F1-score, and ROC/AUC. It also stressed that training and testing data may be spatially dependent, meaning that conventional validation can overestimate performance. For this reason, spatial cross-validation was presented as an important way to produce more realistic assessments of classification accuracy.\n\n\n\nAlthough Kappa adjusts for chance agreement and has been widely used in remote sensing, it should not be treated as a sufficient accuracy measure on its own. A classification may still show a reasonable Kappa value while hiding important errors in specific classes. For this reason, the lecture placed more emphasis on the error matrix and on class-specific measures such as producer’s and user’s accuracy.\n\n\n\nROC curves and AUC are broader machine-learning style evaluation tools. Unlike simple overall accuracy, ROC-based measures assess how well a classifier separates classes across different thresholds. This makes them useful when model performance needs to be evaluated beyond a single final classification result. The lecture therefore showed that classification accuracy can be assessed in more flexible ways than only using traditional remote-sensing metrics.\n\n\n\nNormal train–test splits may overestimate model performance because of spatial autocorrelation. If training and testing samples are geographically close, they are often too similar to be truly independent. To address this, spatial cross-validation was introduced, where data are partitioned by space rather than randomly. This provides a more realistic estimate of classification accuracy, especially in remote sensing.",
+    "crumbs": [
+      "About Me",
+      "7 Classification II"
+    ]
+  },
+  {
+    "objectID": "weeks/week7.html#accuracy-assessment",
+    "href": "weeks/week7.html#accuracy-assessment",
+    "title": "Week #7: Classification 2",
+    "section": "",
+    "text": "Another major focus was accuracy assessment. The lecture showed that classification is incomplete without evaluation, and introduced the error matrix, producer’s accuracy, user’s accuracy, overall accuracy, F1-score, and ROC/AUC. It also stressed that training and testing data may be spatially dependent, meaning that conventional validation can overestimate performance. For this reason, spatial cross-validation was presented as an important way to produce more realistic assessments of classification accuracy.",
+    "crumbs": [
+      "About Me",
+      "7 Classification II"
+    ]
+  },
+  {
+    "objectID": "weeks/week7.html#kappa",
+    "href": "weeks/week7.html#kappa",
+    "title": "Week #7: Classification 2",
+    "section": "",
+    "text": "Although Kappa adjusts for chance agreement and has been widely used in remote sensing, it should not be treated as a sufficient accuracy measure on its own. A classification may still show a reasonable Kappa value while hiding important errors in specific classes. For this reason, the lecture placed more emphasis on the error matrix and on class-specific measures such as producer’s and user’s accuracy.",
+    "crumbs": [
+      "About Me",
+      "7 Classification II"
+    ]
+  },
+  {
+    "objectID": "weeks/week7.html#roc-curve",
+    "href": "weeks/week7.html#roc-curve",
+    "title": "Week #7: Classification 2",
+    "section": "",
+    "text": "ROC curves and AUC are broader machine-learning style evaluation tools. Unlike simple overall accuracy, ROC-based measures assess how well a classifier separates classes across different thresholds. This makes them useful when model performance needs to be evaluated beyond a single final classification result. The lecture therefore showed that classification accuracy can be assessed in more flexible ways than only using traditional remote-sensing metrics.",
+    "crumbs": [
+      "About Me",
+      "7 Classification II"
+    ]
+  },
+  {
+    "objectID": "weeks/week7.html#spatial-cross-validation",
+    "href": "weeks/week7.html#spatial-cross-validation",
+    "title": "Week #7: Classification 2",
+    "section": "",
+    "text": "Normal train–test splits may overestimate model performance because of spatial autocorrelation. If training and testing samples are geographically close, they are often too similar to be truly independent. To address this, spatial cross-validation was introduced, where data are partitioned by space rather than randomly. This provides a more realistic estimate of classification accuracy, especially in remote sensing.",
+    "crumbs": [
+      "About Me",
+      "7 Classification II"
+    ]
+  },
+  {
+    "objectID": "weeks/week7.html#references",
+    "href": "weeks/week7.html#references",
+    "title": "Week #7: Classification 2",
+    "section": "3.1 References",
+    "text": "3.1 References\nBlaschke, T. (2010) ‘Object based image analysis for remote sensing’, ISPRS Journal of Photogrammetry and Remote Sensing, 65(1), pp. 2–16.\nComber, A., Fisher, P., Brunsdon, C. and Khmag, A. (2012) ‘Spatial analysis of remote sensing image classification accuracy’, Remote Sensing of Environment, 127, pp. 237–246.\nFoody, G.M. (2002) ‘Status of land cover classification accuracy assessment’, Remote Sensing of Environment, 80(1), pp. 185–201.",
+    "crumbs": [
+      "About Me",
+      "7 Classification II"
+    ]
   }
 ]

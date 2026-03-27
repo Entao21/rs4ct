@@ -12,13 +12,39 @@ format:
 # **Summary**
 This week moved beyond basic pixel-based classification and focused on more advanced ways of thinking about classification in remote sensing. A central question was whether pixels should always be treated as the main unit of analysis, especially in urban environments where land cover is often heterogeneous. The lecture therefore introduced object-based image analysis (OBIA), where similar pixels are grouped into larger objects before classification, and sub-pixel analysis / spectral mixture analysis (SMA), where a pixel is understood as a mixture of several land-cover types rather than a single class. In the practical, these ideas were implemented in GEE through unmix() for spectral fractions and through segmentation methods such as KMeans and SNIC for object-based workflows.
 
+## Accuracy Assessment
 Another major focus was accuracy assessment. The lecture showed that classification is incomplete without evaluation, and introduced the error matrix, producer’s accuracy, user’s accuracy, overall accuracy, F1-score, and ROC/AUC. It also stressed that training and testing data may be spatially dependent, meaning that conventional validation can overestimate performance. For this reason, spatial cross-validation was presented as an important way to produce more realistic assessments of classification accuracy.
 
+## Kappa
+ Although Kappa adjusts for chance agreement and has been widely used in remote sensing, it should not be treated as a sufficient accuracy measure on its own. A classification may still show a reasonable Kappa value while hiding important errors in specific classes. For this reason, the lecture placed more emphasis on the error matrix and on class-specific measures such as producer’s and user’s accuracy.
+
+## ROC Curve
+ROC curves and AUC are broader machine-learning style evaluation tools. Unlike simple overall accuracy, ROC-based measures assess how well a classifier separates classes across different thresholds. This makes them useful when model performance needs to be evaluated beyond a single final classification result. The lecture therefore showed that classification accuracy can be assessed in more flexible ways than only using traditional remote-sensing metrics.
+
+## Spatial Cross Validation
+Normal train–test splits may overestimate model performance because of spatial autocorrelation. If training and testing samples are geographically close, they are often too similar to be truly independent. To address this, spatial cross-validation was introduced, where data are partitioned by space rather than randomly. This provides a more realistic estimate of classification accuracy, especially in remote sensing.
 
 # **Applications**
 
-## Applications Beyond the Practical
+Object-based image analysis (OBIA)
+
+A useful application of OBIA is in complex urban environments, where pixel-based classification often performs poorly because individual pixels rarely correspond to meaningful real-world objects. Blaschke (2010) explains that OBIA works by first segmenting imagery into objects and then classifying those objects using not only spectral information but also shape, texture and spatial context. This is especially valuable in urban remote sensing, where buildings, roads and vegetation patches are heterogeneous and spatially structured rather than spectrally pure. For my own interests in urban and environmental research, OBIA seems particularly relevant because it aligns classification more closely with actual spatial units. Critical thinking: however, OBIA is not automatically better than pixel-based methods; its success depends heavily on segmentation quality, and poorly chosen segmentation parameters may produce unrealistic or inconsistent objects.
+
+Confusion matrix and accuracy assessment
+
+The confusion matrix is important because classification is not complete once a map is produced; accuracy must also be evaluated in a meaningful way. Foody (2002) reviews classification accuracy assessment in remote sensing and shows that the confusion matrix remains central because it records class-by-class agreement and misclassification, rather than reducing performance to a single overall value. This makes it possible to derive more specific measures such as producer’s accuracy and user’s accuracy, which are often more informative than overall accuracy alone. Critical thinking: however, the confusion matrix also has limitations. Comber et al. (2012) argue that it says little about the spatial distribution of errors, meaning that a map can appear statistically acceptable while still containing geographically important inaccuracies.
 
 # **Reflection**
 
+This week made me think more carefully about what a “good” classification result actually means. Previously, I often focused more on the classification output itself, but this week showed me that choosing the right unit of analysis and evaluating accuracy properly are just as important. 
+
+I found OBIA especially interesting because it seems more suitable for complex urban environments, where real-world features rarely match single pixels. This connects well with my own interests in urban remote sensing. At the same time, learning about confusion matrices and spatial cross-validation reminded me that a visually convincing map is not always a reliable one. Overall, this week helped me become more critical of both classification methods and their evaluation.
+
+## References
+
+Blaschke, T. (2010) ‘Object based image analysis for remote sensing’, ISPRS Journal of Photogrammetry and Remote Sensing, 65(1), pp. 2–16.
+
+Comber, A., Fisher, P., Brunsdon, C. and Khmag, A. (2012) ‘Spatial analysis of remote sensing image classification accuracy’, Remote Sensing of Environment, 127, pp. 237–246.
+
+Foody, G.M. (2002) ‘Status of land cover classification accuracy assessment’, Remote Sensing of Environment, 80(1), pp. 185–201.
 
