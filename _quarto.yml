@@ -44,7 +44,7 @@ website:
         href: weeks/week7.qmd
       - text: "8 Temperature"
         href: weeks/week8.qmd
-      - text: "9 References & Final Words"
+      - text: "9 Ending"
         href: weeks/week9.qmd
   navbar:
     background: "#1c1c1c" 
@@ -70,7 +70,7 @@ website:
           - href: weeks/week8.qmd
             text: "Week 8: Temperature"
           - href: weeks/week9.qmd
-            text: "Week 9: References and Final Words"
+            text: "Week 9: Ending"
     right:
       - icon: github
         href: https://github.com/Entao21/rs4ct
