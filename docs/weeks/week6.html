@@ -417,12 +417,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1</span> <strong>Summary</strong></a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1</span> <strong>Summary</strong></a>
+  <ul class="collapse">
+  <li><a href="#methods-summary" id="toc-methods-summary" class="nav-link" data-scroll-target="#methods-summary"><span class="header-section-number">1.1</span> Methods summary</a></li>
+  <li><a href="#pros-and-cons-of-each-method" id="toc-pros-and-cons-of-each-method" class="nav-link" data-scroll-target="#pros-and-cons-of-each-method"><span class="header-section-number">1.2</span> Pros and Cons of each method</a></li>
+  <li><a href="#the-difference-between-machine-learning-and-deep-learning" id="toc-the-difference-between-machine-learning-and-deep-learning" class="nav-link" data-scroll-target="#the-difference-between-machine-learning-and-deep-learning"><span class="header-section-number">1.3</span> The difference between machine learning and deep learning</a></li>
+  </ul></li>
   <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">2</span> <strong>Applications</strong></a>
   <ul class="collapse">
   <li><a href="#applications-beyond-the-practical" id="toc-applications-beyond-the-practical" class="nav-link" data-scroll-target="#applications-beyond-the-practical"><span class="header-section-number">2.1</span> Applications Beyond the Practical</a></li>
   </ul></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">3</span> <strong>Reflection</strong></a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">3</span> <strong>Reflection</strong></a>
+  <ul class="collapse">
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">3.1</span> References</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -461,19 +469,159 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Machine learning is definitely one of the most exciting topic that I am looking forward to learn in this major. We have been taught with machine learning in both Huanfa’s module and Ollie’s module so I do have a basic idea of what machine learning is. I think by the time I complete week 6 and week 7, I will have a much deeper understanding of how to apply machine learning to my own dissertation and future research.</p>
 <section id="summary" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> <strong>Summary</strong></h1>
+<p>Machine learning is just like human learning. It is a process of letting computers learn from data and make predictions based on the knowledge they have learned from the input data.</p>
+<p>There are two main types of machine learning.</p>
+<ol type="1">
+<li><p>Supervised learning: The computer is given a set of input data and the correct output data (label). The computer then learns to make predictions based on input/output pairs.</p></li>
+<li><p>Unsupervised learning: The computer is given a set of input data and it learns to find patterns and relationships in the data without being told what to look for.</p></li>
+</ol>
+<section id="methods-summary" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="methods-summary"><span class="header-section-number">1.1</span> Methods summary</h2>
+<p>Here, I will conclude every method we mentioned in the lecture material so far. I will use the table to summarise.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Type</th>
+<th>What does it do?</th>
+<th>Key idea</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Linear regression</td>
+<td>Supervised</td>
+<td>It fits the best relationship between independent and dependent variables and can be used for prediction</td>
+<td>Best-fit relationship for prediction</td>
+</tr>
+<tr class="even">
+<td>Classification tree</td>
+<td>Supervised</td>
+<td>Classifies data into two or more discrete categories</td>
+<td>Recursively splits data into more homogeneous subsets; uses Gini impurity to decide splits</td>
+</tr>
+<tr class="odd">
+<td>Regression tree</td>
+<td>Supervised</td>
+<td>Predicts a continuous dependent variable</td>
+<td>Splits data using thresholds that minimise the sum of squared residuals (SSR)</td>
+</tr>
+<tr class="even">
+<td>Random Forest</td>
+<td>Supervised</td>
+<td>A collection of many decision trees and “many are better than one”</td>
+<td>Uses bootstrap samples and random subsets of variables, classification uses Gini, regression uses MSE, output is based on votes, with OOB error for evaluation</td>
+</tr>
+<tr class="odd">
+<td>Maximum Likelihood</td>
+<td>Supervised</td>
+<td>Assigns each pixel to the most probable land cover type</td>
+<td>Probability-based classifier using training-data mean and standard deviation; can set a probability threshold for no classification</td>
+</tr>
+<tr class="even">
+<td>Support Vector Machine (SVM)</td>
+<td>Supervised</td>
+<td>Separates classes using a maximum-margin boundary</td>
+<td>Support vectors define the boundary; can use soft margin, kernels, and hyperparameters such as C and gamma</td>
+</tr>
+<tr class="odd">
+<td>K-means</td>
+<td>Unsupervised</td>
+<td>Standard clustering method for image classification</td>
+<td>Places initial clusters in spectral feature space, then iterates until allocations stabilise or iteration limits are reached</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="pros-and-cons-of-each-method" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="pros-and-cons-of-each-method"><span class="header-section-number">1.2</span> Pros and Cons of each method</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Linear regression</td>
+<td>Simple, fast and easy to interpret</td>
+<td>Poor for strong non-linearity; sensitive to outliers</td>
+</tr>
+<tr class="even">
+<td>Classification tree</td>
+<td>Easy to understand; handles non-linear patterns</td>
+<td>Can overfit; unstable with small data changes</td>
+</tr>
+<tr class="odd">
+<td>Regression tree</td>
+<td>Interpretable; useful for non-linear prediction</td>
+<td>Can overfit; often less accurate than ensemble models</td>
+</tr>
+<tr class="even">
+<td>Random Forest</td>
+<td>Robust, accurate and good for complex data</td>
+<td>Harder to interpret; more computationally demanding</td>
+</tr>
+<tr class="odd">
+<td>Maximum Likelihood</td>
+<td>Classic and effective with good training data</td>
+<td>Assumes statistical distribution; sensitive to class overlap</td>
+</tr>
+<tr class="even">
+<td>Support Vector Machine (SVM)</td>
+<td>Strong performance; works well with limited training data</td>
+<td>Harder to interpret; needs parameter tuning</td>
+</tr>
+<tr class="odd">
+<td>K-means</td>
+<td>Simple, fast and useful without labels</td>
+<td>Must choose k in advance; clusters may not match real classes</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="the-difference-between-machine-learning-and-deep-learning" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="the-difference-between-machine-learning-and-deep-learning"><span class="header-section-number">1.3</span> The difference between machine learning and deep learning</h2>
+<p>Machine learning is the broader field of algorithms that learn patterns from data, while deep learning is a subset of machine learning that uses multi-layer neural networks to learn more complex features automatically.</p>
+</section>
 </section>
 <section id="applications" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> <strong>Applications</strong></h1>
 <section id="applications-beyond-the-practical" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="applications-beyond-the-practical"><span class="header-section-number">2.1</span> Applications Beyond the Practical</h2>
+<p>In supervised learning, methods such as Random Forest, SVM and Maximum Likelihood are widely used in remote sensing because they can classify land cover from labelled training data. Khatami, Mountrakis and Stehman (2016) show in a meta-analysis that classifier choice strongly affects land-cover mapping accuracy, while Yuh et al.&nbsp;(2023) found that Random Forest outperformed several other machine-learning methods in land-cover classification. This suggests that supervised methods are powerful when reliable training samples are available. Critical thinking: however, their performance depends heavily on training quality, so a highly accurate output may still reflect biased or unrepresentative labels rather than genuinely better classification (Khatami, Mountrakis and Stehman, 2016; Yuh et al., 2023).</p>
+<p>In unsupervised learning, methods such as K-means are useful when labelled data are unavailable. Paradis et al.&nbsp;(2022) demonstrate that probabilistic K-means can classify large-scale spectral imagery efficiently, while Gašparović et al.&nbsp;(2019) show that unsupervised clustering can support cost-effective land-cover classification without prior training samples. This makes unsupervised learning useful for exploratory analysis and early-stage classification. Critical thinking: however, unsupervised clusters do not automatically correspond to meaningful real-world classes, so interpretation remains dependent on the researcher and may reduce thematic reliability compared with supervised approaches (Paradis et al., 2022; Gašparović et al., 2019).</p>
 </section>
 </section>
 <section id="reflection" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> <strong>Reflection</strong></h1>
+<p>This week was especially relevant to my own academic background, because my interests increasingly lie at the intersection of remote sensing, urban analysis and environmental research. Learning about supervised and unsupervised methods helped me organise many ideas that I had encountered before but had not fully connected.</p>
+<p>I can already see how these methods may be useful in my future work, especially for land-cover classification, urban environmental monitoring and spatial pattern detection. At the same time, this week reminded me that method choice is never purely technical, but should always depend on the research question, the data available and the scale of analysis.</p>
+<section id="references" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="references"><span class="header-section-number">3.1</span> References</h2>
+<p>Gašparović, M., Jogun, T. and Dobrinić, D. (2019) ‘Automatic cost-effective method for land cover classification (ALCC) based on Landsat-8 imagery and geospatial data’, Computers and Electronics in Agriculture, 161, pp.&nbsp;141–152.</p>
+<p>Khatami, R., Mountrakis, G. and Stehman, S.V. (2016) ‘A meta-analysis of remote sensing research on supervised pixel-based land-cover image classification processes: General guidelines for practitioners and future research’, Remote Sensing of Environment, 177, pp.&nbsp;89–100.</p>
+<p>Paradis, E., Kumar, A. and Chanussot, J. (2022) ‘Probabilistic unsupervised classification for large-scale land cover mapping with spectral imaging data’, International Journal of Applied Earth Observation and Geoinformation, 107, 102681.</p>
+<p>Yuh, Y.G., Behrens, T., Schmidt, K. and Scholten, T. (2023) ‘Application of machine learning approaches for land cover classification from remote sensing data: A review’, Environmental Modelling &amp; Software, 161, 105610.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

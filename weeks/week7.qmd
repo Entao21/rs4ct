@@ -10,7 +10,9 @@ format:
 ---
 
 # **Summary**
+This week moved beyond basic pixel-based classification and focused on more advanced ways of thinking about classification in remote sensing. A central question was whether pixels should always be treated as the main unit of analysis, especially in urban environments where land cover is often heterogeneous. The lecture therefore introduced object-based image analysis (OBIA), where similar pixels are grouped into larger objects before classification, and sub-pixel analysis / spectral mixture analysis (SMA), where a pixel is understood as a mixture of several land-cover types rather than a single class. In the practical, these ideas were implemented in GEE through unmix() for spectral fractions and through segmentation methods such as KMeans and SNIC for object-based workflows.
 
+Another major focus was accuracy assessment. The lecture showed that classification is incomplete without evaluation, and introduced the error matrix, producer’s accuracy, user’s accuracy, overall accuracy, F1-score, and ROC/AUC. It also stressed that training and testing data may be spatially dependent, meaning that conventional validation can overestimate performance. For this reason, spatial cross-validation was presented as an important way to produce more realistic assessments of classification accuracy.
 
 
 # **Applications**

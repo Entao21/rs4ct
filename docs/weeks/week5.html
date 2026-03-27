@@ -417,12 +417,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1</span> <strong>Summary</strong></a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1</span> <strong>Summary</strong></a>
+  <ul class="collapse">
+  <li><a href="#pros-and-cons-of-gee" id="toc-pros-and-cons-of-gee" class="nav-link" data-scroll-target="#pros-and-cons-of-gee"><span class="header-section-number">1.1</span> Pros and Cons of GEE</a></li>
+  <li><a href="#my-thoughts-on-gee-qgis-and-snap" id="toc-my-thoughts-on-gee-qgis-and-snap" class="nav-link" data-scroll-target="#my-thoughts-on-gee-qgis-and-snap"><span class="header-section-number">1.2</span> My Thoughts on GEE, QGIS and SNAP</a></li>
+  </ul></li>
   <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">2</span> <strong>Applications</strong></a>
   <ul class="collapse">
-  <li><a href="#applications-beyond-the-practical" id="toc-applications-beyond-the-practical" class="nav-link" data-scroll-target="#applications-beyond-the-practical"><span class="header-section-number">2.1</span> Applications Beyond the Practical</a></li>
+  <li><a href="#to-detect-urban-land-cover-change" id="toc-to-detect-urban-land-cover-change" class="nav-link" data-scroll-target="#to-detect-urban-land-cover-change"><span class="header-section-number">2.1</span> To detect urban land cover change</a></li>
+  <li><a href="#flood-detection" id="toc-flood-detection" class="nav-link" data-scroll-target="#flood-detection"><span class="header-section-number">2.2</span> Flood detection</a></li>
+  <li><a href="#forest-change-monitoring" id="toc-forest-change-monitoring" class="nav-link" data-scroll-target="#forest-change-monitoring"><span class="header-section-number">2.3</span> Forest change monitoring</a></li>
+  <li><a href="#cropland-mapping" id="toc-cropland-mapping" class="nav-link" data-scroll-target="#cropland-mapping"><span class="header-section-number">2.4</span> Cropland mapping</a></li>
+  <li><a href="#land-cover-classification" id="toc-land-cover-classification" class="nav-link" data-scroll-target="#land-cover-classification"><span class="header-section-number">2.5</span> Land cover classification</a></li>
   </ul></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">3</span> <strong>Reflection</strong></a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">3</span> <strong>Reflection</strong></a>
+  <ul class="collapse">
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">3.1</span> References</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -461,19 +472,140 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>We were introduced to Google Earth Engine (GEE) this week. Although I had used GEE before, I did not realise that its scripting language is JavaScript. In the past, I mainly relied on remembering the syntax without fully understanding the language itself. I kind of surprised that I have learnt so much in this major, I learnt python, R, SQL, and now JavaScript.</p>
 <section id="summary" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> <strong>Summary</strong></h1>
+<p>Google Earth Engine (GEE) is an online platform operated by Google. It is a cloud-based platform with a large number of built-in geospatial and remote sensing datasets. This greatly facilitates remote sensing analysis, as users do not need to download large volumes of data to their local machines before processing them. Instead, data can be accessed, filtered and analysed directly within the platform.</p>
+<div style="text-align: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../resources/pictures5/gee.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 1. Googel Earth Engine Code Editor</figcaption>
+</figure>
+</div>
+<p><em>Source: <a href="https://developers.google.com/earth-engine/guides/playground">GEE(2025)</a></em></p>
+</div>
+<section id="pros-and-cons-of-gee" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="pros-and-cons-of-gee"><span class="header-section-number">1.1</span> Pros and Cons of GEE</h2>
+<p>Based on both my current and previous experience, I summarise the main advantages and disadvantages of using GEE as follows.</p>
+<p>Pros:</p>
+<ol type="1">
+<li><p>GEE makes querying data products extremely convenient. Many datasets can be loaded with just one line of code.</p></li>
+<li><p>GEE does not rely heavily on local computational power, as computationally intensive tasks can be performed in the cloud.</p></li>
+<li><p>GEE can also be used to build interactive web applications, making it easier to share analysis and visualisations with others.</p></li>
+</ol>
+<p>Cons:</p>
+<ol type="1">
+<li><p>GEE has a steep learning curve for beginners, especially for those who are not familiar with JavaScript or the platform’s specific syntax and logic.</p></li>
+<li><p>Although it is powerful, GEE is not always flexible for highly customised local workflows, and some analyses can be harder to debug than in Python or R run locally.</p></li>
+<li><p>You have to run the code from the start, rather than being able to run a specific part of the code.</p></li>
+</ol>
+</section>
+<section id="my-thoughts-on-gee-qgis-and-snap" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="my-thoughts-on-gee-qgis-and-snap"><span class="header-section-number">1.2</span> My Thoughts on GEE, QGIS and SNAP</h2>
+<p>By using GEE, I realised that the core idea of doing research in QGIS and GEE is largely the same. Vectors and rasters are still the core data types. Many of the tasks you can do in GEE are similar to those in QGIS, such as cropping an area of interest, creating a mask, and loading raster data. Since we also learned SNAP in Week 1, I wrote the table below to compare the differences between QGIS, GEE and SNAP based on my own experience.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Aspect</th>
+<th>GEE</th>
+<th>QGIS</th>
+<th>SNAP</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Core Nature</td>
+<td>A cloud-based platform</td>
+<td>Destop software</td>
+<td>Desktop software</td>
+</tr>
+<tr class="even">
+<td>Main Strength</td>
+<td>Best for handling large remote sensing datasets at scale</td>
+<td>General GIS analysis, mapping, editing and visualisation</td>
+<td>Processing and analysis of EO data products</td>
+</tr>
+<tr class="odd">
+<td>Main Limitation</td>
+<td>Very limited for detailed manual GIS editing and high-quality cartographic or aesthetic outputs.</td>
+<td>Less efficient for planetary scale EO archives and repeated large-batch processing</td>
+<td>Not suitable for general GIS/cartography and often slower for very large local workflows</td>
+</tr>
+<tr class="even">
+<td>User Interface</td>
+<td>Mainly code based, not friendly for people who are not familiar with coding</td>
+<td>GUI based, click and drag everything</td>
+<td>GUI based, but requires some learning</td>
+</tr>
+<tr class="odd">
+<td>Data access</td>
+<td>Strong built-in public data catalogue</td>
+<td>No data, you have to download dataset</td>
+<td>No data, have to download dataset</td>
+</tr>
+<tr class="even">
+<td>Remote Sensing Strength</td>
+<td>Excellent for large scale analysis</td>
+<td>Useful for basic raster analysis, but not designed mainly for EO preprocessing</td>
+<td>Very strong for EO preprocessing, but requires computational power</td>
+</tr>
+<tr class="odd">
+<td>Cartography and Data Visualisation</td>
+<td>Quite Limited</td>
+<td>Excellent, QGIS feels like the ‘photoshop’ of GIS software</td>
+<td>Quite Limited</td>
+</tr>
+</tbody>
+</table>
+<p>In practice, the three tools are often complementary. A common workflow is to use SNAP for EO preprocessing, GEE for large-scale analysis and time series work, and QGIS for local inspection, overlay analysis and final cartographic presentation. That division reflects each platform’s official strengths and typical design goals.</p>
+</section>
 </section>
 <section id="applications" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> <strong>Applications</strong></h1>
-<section id="applications-beyond-the-practical" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="applications-beyond-the-practical"><span class="header-section-number">2.1</span> Applications Beyond the Practical</h2>
+<p>After browsing the google scholar, I concluded these five examples that might be useful for my future research.</p>
+<section id="to-detect-urban-land-cover-change" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="to-detect-urban-land-cover-change"><span class="header-section-number">2.1</span> To detect urban land cover change</h2>
+<p>Zhang et al.&nbsp;(2018) used GEE to quantify short-term urban land cover change from multi-temporal Sentinel-2 imagery. GEE allowed the authors to process repeated images efficiently in the cloud and classify urban change at scale. In this case, GEE functioned as a platform for time-series image handling and urban monitoring, showing its value for tracking rapid spatial change in built environments.</p>
+</section>
+<section id="flood-detection" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="flood-detection"><span class="header-section-number">2.2</span> Flood detection</h2>
+<p>Johary et al.&nbsp;(2023) used GEE with Sentinel-1 SAR imagery to detect large-scale flood extent. The platform enabled rapid processing of radar data, which is especially useful during flood events because SAR can observe the surface even under cloud cover. Here, GEE supported an operational flood-mapping workflow, demonstrating how cloud computing can improve the speed and scalability of disaster-response analysis.</p>
+</section>
+<section id="forest-change-monitoring" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="forest-change-monitoring"><span class="header-section-number">2.3</span> Forest change monitoring</h2>
+<p>Brovelli et al.&nbsp;(2020) used GEE to map and monitor forest change in the Amazon between 2000 and 2019. Their workflow involved supervised classification on cloud infrastructure, allowing repeated land cover mapping across multiple years. In this application, GEE was not only a data-access tool but also a computational environment for long-term forest monitoring, which is difficult to manage efficiently with purely local processing.</p>
+</section>
+<section id="cropland-mapping" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="cropland-mapping"><span class="header-section-number">2.4</span> Cropland mapping</h2>
+<p>Xing et al.&nbsp;(2022) developed a semi-automatic framework in GEE to map irrigated, rainfed and paddy croplands using time-series remote sensing data. GEE helped manage large image collections and supported classification across different agricultural types. This study shows that GEE is highly useful for agricultural monitoring, especially where crop conditions vary over time and where automated workflows are needed for consistent regional analysis.</p>
+</section>
+<section id="land-cover-classification" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="land-cover-classification"><span class="header-section-number">2.5</span> Land cover classification</h2>
+<p>Phan et al.&nbsp;(2020) used GEE and a Random Forest classifier to test different Landsat 8 compositing strategies for land cover classification. The study used GEE to compare multiple image combinations efficiently and evaluate classification outcomes. This demonstrates how GEE can support methodological experimentation as well as final mapping, making it useful not only for producing results but also for testing which remote sensing workflow performs best.</p>
+<p>By reading these studies, I gained a clearer idea of the potential applications of GEE in my dissertation and future work. GEE seems to be a very powerful tool, especially if I want to include multi-temporal analysis. One common drawback I noticed across these papers is that they all relied on datasets already built into GEE. However, if I were to conduct urban research, I think I might need much higher-resolution data.</p>
 </section>
 </section>
 <section id="reflection" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> <strong>Reflection</strong></h1>
+<p>This week made me reflect less on GEE as a completely new tool and more on what it means for my own research development. Although GEE uses a different environment, the underlying logic of spatial analysis still feels familiar: vectors, rasters, masking, and defining areas of interest remain central. What changed is the scale and efficiency of the workflow.</p>
+<p>For me, this is especially relevant because my interests are increasingly related to multi-temporal and policy-relevant urban research. GEE made me realise how large image archives can be analysed more systematically, which could be very useful for my future dissertation. At the same time, I also became more critical of its limitations. In urban studies, high-resolution data and local detail are often essential. Therefore, I see GEE not as a replacement for QGIS or SNAP, but as part of a broader geospatial workflow.</p>
+<section id="references" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="references"><span class="header-section-number">3.1</span> References</h2>
+<p>Brovelli, M.A., Sun, Y. and Yordanov, V. (2020) ‘Monitoring forest change in the Amazon using multi-temporal remote sensing data and Google Earth Engine cloud computing’, ISPRS International Journal of Geo-Information, 9(10), p.&nbsp;580.</p>
+<p>Johary, R., Ramli, M.F. and others (2023) ‘Detection of large-scale floods using Google Earth Engine’, Remote Sensing, 15(22), p.&nbsp;5368.</p>
+<p>Phan, T.N., Kuch, V. and Lehnert, L.W. (2020) ‘Land cover classification using Google Earth Engine and Random Forest classifier—The role of image composition’, Remote Sensing, 12(15), p.&nbsp;2411.</p>
+<p>Xing, H., Meng, J., Wang, J. and others (2022) ‘Mapping irrigated, rainfed and paddy croplands from time-series remote sensing images using Google Earth Engine’, International Journal of Digital Earth, 15(1).</p>
+<p>Zhang, H., Lin, H. and Wang, Y. (2018) ‘Quantifying short-term urban land cover change with time-series remote sensing images on Google Earth Engine’, Sensors, 18(12), p.&nbsp;4319.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

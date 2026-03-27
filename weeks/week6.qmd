@@ -8,15 +8,69 @@ format:
   html:
     cite-method: citeproc
 ---
+Machine learning is definitely one of the most exciting topic that I am looking forward to learn in this major. We have been taught with machine learning in both Huanfa's module and Ollie's module so I do have a basic idea of what machine learning is. I think by the time I complete week 6 and week 7, I will have a much deeper understanding of how to apply machine learning to my own dissertation and future research.
 
 # **Summary**
 
+Machine learning is just like human learning. It is a process of letting computers learn from data and make predictions based on the knowledge they have learned from the input data. 
 
+There are two main types of machine learning.
+
+1. Supervised learning: The computer is given a set of input data and the correct output data (label). The computer then learns to make predictions based on input/output pairs.
+
+2. Unsupervised learning: The computer is given a set of input data and it learns to find patterns and relationships in the data without being told what to look for.
+
+## Methods summary
+
+Here, I will conclude every method we mentioned in the lecture material so far. I will use the table to summarise.
+
+| Method | Type | What does it do? | Key idea |
+|---|---|---|---|
+| Linear regression | Supervised | It fits the best relationship between independent and dependent variables and can be used for prediction | Best-fit relationship for prediction |
+| Classification tree | Supervised | Classifies data into two or more discrete categories | Recursively splits data into more homogeneous subsets; uses Gini impurity to decide splits |
+| Regression tree | Supervised | Predicts a continuous dependent variable | Splits data using thresholds that minimise the sum of squared residuals (SSR) |
+| Random Forest | Supervised | A collection of many decision trees and “many are better than one” | Uses bootstrap samples and random subsets of variables, classification uses Gini, regression uses MSE, output is based on votes, with OOB error for evaluation |
+| Maximum Likelihood | Supervised | Assigns each pixel to the most probable land cover type | Probability-based classifier using training-data mean and standard deviation; can set a probability threshold for no classification |
+| Support Vector Machine (SVM) | Supervised | Separates classes using a maximum-margin boundary | Support vectors define the boundary; can use soft margin, kernels, and hyperparameters such as C and gamma |
+| K-means | Unsupervised | Standard clustering method for image classification | Places initial clusters in spectral feature space, then iterates until allocations stabilise or iteration limits are reached |
+
+## Pros and Cons of each method
+
+| Method | Pros | Cons |
+|---|---|---|
+| Linear regression | Simple, fast and easy to interpret | Poor for strong non-linearity; sensitive to outliers |
+| Classification tree | Easy to understand; handles non-linear patterns | Can overfit; unstable with small data changes |
+| Regression tree | Interpretable; useful for non-linear prediction | Can overfit; often less accurate than ensemble models |
+| Random Forest | Robust, accurate and good for complex data | Harder to interpret; more computationally demanding |
+| Maximum Likelihood | Classic and effective with good training data | Assumes statistical distribution; sensitive to class overlap |
+| Support Vector Machine (SVM) | Strong performance; works well with limited training data | Harder to interpret; needs parameter tuning |
+| K-means | Simple, fast and useful without labels | Must choose k in advance; clusters may not match real classes |
+
+## The difference between machine learning and deep learning
+
+Machine learning is the broader field of algorithms that learn patterns from data, while deep learning is a subset of machine learning that uses multi-layer neural networks to learn more complex features automatically.
 
 # **Applications**
 
+
 ## Applications Beyond the Practical
+
+In supervised learning, methods such as Random Forest, SVM and Maximum Likelihood are widely used in remote sensing because they can classify land cover from labelled training data. Khatami, Mountrakis and Stehman (2016) show in a meta-analysis that classifier choice strongly affects land-cover mapping accuracy, while Yuh et al. (2023) found that Random Forest outperformed several other machine-learning methods in land-cover classification. This suggests that supervised methods are powerful when reliable training samples are available. Critical thinking: however, their performance depends heavily on training quality, so a highly accurate output may still reflect biased or unrepresentative labels rather than genuinely better classification (Khatami, Mountrakis and Stehman, 2016; Yuh et al., 2023).
+
+In unsupervised learning, methods such as K-means are useful when labelled data are unavailable. Paradis et al. (2022) demonstrate that probabilistic K-means can classify large-scale spectral imagery efficiently, while Gašparović et al. (2019) show that unsupervised clustering can support cost-effective land-cover classification without prior training samples. This makes unsupervised learning useful for exploratory analysis and early-stage classification. Critical thinking: however, unsupervised clusters do not automatically correspond to meaningful real-world classes, so interpretation remains dependent on the researcher and may reduce thematic reliability compared with supervised approaches (Paradis et al., 2022; Gašparović et al., 2019).
 
 # **Reflection**
 
+This week was especially relevant to my own academic background, because my interests increasingly lie at the intersection of remote sensing, urban analysis and environmental research. Learning about supervised and unsupervised methods helped me organise many ideas that I had encountered before but had not fully connected.
 
+I can already see how these methods may be useful in my future work, especially for land-cover classification, urban environmental monitoring and spatial pattern detection. At the same time, this week reminded me that method choice is never purely technical, but should always depend on the research question, the data available and the scale of analysis.
+
+## References
+
+Gašparović, M., Jogun, T. and Dobrinić, D. (2019) ‘Automatic cost-effective method for land cover classification (ALCC) based on Landsat-8 imagery and geospatial data’, Computers and Electronics in Agriculture, 161, pp. 141–152.
+
+Khatami, R., Mountrakis, G. and Stehman, S.V. (2016) ‘A meta-analysis of remote sensing research on supervised pixel-based land-cover image classification processes: General guidelines for practitioners and future research’, Remote Sensing of Environment, 177, pp. 89–100.
+
+Paradis, E., Kumar, A. and Chanussot, J. (2022) ‘Probabilistic unsupervised classification for large-scale land cover mapping with spectral imaging data’, International Journal of Applied Earth Observation and Geoinformation, 107, 102681.
+
+Yuh, Y.G., Behrens, T., Schmidt, K. and Scholten, T. (2023) ‘Application of machine learning approaches for land cover classification from remote sensing data: A review’, Environmental Modelling & Software, 161, 105610.

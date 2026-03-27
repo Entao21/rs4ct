@@ -9,14 +9,45 @@ format:
     cite-method: citeproc
 ---
 
+Singapore is a highly urbanised and densely populated city-state in Southeast Asia, where land is extremely limited and every planning decision involves trade-offs between development, liveability and environmental resilience. This makes Singapore a strong case for policy analysis, because land-use planning must not only accommodate housing, transport and economic growth, but also respond to rising climate risks such as urban heat and the uneven distribution of green space.
+
 # **Summary**
 
+My chosen policy analysis focuses on the Singapore Master Plan, specifically the theme “A Flood Resilient City & Coast”. This theme addresses a major planning challenge for Singapore: how to protect a low-lying coastal city from both inland flooding and sea-level rise while continuing to support long-term urban development.
 
+According to the URA Draft Master Plan webpage, Singapore faces increasing flood risk under climate change. By 2100, extreme daily rainfall is projected to rise across all seasons, while relative mean sea levels around Singapore could increase by as much as 1.15 metres. When combined with storm surges and daily tidal activity, water levels could rise to between 4 and 5 metres. This is especially significant because around 30 percent of Singapore’s land area is currently less than 5 metres above mean sea level. These conditions make flood resilience not only an environmental issue, but also a central land-use and planning concern.
+
+What makes this policy especially interesting is its integrated approach. For inland flooding, Singapore has reduced flood-prone areas from about 3,200 hectares in the 1970s to less than 25 hectares today through PUB’s source-receptor-pathway approach. For coastal flooding, the government is considering a range of measures, including sea walls, earth mounds, tidal gates and nature-based solutions. Since 2021, site-specific studies have been carried out to develop adaptation strategies for different parts of the coastline, and by 2026, studies covering over 80 percent of Singapore’s coastlines are expected to be in progress.
+
+The policy also shows that flood protection in Singapore is closely linked to broader development goals. The “Long Island” project, for example, is designed not only to protect the southeastern coastline from sea-level rise, but also to improve water resilience, support flood management, create future land supply and provide new recreational opportunities. Overall, this makes Singapore’s flood resilience strategy a strong example of how climate adaptation can be embedded into long-term urban planning.
 
 # **Applications**
+Earth observation (EO) data could support Singapore’s “Flood Resilient City & Coast” strategy by making flood risk more spatially explicit and therefore more actionable in planning. For inland flooding, high-resolution rainfall, land-cover and elevation data can be combined to identify catchments with high runoff potential, especially in dense built-up areas where impervious surfaces accelerate stormwater accumulation. This would strengthen the Source-Pathway-Receptor approach by showing not only where water flows, but also where land-use controls, on-site detention or platform-level requirements may be most necessary (PUB, 2026a; NCCS, 2026).
 
-## Applications Beyond the Practical
+For coastal resilience, EO is especially valuable because it allows planners to monitor changing exposure over time rather than relying only on static protection standards. Satellite radar and elevation-based analysis can be used to detect land subsidence, map low-lying terrain and model future inundation under sea-level-rise scenarios. In Singapore, Catalao et al. (2020) show that InSAR-derived subsidence can significantly increase projected flood vulnerability, especially in reclaimed or low-flat coastal zones. This means EO can help identify where coastal protection should be prioritised, where design levels may need revision and where adaptation should be integrated with long-term development plans rather than treated as a separate engineering exercise (URA, 2025; Catalao et al., 2020).
+
+EO also has value beyond hazard detection. When combined with zoning, infrastructure and population data, it can support more targeted planning decisions about which districts, transport assets or future growth areas face the greatest compound risk. Recent research shows that remote sensing, GIS and data-driven modelling are increasingly central to urban flood susceptibility mapping, especially where risks are dynamic and spatially uneven (Islam et al., 2025). In this sense, EO can help Singapore move from broad resilience ambitions to a more evidence-based and adaptive planning framework. This is consistent with wider coastal adaptation practice, where planners increasingly rely on sea-level projections and spatial risk tools to guide long-term decisions (Hirschfeld et al., 2023).
+
+However, EO should not be treated as a complete solution. Satellite-derived flood risk layers are powerful for identifying exposure, but they do not automatically capture drainage capacity, social vulnerability or the institutional feasibility of intervention. In a city like Singapore, the policy value of EO depends less on producing ever more detailed maps and more on how effectively those maps are integrated into land-use regulation, infrastructure design and phased coastal adaptation.
 
 # **Reflection**
 
+This case helped me understand that the value of Earth observation in urban policy is not simply technical, but strategic. Before this week, I tended to think of remote sensing mainly as a tool for detecting environmental patterns, such as flooded areas, land cover change or surface conditions. However, the Singapore example showed more clearly that these outputs only become meaningful when they are translated into planning decisions. In this case, EO is useful not because it can produce another map, but because it can help planners decide where flood risk is increasing, which areas should be prioritised, and how adaptation can be integrated into long-term land use planning.
 
+I also found this case interesting because Singapore treats flood resilience as part of a broader development strategy rather than as a purely defensive engineering issue. This makes the policy more forward-looking and more relevant to urban governance. At the same time, it also reminded me that data alone is never enough. Even highly detailed spatial information cannot directly solve questions about social vulnerability, cost, governance or implementation.
+
+Overall, this week changed my view of remote sensing in cities. Its real importance lies not only in environmental monitoring, but in supporting more adaptive, spatially targeted and policy-relevant urban planning.
+
+
+## References
+Catalao, J., Nico, G., Hanssen, R. and Sousa, J.J. (2020) ‘InSAR maps of land subsidence and sea level scenarios to quantify the flood inundation risk in coastal cities: The case of Singapore’, Remote Sensing, 12(2), 296.
+
+Hirschfeld, D., Nicholls, R.J., Brown, S., Hinkel, J. and Hanson, S. (2023) ‘Global survey shows planners use widely varying sea-level rise projections for coastal adaptation’, Communications Earth & Environment, 4, article 56.
+
+Islam, T., Rahman, R.M., Khatun, R. and Hossain, M.S. (2025) ‘A systematic review of urban flood susceptibility mapping: Remote sensing, machine learning, and other modeling approaches’, Remote Sensing, 17(3), 524.
+
+National Climate Change Secretariat (NCCS) (2026) Drainage and flood prevention. Singapore: NCCS.
+
+PUB (2026a) Stormwater management. Singapore: PUB, Singapore’s National Water Agency.
+
+Urban Redevelopment Authority (URA) (2025) A Flood Resilient City & Coast. Singapore: URA.
