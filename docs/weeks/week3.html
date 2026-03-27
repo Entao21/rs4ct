@@ -333,7 +333,7 @@ window.Quarto = {
   </li>  
         <li>
     <a class="dropdown-item" href="../weeks/week9.html">
- <span class="dropdown-text">Week 9: References and Final Words</span></a>
+ <span class="dropdown-text">Week 9: Ending</span></a>
   </li>  
     </ul>
   </li>
@@ -433,7 +433,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../weeks/week9.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">9 References &amp; Final Words</span></a>
+ <span class="menu-text">9 Ending</span></a>
   </div>
 </li>
     </ul>
@@ -534,7 +534,7 @@ window.Quarto = {
 <td><strong>Atmospheric Correction</strong></td>
 <td>Reduces the effects of atmospheric scattering and absorption, which can make surface reflectance appear brighter, darker, or hazier than it really is.</td>
 <td>It makes images from different dates or places more comparable. It improves the reliability of spectral indices such as NDVI, and it helps retrieve more realistic surface properties.</td>
-<td>Can be method-dependent and sometimes approximate. Moreover, inaccurate assumptions about the atmosphere can introduce new uncertainty.</td>
+<td>Can be method-dependent and sometimes approximate. Moreover, It may not always be necessary for all tasks. Also inaccurate assumptions about the atmosphere can introduce new uncertainty.</td>
 <td>Using Dark Object Subtraction (DOS) to remove haze from a Landsat image before analysing vegetation.</td>
 </tr>
 <tr class="odd">
@@ -565,48 +565,28 @@ window.Quarto = {
 <p>NDVI (Normalized Difference Vegetation Index) is a spectral index that is commonly used to assess the vegetation health and density. It is calculated as the ratio of the difference between the near-infrared (NIR) and red (red) bands to the sum of the NIR and red bands. As the formula shown below, since vegetation has a higher reflectance in the NIR band and a lower reflectance in the red band, a higher NDVI value indicates a higher vegetation density. <span class="math display">\[
 NDVI = \frac{NIR - Red}{NIR + Red}
 \]</span></p>
-<div style="clear: both; margin-bottom: 1.25em;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../resources/pictures3/klp_ndvi.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Figure 1 NDVI</figcaption>
-</figure>
-</div>
-</div>
-<p>We can easily see that the vegetation is concentrated in the outer part of the city, while the urban area is concentrated in the inner part of the city.</p>
-<div style="clear: both; margin-bottom: 1.25em;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../resources/pictures3/klp_0.2.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>Figure 2 Binary vegetation mask (NDVI ≥ 0.2)</figcaption>
-</figure>
-</div>
-</div>
-<p>Using a threshold of NDVI ≥ 0.2, I created a binary vegetation mask. <strong>1</strong> means pixels with <strong>NDVI ≥ 0.2</strong> (vegetation), and <strong>0</strong> means <strong>NDVI below 0.2</strong> (non-vegetation, including dense urban and bare soil). The result separates stronger vegetation signals from more urbanised and impervious surfaces.</p>
+<p><img src="../resources/pictures3/klp_ndvi.png" class="img-fluid quarto-figure quarto-figure-center" alt="Figure 1 NDVI"> We can easily see that the vegetation is concentrated in the outer part of the city, while the urban area is concentrated in the inner part of the city.</p>
+<p><img src="../resources/pictures3/klp_0.2.png" class="img-fluid quarto-figure quarto-figure-center" alt="Figure 2 Binary Vegetation Mask"> Using a threshold of NDVI ≥ 0.2, I created a binary vegetation mask. Here, 0 means NDVI &gt; 0.2 and 1 means NDVI &lt; 0.2. The result clearly separates areas with stronger vegetation signals from more urbanised and impervious surfaces.</p>
 </section>
 <section id="texture" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="texture"><span class="header-section-number">2.2</span> Texture</h2>
 <p>Texture was derived from the red band using GLCM homogeneity, which measures how similar neighbouring pixel values are within a moving window. Higher values indicate more uniform surfaces, while lower values suggest greater local variation and structural complexity.</p>
-<div style="clear: both; margin-bottom: 1.25em;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../resources/pictures3/texh.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="../resources/pictures3/texh.png" class="img-fluid figure-img"></p>
 <figcaption>Figure 3 Texture</figcaption>
 </figure>
-</div>
 </div>
 <p>The texture map highlights a smoother and more continuous pattern around the urban fringe, while the city centre appears more heterogeneous. This suggests that texture captures spatial structure that is not fully visible in spectral indices such as NDVI.</p>
 </section>
 <section id="pca" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="pca"><span class="header-section-number">2.3</span> PCA</h2>
 <p>PCA was applied to the fused spectral and texture layers to reduce dimensionality and summarise the main variance in the dataset. This helps compress correlated information into fewer components for later analysis.</p>
-<div style="clear: both; margin-bottom: 1.25em;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../resources/pictures3/pca.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="../resources/pictures3/pca.png" class="img-fluid figure-img"></p>
 <figcaption>Figure 4 PCA</figcaption>
 </figure>
-</div>
 </div>
 <p>The first three components reveal broad spatial differences across Kuala Lumpur, especially between the more complex urban core and the more uniform peripheral zones. Although PCA outputs are less physically intuitive, they provide a compact representation of combined spectral and structural information.</p>
 </section>
@@ -624,9 +604,7 @@ NDVI = \frac{NIR - Red}{NIR + Red}
 <section id="references" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="references"><span class="header-section-number">3.1</span> References</h2>
 <p>Feng, Q., Liu, J., &amp; Gong, J. (2015). UAV remote sensing for urban vegetation mapping using random forest and texture analysis. Remote Sensing, 7(1), 1074-1094.</p>
-<p>Hantson, S. and Chuvieco, E. (2011) ‘Evaluation of different topographic correction methods for Landsat imagery’, International Journal of Applied Earth Observation and Geoinformation, 13(5), pp.&nbsp;691–700.</p>
 <p>Kupidura, P. (2019). The comparison of different methods of texture analysis for their efficacy in land use classification in satellite imagery. Remote Sensing, 11(10), 1233.</p>
-<p>Song, C., Woodcock, C.E., Seto, K.C., Lenney, M.P. and Macomber, S.A. (2001) ‘Classification and change detection using Landsat TM data: When and how to correct atmospheric effects?’, Remote Sensing of Environment, 75(2), pp.&nbsp;230–244.</p>
 <p>Zhu, X. X., et al.&nbsp;(2017). Deep learning in remote sensing: A comprehensive review and list of resources. IEEE Geoscience and Remote Sensing Magazine, 5(4), 8-36.</p>
 
 
