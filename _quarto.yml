@@ -42,7 +42,7 @@ website:
         href: weeks/week6.qmd
       - text: "7 Classification II"
         href: weeks/week7.qmd
-      - text: "8 Temperature"
+      - text: "8 SAR"
         href: weeks/week8.qmd
       - text: "9 Ending"
         href: weeks/week9.qmd
@@ -68,7 +68,7 @@ website:
           - href: weeks/week7.qmd
             text: "Week 7: Classification 2"
           - href: weeks/week8.qmd
-            text: "Week 8: Temperature"
+            text: "Week 8: SAR"
           - href: weeks/week9.qmd
             text: "Week 9: Ending"
     right:

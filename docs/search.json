@@ -411,8 +411,8 @@
     "objectID": "weeks/week6.html#references",
     "href": "weeks/week6.html#references",
     "title": "Week #6: Classification 1",
-    "section": "3.1 References",
-    "text": "3.1 References\nGašparović, M., Jogun, T. and Dobrinić, D. (2019) ‘Automatic cost-effective method for land cover classification (ALCC) based on Landsat-8 imagery and geospatial data’, Computers and Electronics in Agriculture, 161, pp. 141–152.\nKhatami, R., Mountrakis, G. and Stehman, S.V. (2016) ‘A meta-analysis of remote sensing research on supervised pixel-based land-cover image classification processes: General guidelines for practitioners and future research’, Remote Sensing of Environment, 177, pp. 89–100.\nParadis, E., Kumar, A. and Chanussot, J. (2022) ‘Probabilistic unsupervised classification for large-scale land cover mapping with spectral imaging data’, International Journal of Applied Earth Observation and Geoinformation, 107, 102681.\nYuh, Y.G., Behrens, T., Schmidt, K. and Scholten, T. (2023) ‘Application of machine learning approaches for land cover classification from remote sensing data: A review’, Environmental Modelling & Software, 161, 105610.",
+    "section": "4.1 References",
+    "text": "4.1 References\nGašparović, M., Jogun, T. and Dobrinić, D. (2019) ‘Automatic cost-effective method for land cover classification (ALCC) based on Landsat-8 imagery and geospatial data’, Computers and Electronics in Agriculture, 161, pp. 141–152.\nKhatami, R., Mountrakis, G. and Stehman, S.V. (2016) ‘A meta-analysis of remote sensing research on supervised pixel-based land-cover image classification processes: General guidelines for practitioners and future research’, Remote Sensing of Environment, 177, pp. 89–100.\nParadis, E., Kumar, A. and Chanussot, J. (2022) ‘Probabilistic unsupervised classification for large-scale land cover mapping with spectral imaging data’, International Journal of Applied Earth Observation and Geoinformation, 107, 102681.\nYuh, Y.G., Behrens, T., Schmidt, K. and Scholten, T. (2023) ‘Application of machine learning approaches for land cover classification from remote sensing data: A review’, Environmental Modelling & Software, 161, 105610.",
     "crumbs": [
       "About Me",
       "6 Classification I"
@@ -487,23 +487,23 @@
   {
     "objectID": "weeks/week8.html",
     "href": "weeks/week8.html",
-    "title": "Week #8: Temperature",
+    "title": "Week #8: SAR",
     "section": "",
-    "text": "This week focused on analysing urban temperature using remote sensing, especially through land surface temperature (LST) data in Google Earth Engine. The practical compared two major temperature data products: Landsat and MODIS. Landsat provides finer spatial detail, while MODIS offers much denser temporal coverage. In the Beijing example, the materials showed that Landsat produced only 5 usable summer images for the selected period, whereas MODIS Aqua and Terra provided more than 100 images each, which makes MODIS much more suitable for time-series analysis. Both datasets also required scaling and conversion from Kelvin to Celsius before interpretation.\nA key idea this week was that temperature can be analysed at different scales. First, it can be mapped continuously as raster data to show spatial variation across the city. Second, it can be summarised by administrative units using functions such as reduceRegions, allowing the average temperature of each polygon to be added to the attribute table. The practical then extended this to time series per spatial unit using ui.Chart.image.seriesByRegion, which is useful for comparing how different districts change over time.\nThe final major theme was the construction of a heat index. Instead of mapping raw temperature alone, the practical ranked spatial units by percentiles and grouped them into categories, similar to the BBC’s heat hazard approach. This turns continuous temperature values into a more interpretable indicator of relative heat risk. The materials also suggested that, once such an index is created, it could be linked to built-environment variables such as vegetation, buildings or water to explore why some places are hotter than others.",
+    "text": "This week introduced Synthetic Aperture Radar (SAR) as a different type of remote sensing data from the optical imagery used in previous weeks. The lecture first emphasised that SAR is an active sensor, meaning that it emits its own electromagnetic signal and records the energy that returns to the sensor, rather than relying on reflected sunlight. This makes SAR especially valuable because it can image the Earth through clouds and weather, which is a major advantage over optical sensors in flood or change-detection applications. The lecture also explained that SAR records two main types of information: amplitude (backscatter) and phase, although only amplitude data are available in GEE, while phase-based applications such as InSAR require specialist tools like SNAP.\nA key idea this week was that SAR images do not behave like optical images. Their interpretation depends on polarization, surface roughness, wavelength, and the way different surfaces scatter radar signals. For example, calm water often appears dark because it reflects the radar pulse away from the sensor, while rough surfaces scatter more energy back. The lecture also showed that SAR values can be represented in power, amplitude, or dB units, and that each format is better suited to different purposes such as analysis, visualisation, or detecting dark pixels like water.\nAnother major focus was change detection. The lecture argued that simple image differencing is not well suited to SAR because of the statistical properties of radar data, and instead introduced ratio, log-ratio, and image-collection approaches. It also suggested that SAR can be combined with optical data through fusion methods such as PCA, OBIA and intensity-based fusion.\nWhat I found most important is that there seems to be no single established best approach. The lecture repeatedly suggested that SAR analysis must work backwards from the research question, which makes the method powerful but also demanding. In other words, SAR is highly useful, but only when its physical properties and limitations are properly understood.",
     "crumbs": [
       "About Me",
-      "8 Temperature"
+      "8 SAR"
     ]
   },
   {
     "objectID": "weeks/week8.html#references",
     "href": "weeks/week8.html#references",
-    "title": "Week #8: Temperature",
+    "title": "Week #8: SAR",
     "section": "3.1 References",
-    "text": "3.1 References\nKhalil, U., Qiu, C., Lan, H. and others (2021) ‘Time series analysis of land surface temperature and drivers of urban heat island effect based on remotely sensed data to develop a prediction model’, Applied Artificial Intelligence. Available at: https://doi.org/10.1080/08839514.2021.1993633 .\nMacLachlan, A., Biggs, E., Roberts, G. and Boruff, B. (2021) ‘Sustainable city planning: A data-driven approach for mitigating urban heat’, Frontiers in Built Environment, 6, 519599. Available at: https://doi.org/10.3389/fbuil.2020.519599 .\nMacLachlan, A., Biggs, E., Roberts, G. and Boruff, B. (2017) ‘Urbanisation-induced land cover temperature dynamics for sustainable future cities’, Urban Science, 1(4), 38. Available at: https://doi.org/10.3390/urbansci1040038 .\nShi, H. et al. (2021) ‘Urban heat island and its regional impacts using remote sensing: A review’, Remote Sensing. Available via NOAA repository.",
+    "text": "3.1 References\nLu, D., Li, G., Moran, E., Dutra, L. and Batistella, M. (2011) ‘A comparison of multisensor integration methods for land cover classification in the Brazilian Amazon’, GIScience & Remote Sensing, 48(3), pp. 345–370.\nSchulte to Bühne, H. and Pettorelli, N. (2018) ‘Better together: Integrating and fusing multispectral and radar satellite imagery to inform biodiversity monitoring, ecological research and conservation science’, Methods in Ecology and Evolution, 9(4), pp. 849–865.",
     "crumbs": [
       "About Me",
-      "8 Temperature"
+      "8 SAR"
     ]
   },
   {
@@ -570,6 +570,17 @@
     "crumbs": [
       "About Me",
       "7 Classification II"
+    ]
+  },
+  {
+    "objectID": "weeks/week6.html#supervised-learning",
+    "href": "weeks/week6.html#supervised-learning",
+    "title": "Week #6: Classification 1",
+    "section": "2.1 Supervised Learning",
+    "text": "2.1 Supervised Learning\nIn supervised learning, methods such as Random Forest, SVM and Maximum Likelihood are widely used in remote sensing because they can classify land cover from labelled training data. Khatami, Mountrakis and Stehman (2016) show in a meta-analysis that classifier choice strongly affects land-cover mapping accuracy, while Yuh et al. (2023) found that Random Forest outperformed several other machine-learning methods in land-cover classification. This suggests that supervised methods are powerful when reliable training samples are available. Critical thinking: however, their performance depends heavily on training quality, so a highly accurate output may still reflect biased or unrepresentative labels rather than genuinely better classification (Khatami, Mountrakis and Stehman, 2016; Yuh et al., 2023).",
+    "crumbs": [
+      "About Me",
+      "6 Classification I"
     ]
   }
 ]

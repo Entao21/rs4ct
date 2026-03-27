@@ -9,7 +9,7 @@
 <meta name="author" content="Entao">
 <meta name="dcterms.date" content="2026-03-26">
 
-<title>Week #8: Temperature – CASA0023 Learning Diary</title>
+<title>Week #8: SAR – CASA0023 Learning Diary</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -300,7 +300,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="../weeks/week8.html">
- <span class="dropdown-text">Week 8: Temperature</span></a>
+ <span class="dropdown-text">Week 8: SAR</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../weeks/week9.html">
@@ -327,7 +327,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../weeks/week8.html">8 Temperature</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../weeks/week8.html">8 SAR</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -398,7 +398,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../weeks/week8.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">8 Temperature</span></a>
+ <span class="menu-text">8 SAR</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -418,10 +418,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1</span> <strong>Summary</strong></a></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">2</span> <strong>Applications</strong></a>
-  <ul class="collapse">
-  <li><a href="#applications-beyond-the-practical" id="toc-applications-beyond-the-practical" class="nav-link" data-scroll-target="#applications-beyond-the-practical"><span class="header-section-number">2.1</span> Applications Beyond the Practical</a></li>
-  </ul></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">2</span> <strong>Applications</strong></a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">3</span> <strong>Reflection</strong></a>
   <ul class="collapse">
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">3.1</span> References</a></li>
@@ -435,7 +432,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week #8: Temperature</h1>
+<h1 class="title">Week #8: SAR</h1>
 </div>
 
 
@@ -466,29 +463,25 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="summary" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> <strong>Summary</strong></h1>
-<p>This week focused on analysing urban temperature using remote sensing, especially through land surface temperature (LST) data in Google Earth Engine. The practical compared two major temperature data products: Landsat and MODIS. Landsat provides finer spatial detail, while MODIS offers much denser temporal coverage. In the Beijing example, the materials showed that Landsat produced only 5 usable summer images for the selected period, whereas MODIS Aqua and Terra provided more than 100 images each, which makes MODIS much more suitable for time-series analysis. Both datasets also required scaling and conversion from Kelvin to Celsius before interpretation.</p>
-<p>A key idea this week was that temperature can be analysed at different scales. First, it can be mapped continuously as raster data to show spatial variation across the city. Second, it can be summarised by administrative units using functions such as reduceRegions, allowing the average temperature of each polygon to be added to the attribute table. The practical then extended this to time series per spatial unit using ui.Chart.image.seriesByRegion, which is useful for comparing how different districts change over time.</p>
-<p>The final major theme was the construction of a heat index. Instead of mapping raw temperature alone, the practical ranked spatial units by percentiles and grouped them into categories, similar to the BBC’s heat hazard approach. This turns continuous temperature values into a more interpretable indicator of relative heat risk. The materials also suggested that, once such an index is created, it could be linked to built-environment variables such as vegetation, buildings or water to explore why some places are hotter than others.</p>
+<p>This week introduced Synthetic Aperture Radar (SAR) as a different type of remote sensing data from the optical imagery used in previous weeks. The lecture first emphasised that SAR is an active sensor, meaning that it emits its own electromagnetic signal and records the energy that returns to the sensor, rather than relying on reflected sunlight. This makes SAR especially valuable because it can image the Earth through clouds and weather, which is a major advantage over optical sensors in flood or change-detection applications. The lecture also explained that SAR records two main types of information: amplitude (backscatter) and phase, although only amplitude data are available in GEE, while phase-based applications such as InSAR require specialist tools like SNAP.</p>
+<p>A key idea this week was that SAR images do not behave like optical images. Their interpretation depends on polarization, surface roughness, wavelength, and the way different surfaces scatter radar signals. For example, calm water often appears dark because it reflects the radar pulse away from the sensor, while rough surfaces scatter more energy back. The lecture also showed that SAR values can be represented in power, amplitude, or dB units, and that each format is better suited to different purposes such as analysis, visualisation, or detecting dark pixels like water.</p>
+<p>Another major focus was change detection. The lecture argued that simple image differencing is not well suited to SAR because of the statistical properties of radar data, and instead introduced ratio, log-ratio, and image-collection approaches. It also suggested that SAR can be combined with optical data through fusion methods such as PCA, OBIA and intensity-based fusion.</p>
+<p>What I found most important is that there seems to be no single established best approach. The lecture repeatedly suggested that SAR analysis must work backwards from the research question, which makes the method powerful but also demanding. In other words, SAR is highly useful, but only when its physical properties and limitations are properly understood.</p>
 </section>
 <section id="applications" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> <strong>Applications</strong></h1>
-<p>A key application of remotely sensed temperature is heat-mitigation planning. MacLachlan et al.&nbsp;(2021) integrated Earth observation temperature data with 3D urban models to guide optimal tree placement for localised urban heat mitigation. Their study shows that LST is useful not only for identifying hotter areas, but also for informing where cooling interventions may produce the greatest benefit. This is highly relevant to planning because remote sensing can move heat analysis from description to spatially targeted action.</p>
-<p>A second application is time-series monitoring of urban heat dynamics. Khalil et al.&nbsp;(2021) used remotely sensed LST time series to analyse the drivers of urban heat island effects and develop a prediction model, showing that repeated temperature observations can reveal long-term heat behaviour rather than a single thermal snapshot. This links closely to this week’s practical, where MODIS was useful because of its dense temporal coverage. For urban research, this means remote sensing can help track not only where cities are hot, but also how heat changes seasonally and over time.</p>
-<p>A third application is linking temperature with land-cover change. MacLachlan et al.&nbsp;(2017) showed that land-cover transitions, especially from forest to urban land, were associated with the strongest increases in daytime and nighttime temperature. This demonstrates that LST can be used to evaluate the thermal consequences of urban development and therefore support planning decisions about greening, land conversion and urban expansion. In this sense, temperature analysis is not only environmental monitoring, but also evidence for more climate-sensitive land-use policy.</p>
-<section id="applications-beyond-the-practical" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="applications-beyond-the-practical"><span class="header-section-number">2.1</span> Applications Beyond the Practical</h2>
-<p>Beyond the practical, these methods could be extended to urban policy evaluation. The literature shows that LST can be combined with planning, land-cover and modelling frameworks to assess where mitigation should occur and how urban form influences thermal risk. However, this also requires caution: remotely sensed LST is valuable for spatial comparison, but it does not perfectly represent human heat exposure, especially at street level or indoors. The most meaningful future application is therefore not temperature mapping alone, but integrating EO with urban form, vegetation and social vulnerability data.</p>
-</section>
+<p>One particularly useful application of SAR is multisensor fusion with optical imagery. This was highlighted both in the lecture resources and in the broader literature, because SAR contributes information on surface structure and roughness that optical sensors cannot provide under cloudy conditions. Lu et al.&nbsp;(2011) compared different multisensor integration methods in the Brazilian Amazon and found that combining Landsat TM with radar data improved land-cover classification under some fusion approaches, particularly wavelet-based methods, compared with optical data alone. This is important because it shows that SAR is not always most useful as a stand-alone dataset, but often as a complementary source of structural information. That point is reinforced by Schulte to Bühne and Pettorelli (2018), who argue that integrating multispectral and radar imagery can significantly improve the ability to map ecological structure and spatial heterogeneity.</p>
+<p>For my own interests in urban and environmental research, this is especially relevant because many real-world landscapes are not well captured by one sensor type alone. However, fusion does not automatically improve results. The lecture itself stressed that there is no universally best method, and Lu et al.&nbsp;(2011) also showed that some fusion strategies performed better than others. This means that SAR–optical integration should be chosen carefully according to the research aim, rather than treated as a guaranteed improvement.</p>
+<p>These methods could be extended to urban policy evaluation. The literature shows that LST can be combined with planning, land-cover and modelling frameworks to assess where mitigation should occur and how urban form influences thermal risk. However, this also requires caution: remotely sensed LST is valuable for spatial comparison, but it does not perfectly represent human heat exposure, especially at street level or indoors. The most meaningful future application is therefore not temperature mapping alone, but integrating EO with urban form, vegetation and social vulnerability data.</p>
 </section>
 <section id="reflection" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> <strong>Reflection</strong></h1>
-<p>This week was especially relevant to my own interests because it connected remote sensing more directly to urban environmental inequality and policy. I found it useful that temperature was not treated only as a raster surface, but also as something that could be summarised by spatial units, tracked over time, and translated into an index that is easier to communicate. That feels particularly relevant for future urban research, where the challenge is often not only to detect environmental patterns, but to make them meaningful for planning and governance. At the same time, this week also reminded me that data choice always involves trade-offs. Landsat and MODIS offer different strengths, so the method should depend on whether spatial detail or temporal coverage is more important for the research question.</p>
+<p>This week was especially interesting for me because it expanded my understanding of remote sensing beyond the optical workflows that I have used more often in urban and environmental research. Given my background, I usually think first in terms of land cover, vegetation, temperature or policy-relevant mapping from optical imagery, so SAR initially felt less intuitive. However, this week made me realise that SAR is valuable precisely because it adds a different way of seeing the surface: not mainly through reflected light, but through structure, roughness and change in backscatter. That feels particularly relevant to my broader interests in urban environments, where surfaces are complex, heterogeneous and often difficult to characterise with one sensor alone.</p>
+<p>I also found the lecture useful because it reminded me that learning remote sensing is not just about accumulating more methods, but about understanding when each method is appropriate. For me, SAR does not replace the optical approaches I already know, but it adds another layer of possibility, especially for flood mapping, change detection and multisensor analysis. In that sense, this week felt less like learning a completely separate topic, and more like widening the kinds of research questions I may be able to answer in the future.</p>
 <section id="references" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="references"><span class="header-section-number">3.1</span> References</h2>
-<p>Khalil, U., Qiu, C., Lan, H. and others (2021) ‘Time series analysis of land surface temperature and drivers of urban heat island effect based on remotely sensed data to develop a prediction model’, Applied Artificial Intelligence. Available at: https://doi.org/10.1080/08839514.2021.1993633 .</p>
-<p>MacLachlan, A., Biggs, E., Roberts, G. and Boruff, B. (2021) ‘Sustainable city planning: A data-driven approach for mitigating urban heat’, Frontiers in Built Environment, 6, 519599. Available at: https://doi.org/10.3389/fbuil.2020.519599 .</p>
-<p>MacLachlan, A., Biggs, E., Roberts, G. and Boruff, B. (2017) ‘Urbanisation-induced land cover temperature dynamics for sustainable future cities’, Urban Science, 1(4), 38. Available at: https://doi.org/10.3390/urbansci1040038 .</p>
-<p>Shi, H. et al.&nbsp;(2021) ‘Urban heat island and its regional impacts using remote sensing: A review’, Remote Sensing. Available via NOAA repository.</p>
+<p>Lu, D., Li, G., Moran, E., Dutra, L. and Batistella, M. (2011) ‘A comparison of multisensor integration methods for land cover classification in the Brazilian Amazon’, GIScience &amp; Remote Sensing, 48(3), pp.&nbsp;345–370.</p>
+<p>Schulte to Bühne, H. and Pettorelli, N. (2018) ‘Better together: Integrating and fusing multispectral and radar satellite imagery to inform biodiversity monitoring, ecological research and conservation science’, Methods in Ecology and Evolution, 9(4), pp.&nbsp;849–865.</p>
 
 
 </section>

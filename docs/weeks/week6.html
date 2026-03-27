@@ -300,7 +300,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="../weeks/week8.html">
- <span class="dropdown-text">Week 8: Temperature</span></a>
+ <span class="dropdown-text">Week 8: SAR</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../weeks/week9.html">
@@ -398,7 +398,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../weeks/week8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">8 Temperature</span></a>
+ <span class="menu-text">8 SAR</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -425,11 +425,12 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">2</span> <strong>Applications</strong></a>
   <ul class="collapse">
-  <li><a href="#applications-beyond-the-practical" id="toc-applications-beyond-the-practical" class="nav-link" data-scroll-target="#applications-beyond-the-practical"><span class="header-section-number">2.1</span> Applications Beyond the Practical</a></li>
+  <li><a href="#supervised-learning" id="toc-supervised-learning" class="nav-link" data-scroll-target="#supervised-learning"><span class="header-section-number">2.1</span> Supervised Learning</a></li>
   </ul></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">3</span> <strong>Reflection</strong></a>
+  <li><a href="#unsupervised-learning" id="toc-unsupervised-learning" class="nav-link" data-scroll-target="#unsupervised-learning"><span class="header-section-number">3</span> Unsupervised Learning</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">4</span> <strong>Reflection</strong></a>
   <ul class="collapse">
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">3.1</span> References</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">4.1</span> References</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -603,18 +604,21 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="applications" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> <strong>Applications</strong></h1>
-<section id="applications-beyond-the-practical" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="applications-beyond-the-practical"><span class="header-section-number">2.1</span> Applications Beyond the Practical</h2>
+<section id="supervised-learning" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="supervised-learning"><span class="header-section-number">2.1</span> Supervised Learning</h2>
 <p>In supervised learning, methods such as Random Forest, SVM and Maximum Likelihood are widely used in remote sensing because they can classify land cover from labelled training data. Khatami, Mountrakis and Stehman (2016) show in a meta-analysis that classifier choice strongly affects land-cover mapping accuracy, while Yuh et al.&nbsp;(2023) found that Random Forest outperformed several other machine-learning methods in land-cover classification. This suggests that supervised methods are powerful when reliable training samples are available. Critical thinking: however, their performance depends heavily on training quality, so a highly accurate output may still reflect biased or unrepresentative labels rather than genuinely better classification (Khatami, Mountrakis and Stehman, 2016; Yuh et al., 2023).</p>
+</section>
+</section>
+<section id="unsupervised-learning" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Unsupervised Learning</h1>
 <p>In unsupervised learning, methods such as K-means are useful when labelled data are unavailable. Paradis et al.&nbsp;(2022) demonstrate that probabilistic K-means can classify large-scale spectral imagery efficiently, while Gašparović et al.&nbsp;(2019) show that unsupervised clustering can support cost-effective land-cover classification without prior training samples. This makes unsupervised learning useful for exploratory analysis and early-stage classification. Critical thinking: however, unsupervised clusters do not automatically correspond to meaningful real-world classes, so interpretation remains dependent on the researcher and may reduce thematic reliability compared with supervised approaches (Paradis et al., 2022; Gašparović et al., 2019).</p>
 </section>
-</section>
-<section id="reflection" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> <strong>Reflection</strong></h1>
+<section id="reflection" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> <strong>Reflection</strong></h1>
 <p>This week was especially relevant to my own academic background, because my interests increasingly lie at the intersection of remote sensing, urban analysis and environmental research. Learning about supervised and unsupervised methods helped me organise many ideas that I had encountered before but had not fully connected.</p>
 <p>I can already see how these methods may be useful in my future work, especially for land-cover classification, urban environmental monitoring and spatial pattern detection. At the same time, this week reminded me that method choice is never purely technical, but should always depend on the research question, the data available and the scale of analysis.</p>
-<section id="references" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="references"><span class="header-section-number">3.1</span> References</h2>
+<section id="references" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="references"><span class="header-section-number">4.1</span> References</h2>
 <p>Gašparović, M., Jogun, T. and Dobrinić, D. (2019) ‘Automatic cost-effective method for land cover classification (ALCC) based on Landsat-8 imagery and geospatial data’, Computers and Electronics in Agriculture, 161, pp.&nbsp;141–152.</p>
 <p>Khatami, R., Mountrakis, G. and Stehman, S.V. (2016) ‘A meta-analysis of remote sensing research on supervised pixel-based land-cover image classification processes: General guidelines for practitioners and future research’, Remote Sensing of Environment, 177, pp.&nbsp;89–100.</p>
 <p>Paradis, E., Kumar, A. and Chanussot, J. (2022) ‘Probabilistic unsupervised classification for large-scale land cover mapping with spectral imaging data’, International Journal of Applied Earth Observation and Geoinformation, 107, 102681.</p>
